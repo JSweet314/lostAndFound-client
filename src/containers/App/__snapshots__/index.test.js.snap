@@ -17,22 +17,18 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h2>
-        Hello World
-</h2>,
+      "children": <Header />,
       "className": "app",
     },
     "ref": null,
     "rendered": Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Hello World",
-      },
+      "nodeType": "function",
+      "props": Object {},
       "ref": null,
-      "rendered": "Hello World",
-      "type": "h2",
+      "rendered": null,
+      "type": [Function],
     },
     "type": "div",
   },
@@ -42,22 +38,18 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h2>
-          Hello World
-</h2>,
+        "children": <Header />,
         "className": "app",
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Hello World",
-        },
+        "nodeType": "function",
+        "props": Object {},
         "ref": null,
-        "rendered": "Hello World",
-        "type": "h2",
+        "rendered": null,
+        "type": [Function],
       },
       "type": "div",
     },
