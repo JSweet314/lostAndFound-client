@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
-const UserForm = ({routeId, name, email, password, handleOnChange}) => {
+const UserForm = (
+  {routeId, name, email, password, handleOnChange, handleOnSubmit}
+) => {
   const buttonText = routeId === 'login' ? 'Log In' : 'Sign Up';
   const display = routeId === 'login' ? 'none' : 'initial';
   return (
-    <form>
+    <form
+      onSubmit={event => handleOnSubmit(event)}>
       <input 
         style={{display}}
         onChange={event => handleOnChange(event)}
@@ -36,7 +39,8 @@ UserForm.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
-  handleOnChange: PropTypes.func.isRequired
+  handleOnChange: PropTypes.func.isRequired,
+  handleOnSubmit: PropTypes.func.isRequired
 };
 
 export default UserForm;

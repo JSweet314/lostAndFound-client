@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FormsContainer
+    captureUser={[Function]}
     match={
         Object {
             "params": Object {
@@ -27,6 +28,7 @@ ShallowWrapper {
     "props": Object {
       "email": "",
       "handleOnChange": [Function],
+      "handleOnSubmit": [Function],
       "name": "",
       "password": "",
       "routeId": "login",
@@ -43,6 +45,7 @@ ShallowWrapper {
       "props": Object {
         "email": "",
         "handleOnChange": [Function],
+        "handleOnSubmit": [Function],
         "name": "",
         "password": "",
         "routeId": "login",
