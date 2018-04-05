@@ -1,11 +1,20 @@
 import * as actions from './index';
-describe('addUser', () => {
-  it('should return an action of type ADD_USER', () => {
-    const user = { name: 'tom', email: 'tom@gmail.com', password: 'abc' };
+describe('captureUser', () => {
+  it('should return an action of type CAPTURE_USER', () => {
+    const mockUser = { name: 'tom', email: 'tom@gmail.com', password: 'abc' };
     const expected = {
-      type: 'ADD_USER',
-      user
+      type: 'CAPTURE_USER',
+      user: mockUser
     };
-    expect(actions.addUser(user)).toEqual(expected);
+    expect(actions.captureUser(mockUser)).toEqual(expected);
+  });
+
+  describe('logOutUser', () => {
+    it('should return an action of type LOG_OUT_USER', () => {
+      const expected = {
+        type: 'LOG_OUT_USER'
+      };
+      expect(actions.logOutUser()).toEqual(expected);
+    });
   });
 });
