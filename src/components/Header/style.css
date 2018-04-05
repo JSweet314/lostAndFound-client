@@ -1,0 +1,31 @@
+.header {
+  padding: 1rem;
+  background-color: #5D2C12;
+  color: #EBC9AD;
+}
+
+.header__h1 {
+  display: inline-block;
+  margin: 0;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.header__nav-list {
+  float: right;
+}
+
+.header__nav-list-item {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.header__nav-link {
+  font-size: 2rem;
+  color: #EBC9AD;
+  text-decoration: none;
+}
+
+.header__nav-link:hover {
+  color: #C47E59;
+}

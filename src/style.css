@@ -1,3 +1,19 @@
+/* color pallete */
+/* #5D2C12 seal brown */
+/* #600E10 rosewood */
+/* #EBC9AD desert sand */
+/* #C47E59 deer */
+/* #625049 umber */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
 body {
   margin: 0;
   padding: 0;
