@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <UserForm
     email=""
     handleOnChange={[Function]}
+    handleOnSubmit={[Function]}
     name=""
     password=""
     routeId="login"
@@ -56,6 +57,7 @@ ShallowWrapper {
           Log In
 </button>,
       ],
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -161,6 +163,7 @@ ShallowWrapper {
             Log In
 </button>,
         ],
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
