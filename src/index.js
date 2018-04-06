@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './reducers';
-import mySaga from './sagas';
+import {listenForSubmitNewUser} from './sagas/';
 import App from './containers/App';
 import './style.css';
 
@@ -19,7 +19,7 @@ const store = createStore(
   )
 );
 
-sagaMiddleware.run(mySaga);
+sagaMiddleware.run(listenForSubmitNewUser);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -8,9 +8,10 @@ export class FormsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      username: '',
       email: '',
-      password: ''
+      password: '',
+      showPassword: false
     };
   }
 
@@ -21,8 +22,15 @@ export class FormsContainer extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.captureUser(this.state);
-    this.setState({ name: '', email: '', password: '' });
+    const { username, email, password } = this.state;
+    this.props.submitNewUser({username, email, password});
+    this.setState({ username: '', email: '', password: '', showPassword: false });
+  }
+
+  togglePasswordVisibility = event => {
+    event.preventDefault();
+    const { showPassword } = this.state;
+    this.setState({ showPassword: !showPassword });
   }
 
   render() {
@@ -32,6 +40,7 @@ export class FormsContainer extends Component {
         routeId={id}
         handleOnSubmit={this.handleOnSubmit}
         handleOnChange={this.handleOnChange}
+        togglePasswordVisibility={this.togglePasswordVisibility}
         {...this.state}
       />
     );
@@ -39,12 +48,14 @@ export class FormsContainer extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  captureUser: user => dispatch(actions.captureUser(user))
+  captureUser: user => dispatch(actions.captureUser(user)),
+  submitNewUser: user => dispatch(actions.submitNewUser(user))
 });
 
 FormsContainer.propTypes = {
   match: PropTypes.object.isRequired,
-  captureUser: PropTypes.func.isRequired
+  captureUser: PropTypes.func.isRequired,
+  submitNewUser: PropTypes.func.isRequired
 };
 
 export default connect(null, mapDispatchToProps)(FormsContainer);

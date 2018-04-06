@@ -13,6 +13,7 @@ ShallowWrapper {
             },
           }
     }
+    submitNewUser={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -29,9 +30,11 @@ ShallowWrapper {
       "email": "",
       "handleOnChange": [Function],
       "handleOnSubmit": [Function],
-      "name": "",
       "password": "",
       "routeId": "login",
+      "showPassword": false,
+      "togglePasswordVisibility": [Function],
+      "username": "",
     },
     "ref": null,
     "rendered": null,
@@ -46,9 +49,11 @@ ShallowWrapper {
         "email": "",
         "handleOnChange": [Function],
         "handleOnSubmit": [Function],
-        "name": "",
         "password": "",
         "routeId": "login",
+        "showPassword": false,
+        "togglePasswordVisibility": [Function],
+        "username": "",
       },
       "ref": null,
       "rendered": null,
