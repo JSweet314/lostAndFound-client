@@ -5,15 +5,17 @@ import * as actions from '../../actions';
 
 describe('FormsContainer', () => {
   let wrapper;
-  const mockUser = { name: 'tom', email: 'tom@gmail.com', password: 'abc' };
+  const mockUser = { username: 'tom', password: 'abc', email: 'tom@gmail.com' };
   const mockSubmitEvent = { preventDefault: jest.fn() };
   const mockChangeEvent = { target: { name: 'name', value: 'tom' } };
   const mockLoginMatch = { params: { id: 'login' } };
+  const mockSubmitNewUser = jest.fn();
   const mockCaptureUser = jest.fn();
   beforeEach(() => {
     wrapper = shallow(
       <FormsContainer
         captureUser={mockCaptureUser}
+        submitNewUser={mockSubmitNewUser}
         match={mockLoginMatch}
       />
     );
@@ -28,16 +30,18 @@ describe('FormsContainer', () => {
     expect(wrapper.state('name')).toEqual('tom');
   });
 
-  it('should call captureUser when a user submits a form', () => {
+  it('should call submitNewUser when a new user submits a form', () => {
     wrapper.setState(mockUser);
     wrapper.instance().handleOnSubmit(mockSubmitEvent);
-    expect(mockCaptureUser).toHaveBeenCalledWith(mockUser);
+    expect(mockSubmitNewUser).toHaveBeenCalledWith(mockUser);
   });
 
   it('should reset the state when a form is submitted', () => {
     wrapper.setState(mockUser);
     wrapper.instance().handleOnSubmit(mockSubmitEvent);
-    expect(wrapper.state()).toEqual({ name: '', email: '', password: '' });
+    expect(wrapper.state()).toEqual(
+      { username: '', email: '', password: '', showPassword: false }
+    );
   });
 
   describe('mapDispatchToProps', () => {

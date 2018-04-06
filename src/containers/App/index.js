@@ -6,6 +6,11 @@ import FormsContainer from '../FormsContainer';
 import './style.css';
 
 export class App extends Component {
+  // componentDidMount = async () => {
+  //   const response = await fetch('/api/v1/users');
+  //   const parsed = await response.json();
+  // }
+
   render() {
     return (
       <div className="app">

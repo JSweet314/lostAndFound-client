@@ -1,4 +1,8 @@
-const userReducer = (state = {}, action) => {
+const initialState = {
+  loggedIn: false
+};
+
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
   case 'CAPTURE_USER':
     return action.user;
