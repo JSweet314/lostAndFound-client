@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Header
+    handleLogOut={[Function]}
     loggedIn={false}
     username=""
 />,
@@ -443,11 +444,12 @@ ShallowWrapper {
 }
 `;
 
-exports[`Header should match a snapshot 2`] = `
+exports[`Header should match a snapshot when signed in 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Header
+    handleLogOut={[Function]}
     loggedIn={true}
     username="jon"
 />,
@@ -488,6 +490,7 @@ ShallowWrapper {
           >
                     <Link
                               className="header__nav-link"
+                              onClick={[Function]}
                               replace={false}
                               to="/"
                     >
@@ -543,6 +546,7 @@ ShallowWrapper {
 >
               <Link
                             className="header__nav-link"
+                            onClick={[Function]}
                             replace={false}
                             to="/"
               >
@@ -601,6 +605,7 @@ ShallowWrapper {
             "props": Object {
               "children": <Link
                 className="header__nav-link"
+                onClick={[Function]}
                 replace={false}
                 to="/"
 >
@@ -616,6 +621,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "Log Out",
                 "className": "header__nav-link",
+                "onClick": [Function],
                 "replace": false,
                 "to": "/",
               },
@@ -689,6 +695,7 @@ ShallowWrapper {
             >
                         <Link
                                     className="header__nav-link"
+                                    onClick={[Function]}
                                     replace={false}
                                     to="/"
                         >
@@ -744,6 +751,7 @@ ShallowWrapper {
 >
                 <Link
                                 className="header__nav-link"
+                                onClick={[Function]}
                                 replace={false}
                                 to="/"
                 >
@@ -802,6 +810,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <Link
                   className="header__nav-link"
+                  onClick={[Function]}
                   replace={false}
                   to="/"
 >
@@ -817,6 +826,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Log Out",
                   "className": "header__nav-link",
+                  "onClick": [Function],
                   "replace": false,
                   "to": "/",
                 },

@@ -28,9 +28,11 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          className="user-form__input"
           name="username"
           onChange={[Function]}
-          placeholder="username"
+          placeholder="Hey stranger, what's your name?"
+          required={false}
           style={
                     Object {
                               "display": "none",
@@ -39,31 +41,52 @@ ShallowWrapper {
           type="text"
           value=""
 />,
+        <h2
+          className="user-form__greeting"
+          style={
+                    Object {
+                              "display": "initial",
+                            }
+          }
+>
+          Welcome Back!
+</h2>,
         <input
+          className="user-form__input"
           name="email"
           onChange={[Function]}
           placeholder="email"
+          required={true}
           type="email"
           value=""
 />,
-        <input
-          name="password"
-          onChange={[Function]}
-          placeholder="password"
-          type="password"
-          value=""
-/>,
-        <button
-          onClick={[Function]}
+        <div
+          className="user-form__password-fields"
 >
-          show password
-</button>,
+          <input
+                    className="password-fields__input"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="password"
+                    required={true}
+                    type="password"
+                    value=""
+          />
+          <button
+                    className="password-fields__password-toggle-btn"
+                    onClick={[Function]}
+          >
+                    show password
+          </button>
+</div>,
         <button
+          className="user-form__btn user-form__btn--submit"
           type="submit"
 >
           Log In
 </button>,
       ],
+      "className": "user-form",
       "onSubmit": [Function],
     },
     "ref": null,
@@ -73,9 +96,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "user-form__input",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "username",
+          "placeholder": "Hey stranger, what's your name?",
+          "required": false,
           "style": Object {
             "display": "none",
           },
@@ -91,9 +116,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Welcome Back!",
+          "className": "user-form__greeting",
+          "style": Object {
+            "display": "initial",
+          },
+        },
+        "ref": null,
+        "rendered": "Welcome Back!",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "user-form__input",
           "name": "email",
           "onChange": [Function],
           "placeholder": "email",
+          "required": true,
           "type": "email",
           "value": "",
         },
@@ -106,27 +148,59 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "name": "password",
-          "onChange": [Function],
-          "placeholder": "password",
-          "type": "password",
-          "value": "",
+          "children": Array [
+            <input
+              className="password-fields__input"
+              name="password"
+              onChange={[Function]}
+              placeholder="password"
+              required={true}
+              type="password"
+              value=""
+/>,
+            <button
+              className="password-fields__password-toggle-btn"
+              onClick={[Function]}
+>
+              show password
+</button>,
+          ],
+          "className": "user-form__password-fields",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "show password",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "show password",
-        "type": "button",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "password-fields__input",
+              "name": "password",
+              "onChange": [Function],
+              "placeholder": "password",
+              "required": true,
+              "type": "password",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "show password",
+              "className": "password-fields__password-toggle-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "show password",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -134,6 +208,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Log In",
+          "className": "user-form__btn user-form__btn--submit",
           "type": "submit",
         },
         "ref": null,
@@ -151,9 +226,11 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            className="user-form__input"
             name="username"
             onChange={[Function]}
-            placeholder="username"
+            placeholder="Hey stranger, what's your name?"
+            required={false}
             style={
                         Object {
                                     "display": "none",
@@ -162,31 +239,52 @@ ShallowWrapper {
             type="text"
             value=""
 />,
+          <h2
+            className="user-form__greeting"
+            style={
+                        Object {
+                                    "display": "initial",
+                                  }
+            }
+>
+            Welcome Back!
+</h2>,
           <input
+            className="user-form__input"
             name="email"
             onChange={[Function]}
             placeholder="email"
+            required={true}
             type="email"
             value=""
 />,
-          <input
-            name="password"
-            onChange={[Function]}
-            placeholder="password"
-            type="password"
-            value=""
-/>,
-          <button
-            onClick={[Function]}
+          <div
+            className="user-form__password-fields"
 >
-            show password
-</button>,
+            <input
+                        className="password-fields__input"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="password"
+                        required={true}
+                        type="password"
+                        value=""
+            />
+            <button
+                        className="password-fields__password-toggle-btn"
+                        onClick={[Function]}
+            >
+                        show password
+            </button>
+</div>,
           <button
+            className="user-form__btn user-form__btn--submit"
             type="submit"
 >
             Log In
 </button>,
         ],
+        "className": "user-form",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -196,9 +294,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "user-form__input",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "username",
+            "placeholder": "Hey stranger, what's your name?",
+            "required": false,
             "style": Object {
               "display": "none",
             },
@@ -214,9 +314,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Welcome Back!",
+            "className": "user-form__greeting",
+            "style": Object {
+              "display": "initial",
+            },
+          },
+          "ref": null,
+          "rendered": "Welcome Back!",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "user-form__input",
             "name": "email",
             "onChange": [Function],
             "placeholder": "email",
+            "required": true,
             "type": "email",
             "value": "",
           },
@@ -229,27 +346,59 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "name": "password",
-            "onChange": [Function],
-            "placeholder": "password",
-            "type": "password",
-            "value": "",
+            "children": Array [
+              <input
+                className="password-fields__input"
+                name="password"
+                onChange={[Function]}
+                placeholder="password"
+                required={true}
+                type="password"
+                value=""
+/>,
+              <button
+                className="password-fields__password-toggle-btn"
+                onClick={[Function]}
+>
+                show password
+</button>,
+            ],
+            "className": "user-form__password-fields",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "show password",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "show password",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "password-fields__input",
+                "name": "password",
+                "onChange": [Function],
+                "placeholder": "password",
+                "required": true,
+                "type": "password",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "show password",
+                "className": "password-fields__password-toggle-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "show password",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -257,6 +406,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Log In",
+            "className": "user-form__btn user-form__btn--submit",
             "type": "submit",
           },
           "ref": null,
@@ -305,9 +455,11 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <input
+          className="user-form__input"
           name="username"
           onChange={[Function]}
-          placeholder="username"
+          placeholder="Hey stranger, what's your name?"
+          required={true}
           style={
                     Object {
                               "display": "initial",
@@ -316,31 +468,52 @@ ShallowWrapper {
           type="text"
           value=""
 />,
+        <h2
+          className="user-form__greeting"
+          style={
+                    Object {
+                              "display": "none",
+                            }
+          }
+>
+          Welcome Back!
+</h2>,
         <input
+          className="user-form__input"
           name="email"
           onChange={[Function]}
           placeholder="email"
+          required={true}
           type="email"
           value=""
 />,
-        <input
-          name="password"
-          onChange={[Function]}
-          placeholder="password"
-          type="text"
-          value=""
-/>,
-        <button
-          onClick={[Function]}
+        <div
+          className="user-form__password-fields"
 >
-          hide password
-</button>,
+          <input
+                    className="password-fields__input"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="password"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <button
+                    className="password-fields__password-toggle-btn"
+                    onClick={[Function]}
+          >
+                    hide password
+          </button>
+</div>,
         <button
+          className="user-form__btn user-form__btn--submit"
           type="submit"
 >
           Sign Up
 </button>,
       ],
+      "className": "user-form",
       "onSubmit": [Function],
     },
     "ref": null,
@@ -350,9 +523,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "user-form__input",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "username",
+          "placeholder": "Hey stranger, what's your name?",
+          "required": true,
           "style": Object {
             "display": "initial",
           },
@@ -368,9 +543,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Welcome Back!",
+          "className": "user-form__greeting",
+          "style": Object {
+            "display": "none",
+          },
+        },
+        "ref": null,
+        "rendered": "Welcome Back!",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "user-form__input",
           "name": "email",
           "onChange": [Function],
           "placeholder": "email",
+          "required": true,
           "type": "email",
           "value": "",
         },
@@ -383,27 +575,59 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "name": "password",
-          "onChange": [Function],
-          "placeholder": "password",
-          "type": "text",
-          "value": "",
+          "children": Array [
+            <input
+              className="password-fields__input"
+              name="password"
+              onChange={[Function]}
+              placeholder="password"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <button
+              className="password-fields__password-toggle-btn"
+              onClick={[Function]}
+>
+              hide password
+</button>,
+          ],
+          "className": "user-form__password-fields",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "hide password",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "hide password",
-        "type": "button",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "password-fields__input",
+              "name": "password",
+              "onChange": [Function],
+              "placeholder": "password",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "hide password",
+              "className": "password-fields__password-toggle-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "hide password",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -411,6 +635,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Sign Up",
+          "className": "user-form__btn user-form__btn--submit",
           "type": "submit",
         },
         "ref": null,
@@ -428,9 +653,11 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            className="user-form__input"
             name="username"
             onChange={[Function]}
-            placeholder="username"
+            placeholder="Hey stranger, what's your name?"
+            required={true}
             style={
                         Object {
                                     "display": "initial",
@@ -439,31 +666,52 @@ ShallowWrapper {
             type="text"
             value=""
 />,
+          <h2
+            className="user-form__greeting"
+            style={
+                        Object {
+                                    "display": "none",
+                                  }
+            }
+>
+            Welcome Back!
+</h2>,
           <input
+            className="user-form__input"
             name="email"
             onChange={[Function]}
             placeholder="email"
+            required={true}
             type="email"
             value=""
 />,
-          <input
-            name="password"
-            onChange={[Function]}
-            placeholder="password"
-            type="text"
-            value=""
-/>,
-          <button
-            onClick={[Function]}
+          <div
+            className="user-form__password-fields"
 >
-            hide password
-</button>,
+            <input
+                        className="password-fields__input"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="password"
+                        required={true}
+                        type="text"
+                        value=""
+            />
+            <button
+                        className="password-fields__password-toggle-btn"
+                        onClick={[Function]}
+            >
+                        hide password
+            </button>
+</div>,
           <button
+            className="user-form__btn user-form__btn--submit"
             type="submit"
 >
             Sign Up
 </button>,
         ],
+        "className": "user-form",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -473,9 +721,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "user-form__input",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "username",
+            "placeholder": "Hey stranger, what's your name?",
+            "required": true,
             "style": Object {
               "display": "initial",
             },
@@ -491,9 +741,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "Welcome Back!",
+            "className": "user-form__greeting",
+            "style": Object {
+              "display": "none",
+            },
+          },
+          "ref": null,
+          "rendered": "Welcome Back!",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "user-form__input",
             "name": "email",
             "onChange": [Function],
             "placeholder": "email",
+            "required": true,
             "type": "email",
             "value": "",
           },
@@ -506,27 +773,59 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "name": "password",
-            "onChange": [Function],
-            "placeholder": "password",
-            "type": "text",
-            "value": "",
+            "children": Array [
+              <input
+                className="password-fields__input"
+                name="password"
+                onChange={[Function]}
+                placeholder="password"
+                required={true}
+                type="text"
+                value=""
+/>,
+              <button
+                className="password-fields__password-toggle-btn"
+                onClick={[Function]}
+>
+                hide password
+</button>,
+            ],
+            "className": "user-form__password-fields",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "hide password",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "hide password",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "password-fields__input",
+                "name": "password",
+                "onChange": [Function],
+                "placeholder": "password",
+                "required": true,
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "hide password",
+                "className": "password-fields__password-toggle-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "hide password",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -534,6 +833,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Sign Up",
+            "className": "user-form__btn user-form__btn--submit",
             "type": "submit",
           },
           "ref": null,

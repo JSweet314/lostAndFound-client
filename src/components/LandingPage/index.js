@@ -2,7 +2,6 @@ import React from 'react';
 import Welcome from '../Welcome';
 import Search from '../Search';
 import PropTypes from 'prop-types';
-import './style.css';
 
 const LandingPage = ({username}) => {
   return (
