@@ -10,10 +10,10 @@ export const addUser = async newUser => {
     if (response.ok) {
       return await response.json();
     } else {
-      throw new Error(`Errored with status code ${response.status}`);
+      throw new Error(`Errored adding user. Status code: ${response.status}.`);
     }
   } catch (error) {
-    throw error;
+    throw new Error(error.message);
   }
 };
 
@@ -29,9 +29,11 @@ export const signInUser = async user => {
     if (response.ok) {
       return await response.json();
     } else {
-      throw new Error('Error occured during sign in');
+      throw new Error(
+        `Error occured during sign in. Status code: ${response.status}.`
+      );
     }
   } catch (error) {
-    throw error;
+    throw new Error(error.message);
   }
 };
