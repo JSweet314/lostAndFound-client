@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormsContainer, mapDispatchToProps } from './index';
+import { FormsContainer, mapDispatchToProps, mapStateToProps } from './index';
 import * as actions from '../../actions';
 
 describe('FormsContainer', () => {
@@ -15,6 +15,7 @@ describe('FormsContainer', () => {
   beforeEach(() => {
     wrapper = shallow(
       <FormsContainer
+        loggedIn={false}
         captureUser={mockCaptureUser}
         submitNewUser={mockSubmitNewUser}
         signInUser={mockSignInUser}
@@ -52,6 +53,14 @@ describe('FormsContainer', () => {
       const mapped = mapDispatchToProps(mockDispatch);
       mapped.captureUser(mockUser);
       expect(mockDispatch).toHaveBeenCalledWith(actions.captureUser(mockUser));
+    });
+  });
+
+  describe('mapStateToProps', () => {
+    const mockState = {user: {loggedIn: false}};
+    
+    it('should return an object of data from the store', () => {
+      expect(mapStateToProps(mockState)).toEqual({loggedIn: false});
     });
   });
 });
