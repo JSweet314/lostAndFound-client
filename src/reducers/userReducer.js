@@ -5,9 +5,9 @@ const initialState = {
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
   case 'CAPTURE_USER':
-    return action.user;
+    return {...action.user, loggedIn: true};
   case 'LOG_OUT_USER':
-    return {};
+    return initialState;
   default:
     return state;
   }

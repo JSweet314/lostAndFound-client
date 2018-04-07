@@ -9,10 +9,11 @@ ShallowWrapper {
     match={
         Object {
             "params": Object {
-              "id": "login",
+              "id": "signup",
             },
           }
     }
+    signInUser={[Function]}
     submitNewUser={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -31,7 +32,7 @@ ShallowWrapper {
       "handleOnChange": [Function],
       "handleOnSubmit": [Function],
       "password": "",
-      "routeId": "login",
+      "routeId": "signup",
       "showPassword": false,
       "togglePasswordVisibility": [Function],
       "username": "",
@@ -50,7 +51,7 @@ ShallowWrapper {
         "handleOnChange": [Function],
         "handleOnSubmit": [Function],
         "password": "",
-        "routeId": "login",
+        "routeId": "signup",
         "showPassword": false,
         "togglePasswordVisibility": [Function],
         "username": "",

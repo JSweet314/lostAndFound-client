@@ -8,14 +8,16 @@ describe('FormsContainer', () => {
   const mockUser = { username: 'tom', password: 'abc', email: 'tom@gmail.com' };
   const mockSubmitEvent = { preventDefault: jest.fn() };
   const mockChangeEvent = { target: { name: 'name', value: 'tom' } };
-  const mockLoginMatch = { params: { id: 'login' } };
+  const mockLoginMatch = { params: { id: 'signup' } };
   const mockSubmitNewUser = jest.fn();
+  const mockSignInUser = jest.fn();
   const mockCaptureUser = jest.fn();
   beforeEach(() => {
     wrapper = shallow(
       <FormsContainer
         captureUser={mockCaptureUser}
         submitNewUser={mockSubmitNewUser}
+        signInUser={mockSignInUser}
         match={mockLoginMatch}
       />
     );

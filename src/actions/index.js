@@ -12,6 +12,11 @@ export const submitNewUser = user => ({
   user
 });
 
+export const signInUser = user => ({
+  type: 'SIGN_IN_USER',
+  user
+});
+
 export const captureErrorMessage = message => ({
   type: 'CAPTURE_ERROR_MESSAGE',
   message
