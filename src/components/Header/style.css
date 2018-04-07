@@ -7,7 +7,9 @@
 .header__h1 {
   display: inline-block;
   margin: 0;
+  font-family: 'Exo', sans-serif;
   font-size: 5rem;
+  font-weight: 100;
   text-align: center;
 }
 
