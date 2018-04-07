@@ -12,38 +12,60 @@ const UserForm = ({
   showPassword,
   togglePasswordVisibility
 }) => {
-  const type = showPassword ? 'text' : 'password';
-  const passwordDisplayBtnText = showPassword ? 
-    'hide password' : 'show password';
   const buttonText = routeId === 'login' ? 'Log In' : 'Sign Up';
-  const display = routeId === 'login' ? 'none' : 'initial';
+  const usernameDisplay = routeId === 'login' ? 'none' : 'initial';
+  const welcomeBackDisplay = routeId === 'login' ? 'initial' : 'none';
+  const userNameRequired = routeId === 'login' ? false : true;
+  const type = showPassword ? 'text' : 'password';
+  const passwordDisplayBtnText = showPassword ?
+    'hide password' : 'show password';
+
   return (
     <form
+      className='user-form'
       onSubmit={event => handleOnSubmit(event)}>
       <input 
-        style={{display}}
+        className='user-form__input'
+        style={{display: usernameDisplay}}
         onChange={event => handleOnChange(event)}
         value={username}
         name='username'
-        placeholder='username'
+        placeholder="Hey stranger, what's your name?"
+        required={userNameRequired}
         type='text' />
+      <h2  
+        className='user-form__greeting' 
+        style={{display: welcomeBackDisplay}}>
+        Welcome Back!
+      </h2>
       <input 
+        className='user-form__input'
         onChange={event => handleOnChange(event)}
         value={email}
         name='email'
         placeholder='email'
+        required
         type='email' />
-      <input 
-        onChange={event => handleOnChange(event)}
-        value={password}
-        name='password'
-        placeholder='password'
-        type={type} />
-      <button
-        onClick={event => togglePasswordVisibility(event)}>
-        {passwordDisplayBtnText}
+      <div className='user-form__password-fields'>
+        <input 
+          className='password-fields__input'
+          onChange={event => handleOnChange(event)}
+          value={password}
+          name='password'
+          placeholder='password'
+          required
+          type={type} />
+        <button 
+          className='password-fields__password-toggle-btn'
+          onClick={event => togglePasswordVisibility(event)}>
+          {passwordDisplayBtnText}
+        </button>
+      </div>
+      <button 
+        className='user-form__btn user-form__btn--submit'
+        type='submit'>
+        {buttonText}
       </button>
-      <button type='submit'>{buttonText}</button>
     </form>
   );
 };
