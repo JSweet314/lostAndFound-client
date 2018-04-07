@@ -7,7 +7,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './reducers';
 import rootSaga from './sagas/';
-import App from './containers/App';
+import AppContainer from './containers/AppContainer';
 import './style.css';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -24,7 +24,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <App />
+      <AppContainer />
     </Router>
   </Provider>,
   document.getElementById('root')

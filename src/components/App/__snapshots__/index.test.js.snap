@@ -5,10 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
-    captureUser={[Function]}
-    logOutUser={[Function]}
-    loggedIn={false}
-    username=""
+    handleLogOut={[Function]}
+    loggedIn={true}
+    username="jon"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,8 +24,8 @@ ShallowWrapper {
       "children": Array [
         <Header
           handleLogOut={[Function]}
-          loggedIn={false}
-          username=""
+          loggedIn={true}
+          username="jon"
 />,
         <Route
           exact={true}
@@ -48,8 +47,8 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "handleLogOut": [Function],
-          "loggedIn": false,
-          "username": "",
+          "loggedIn": true,
+          "username": "jon",
         },
         "ref": null,
         "rendered": null,
@@ -92,8 +91,8 @@ ShallowWrapper {
         "children": Array [
           <Header
             handleLogOut={[Function]}
-            loggedIn={false}
-            username=""
+            loggedIn={true}
+            username="jon"
 />,
           <Route
             exact={true}
@@ -115,8 +114,8 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "handleLogOut": [Function],
-            "loggedIn": false,
-            "username": "",
+            "loggedIn": true,
+            "username": "jon",
           },
           "ref": null,
           "rendered": null,

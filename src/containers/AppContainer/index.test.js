@@ -1,18 +1,18 @@
 import React from 'react';
-import {App} from './index';
+import {AppContainer} from './index';
 import {shallow} from 'enzyme';
 import LocalStorage from '../../__mocks__/localStorageMock';
 
 window.localStorage = new LocalStorage();
 
-describe('App', () => {
+describe('AppContainer', () => {
   let wrapper;
   const mockLogOutUser = jest.fn();
   const mockCaptureUser = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(
-      <App
+      <AppContainer
         captureUser={mockCaptureUser}
         logOutUser={mockLogOutUser} 
         loggedIn={false} 
