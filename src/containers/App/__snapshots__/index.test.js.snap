@@ -26,9 +26,9 @@ ShallowWrapper {
           username=""
 />,
         <Route
-          component={[Function]}
           exact={true}
           path="/"
+          render={[Function]}
 />,
         <Route
           component={[Function]}
@@ -56,9 +56,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "component": [Function],
           "exact": true,
           "path": "/",
+          "render": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -91,9 +91,9 @@ ShallowWrapper {
             username=""
 />,
           <Route
-            component={[Function]}
             exact={true}
             path="/"
+            render={[Function]}
 />,
           <Route
             component={[Function]}
@@ -121,9 +121,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
             "exact": true,
             "path": "/",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,

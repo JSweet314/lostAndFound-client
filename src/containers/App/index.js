@@ -13,7 +13,8 @@ export class App extends Component {
     return (
       <div className="app">
         <Header loggedIn={loggedIn} username={username} />
-        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/' render={() =>
+          <LandingPage username={username} />} />
         <Route path="/forms/:id" component={FormsContainer} />
       </div>
     );
