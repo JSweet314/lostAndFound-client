@@ -1,0 +1,3 @@
+[submodule "lostAndFound-backend"]
+	path = lostAndFound-backend
+	url = git@github.com:JSweet314/lostAndFound-backend.git
