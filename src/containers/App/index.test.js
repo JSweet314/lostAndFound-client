@@ -6,7 +6,7 @@ describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<App loggedIn={false} username='' />);
   });
   
   it('should match a snapshot', () => {
