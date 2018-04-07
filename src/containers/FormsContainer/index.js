@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import UserForm from '../../components/UserForm';
 import * as actions from '../../actions';
@@ -45,8 +46,9 @@ export class FormsContainer extends Component {
   }
 
   render() {
+    const loggedIn = this.props.loggedIn;
     const { id } = this.props.match.params;
-    return (
+    return (loggedIn ? <Redirect to='/' /> : (
       <UserForm
         routeId={id}
         handleOnSubmit={this.handleOnSubmit}
@@ -54,7 +56,7 @@ export class FormsContainer extends Component {
         togglePasswordVisibility={this.togglePasswordVisibility}
         {...this.state}
       />
-    );
+    ));
   }
 }
 
@@ -64,11 +66,16 @@ export const mapDispatchToProps = dispatch => ({
   signInUser: user => dispatch(actions.signInUser(user))
 });
 
+export const mapStateToProps = state => ({
+  loggedIn: state.user.loggedIn
+});
+
 FormsContainer.propTypes = {
   match: PropTypes.object.isRequired,
+  loggedIn: PropTypes.bool.isRequired,
   captureUser: PropTypes.func.isRequired,
   submitNewUser: PropTypes.func.isRequired,
   signInUser: PropTypes.func.isRequired
 };
 
-export default connect(null, mapDispatchToProps)(FormsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FormsContainer);

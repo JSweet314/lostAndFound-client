@@ -4,7 +4,10 @@ exports[`App should match a snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <App
+    loggedIn={false}
+    username=""
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,7 +21,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Header
+          loggedIn={false}
+          username=""
+/>,
+        <Route
+          exact={true}
+          path="/"
+          render={[Function]}
+/>,
         <Route
           component={[Function]}
           path="/forms/:id"
@@ -32,7 +43,23 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "loggedIn": false,
+          "username": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+          "render": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -59,7 +86,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Header
+            loggedIn={false}
+            username=""
+/>,
+          <Route
+            exact={true}
+            path="/"
+            render={[Function]}
+/>,
           <Route
             component={[Function]}
             path="/forms/:id"
@@ -73,7 +108,23 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "loggedIn": false,
+            "username": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+            "render": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
