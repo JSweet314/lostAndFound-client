@@ -23,7 +23,7 @@ const Header = ({ loggedIn, username, handleLogOut }) => {
           }
         </li>
         <li className='header__nav-list-item'>
-          {loggedIn ? <div className='header__nav-link'>{username}</div> : (
+          {loggedIn ? <span className='header__username'>{username}</span> : (
             <Link className='header__nav-link' to='/forms/signup'>Sign Up</Link>
           )}
         </li>

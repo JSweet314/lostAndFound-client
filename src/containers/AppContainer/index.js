@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom';
-import Header from '../../components/Header';
-import FormsContainer from '../FormsContainer';
-import LandingPage from '../../components/LandingPage';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
-import './style.css';
+import App from '../../components/App';
 
-export class App extends Component {
+export class AppContainer extends Component {
 
   componentDidMount = () => {
     const storedUser = localStorage.getItem('LFUser');
@@ -25,17 +22,10 @@ export class App extends Component {
 
   render() {
     const { loggedIn, username } = this.props;
-    return (
-      <div className="app">
-        <Header 
-          loggedIn={loggedIn} 
-          username={username}
-          handleLogOut={this.handleLogOut} />
-        <Route exact path='/' render={() =>
-          <LandingPage username={username} />} />
-        <Route path="/forms/:id" component={FormsContainer} />
-      </div>
-    );
+    return <App
+      loggedIn={loggedIn}
+      username={username}
+      handleLogOut={this.handleLogOut} />;
   }
 }
 
@@ -49,11 +39,13 @@ const mapDispatchToProps = dispatch => ({
   captureUser: user => dispatch(actions.captureUser(user))
 });
 
-App.propTypes = {
+AppContainer.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
   username: PropTypes.string,
   logOutUser: PropTypes.func.isRequired,
   captureUser: PropTypes.func.isRequired
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(AppContainer)
+);

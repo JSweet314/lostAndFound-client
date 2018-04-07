@@ -22,6 +22,7 @@
   margin: 1rem;
 }
 
+.header__username,
 .header__nav-link {
   font-size: 2rem;
   color: #EBC9AD;

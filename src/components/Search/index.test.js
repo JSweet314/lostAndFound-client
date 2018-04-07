@@ -15,8 +15,8 @@ describe('Search', () => {
   it('should store a changing searchValue in local state', () => {
     wrapper.instance().handleOnChange({target: {
       name: 'searchValue',
-      value: 'phone'
+      value: 'iPhone'
     }});
-    expect(wrapper.state('searchValue')).toEqual('phone');
+    expect(wrapper.state('searchValue')).toEqual('iPhone');
   });
 });

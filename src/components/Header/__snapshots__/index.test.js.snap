@@ -500,11 +500,11 @@ ShallowWrapper {
           <li
                     className="header__nav-list-item"
           >
-                    <div
-                              className="header__nav-link"
+                    <span
+                              className="header__username"
                     >
                               jon
-                    </div>
+                    </span>
           </li>
 </ul>,
       ],
@@ -556,11 +556,11 @@ ShallowWrapper {
             <li
               className="header__nav-list-item"
 >
-              <div
-                            className="header__nav-link"
+              <span
+                            className="header__username"
               >
                             jon
-              </div>
+              </span>
 </li>,
           ],
           "className": "header__nav-list",
@@ -636,11 +636,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div
-                className="header__nav-link"
+              "children": <span
+                className="header__username"
 >
                 jon
-</div>,
+</span>,
               "className": "header__nav-list-item",
             },
             "ref": null,
@@ -650,11 +650,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "jon",
-                "className": "header__nav-link",
+                "className": "header__username",
               },
               "ref": null,
               "rendered": "jon",
-              "type": "div",
+              "type": "span",
             },
             "type": "li",
           },
@@ -705,11 +705,11 @@ ShallowWrapper {
             <li
                         className="header__nav-list-item"
             >
-                        <div
-                                    className="header__nav-link"
+                        <span
+                                    className="header__username"
                         >
                                     jon
-                        </div>
+                        </span>
             </li>
 </ul>,
         ],
@@ -761,11 +761,11 @@ ShallowWrapper {
               <li
                 className="header__nav-list-item"
 >
-                <div
-                                className="header__nav-link"
+                <span
+                                className="header__username"
                 >
                                 jon
-                </div>
+                </span>
 </li>,
             ],
             "className": "header__nav-list",
@@ -841,11 +841,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div
-                  className="header__nav-link"
+                "children": <span
+                  className="header__username"
 >
                   jon
-</div>,
+</span>,
                 "className": "header__nav-list-item",
               },
               "ref": null,
@@ -855,11 +855,11 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "jon",
-                  "className": "header__nav-link",
+                  "className": "header__username",
                 },
                 "ref": null,
                 "rendered": "jon",
-                "type": "div",
+                "type": "span",
               },
               "type": "li",
             },

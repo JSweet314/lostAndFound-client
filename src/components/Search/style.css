@@ -25,3 +25,8 @@
   font-size: 3rem;
   font-family: 'Exo', sans-serif;
 }
+
+.search-form__submit:hover {
+  background-color: #625049;
+  color: #EBC9AD;
+}
