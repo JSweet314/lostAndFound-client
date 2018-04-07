@@ -1,14 +1,12 @@
 import React from 'react';
-import Header from '../Header';
 import {Route} from 'react-router-dom';
-import FormsContainer from '../../containers/FormsContainer';
-import LandingPage from '../LandingPage';
 import PropTypes from 'prop-types';
-
+import FormsContainer from '../../containers/FormsContainer';
+import Header from '../Header';
+import LandingPage from '../LandingPage';
 import './style.css';
 
 const App = ({ username, loggedIn, handleLogOut }) => {
-
   return (
     <div className="app">
       <Header
