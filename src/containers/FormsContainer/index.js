@@ -22,9 +22,20 @@ export class FormsContainer extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const { username, email, password } = this.state;
-    this.props.submitNewUser({username, email, password});
-    this.setState({ username: '', email: '', password: '', showPassword: false });
+    const { id } = this.props.match.params;
+    if (id === 'login') {
+      const { email, password } = this.state;
+      this.props.signInUser({ email, password });
+    } else {
+      const { username, email, password } = this.state;
+      this.props.submitNewUser({ username, email, password });
+    }
+    this.setState({ 
+      username: '', 
+      email: '', 
+      password: '', 
+      showPassword: false 
+    });
   }
 
   togglePasswordVisibility = event => {
@@ -49,13 +60,15 @@ export class FormsContainer extends Component {
 
 export const mapDispatchToProps = dispatch => ({
   captureUser: user => dispatch(actions.captureUser(user)),
-  submitNewUser: user => dispatch(actions.submitNewUser(user))
+  submitNewUser: user => dispatch(actions.submitNewUser(user)),
+  signInUser: user => dispatch(actions.signInUser(user))
 });
 
 FormsContainer.propTypes = {
   match: PropTypes.object.isRequired,
   captureUser: PropTypes.func.isRequired,
-  submitNewUser: PropTypes.func.isRequired
+  submitNewUser: PropTypes.func.isRequired,
+  signInUser: PropTypes.func.isRequired
 };
 
 export default connect(null, mapDispatchToProps)(FormsContainer);
