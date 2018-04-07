@@ -16,6 +16,7 @@ ShallowWrapper {
     }
     signInUser={[Function]}
     submitNewUser={[Function]}
+    user={Object {}}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

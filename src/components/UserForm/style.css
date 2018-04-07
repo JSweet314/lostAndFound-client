@@ -24,6 +24,8 @@
   color: #5F504A;
 }
 
+.password-fields__password-toggle-btn,
+.user-form__btn,
 .user-form__input {
   padding: 1rem;
   color: #625049;
@@ -32,10 +34,11 @@
 .password-fields__input::placeholder,
 .user-form__input::placeholder {
   font-family: 'Exo', sans-serif;
+  color: #625049;
 }
 .password-fields__password-toggle-btn,
 .user-form__btn {
-background-color: #EBC9AD;
+  background-color: #EBC9AD;
   border: 2px solid #625049;
 }
 

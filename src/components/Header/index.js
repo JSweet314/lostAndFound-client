@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './style.css';
 
-const Header = ({ loggedIn, username }) => {
+const Header = ({ loggedIn, username, handleLogOut }) => {
   
   return (
     <header className='header'>
@@ -14,7 +14,11 @@ const Header = ({ loggedIn, username }) => {
         </li>
         <li className='header__nav-list-item'>
           {loggedIn ? 
-            <Link className='header__nav-link' to='/'>Log Out</Link> :
+            <Link 
+              onClick={() => handleLogOut()}
+              className='header__nav-link' to='/'>
+              Log Out
+            </Link> :
             <Link className='header__nav-link' to='/forms/login'>Log In</Link>
           }
         </li>
@@ -30,7 +34,8 @@ const Header = ({ loggedIn, username }) => {
 
 Header.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
-  username: PropTypes.string
+  username: PropTypes.string,
+  handleLogOut: PropTypes.func.isRequired
 };
 
 export default Header;

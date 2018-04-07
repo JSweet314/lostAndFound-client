@@ -16,6 +16,12 @@ export class FormsContainer extends Component {
     };
   }
 
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.loggedIn !== this.props.loggedIn) {
+      localStorage.setItem('LFUser', JSON.stringify(this.props.user));
+    }
+  }
+
   handleOnChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -67,11 +73,13 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export const mapStateToProps = state => ({
-  loggedIn: state.user.loggedIn
+  loggedIn: state.user.loggedIn,
+  user: state.user
 });
 
 FormsContainer.propTypes = {
   match: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired,
   loggedIn: PropTypes.bool.isRequired,
   captureUser: PropTypes.func.isRequired,
   submitNewUser: PropTypes.func.isRequired,

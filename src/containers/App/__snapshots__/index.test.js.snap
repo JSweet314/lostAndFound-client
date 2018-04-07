@@ -5,6 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    captureUser={[Function]}
+    logOutUser={[Function]}
     loggedIn={false}
     username=""
 />,
@@ -22,6 +24,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header
+          handleLogOut={[Function]}
           loggedIn={false}
           username=""
 />,
@@ -44,6 +47,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "handleLogOut": [Function],
           "loggedIn": false,
           "username": "",
         },
@@ -87,6 +91,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header
+            handleLogOut={[Function]}
             loggedIn={false}
             username=""
 />,
@@ -109,6 +114,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "handleLogOut": [Function],
             "loggedIn": false,
             "username": "",
           },
