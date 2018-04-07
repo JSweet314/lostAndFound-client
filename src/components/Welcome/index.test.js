@@ -4,7 +4,7 @@ import Welcome from './index';
 
 describe('Welcome', () => {
   it('should match a snapshot', () => {
-    const wrapper = shallow(<Welcome />);
+    const wrapper = shallow(<Welcome username=''/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

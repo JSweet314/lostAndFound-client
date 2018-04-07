@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 import Header from '../../components/Header';
 import FormsContainer from '../FormsContainer';
+import LandingPage from '../../components/LandingPage';
 import PropTypes from 'prop-types';
 import './style.css';
 
@@ -12,6 +13,7 @@ export class App extends Component {
     return (
       <div className="app">
         <Header loggedIn={loggedIn} username={username} />
+        <Route exact path='/' component={LandingPage} />
         <Route path="/forms/:id" component={FormsContainer} />
       </div>
     );

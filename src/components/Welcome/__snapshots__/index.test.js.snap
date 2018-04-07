@@ -4,7 +4,9 @@ exports[`Welcome should match a snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Welcome />,
+  Symbol(enzyme.__unrendered__): <Welcome
+    username=""
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -16,20 +18,26 @@ ShallowWrapper {
     "instance": null,
     "key": undefined,
     "nodeType": "host",
-    "props": Object {},
+    "props": Object {
+      "children": "Search or Sign In",
+      "className": "welcome-greeting",
+    },
     "ref": null,
-    "rendered": null,
-    "type": "div",
+    "rendered": "Search or Sign In",
+    "type": "h2",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
-      "props": Object {},
+      "props": Object {
+        "children": "Search or Sign In",
+        "className": "welcome-greeting",
+      },
       "ref": null,
-      "rendered": null,
-      "type": "div",
+      "rendered": "Search or Sign In",
+      "type": "h2",
     },
   ],
   Symbol(enzyme.__options__): Object {
