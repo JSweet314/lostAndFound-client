@@ -29,12 +29,12 @@ export class AppContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   loggedIn: state.user.loggedIn,
   username: state.user.username
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   logOutUser: () => dispatch(actions.logOutUser()),
   captureUser: user => dispatch(actions.captureUser(user))
 });

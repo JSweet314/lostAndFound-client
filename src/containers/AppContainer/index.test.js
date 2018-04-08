@@ -1,6 +1,7 @@
 import React from 'react';
-import {AppContainer} from './index';
+import {AppContainer, mapStateToProps, mapDispatchToProps} from './index';
 import {shallow} from 'enzyme';
+import * as actions from '../../actions';
 import LocalStorage from '../../__mocks__/localStorageMock';
 
 window.localStorage = new LocalStorage();
@@ -40,5 +41,36 @@ describe('AppContainer', () => {
     window.localStorage.clear = jest.fn();
     wrapper.instance().handleLogOut();
     expect(window.localStorage.clear).toHaveBeenCalled();
+  });
+
+  describe('mapStateToProps', () => {
+    it('should return an object of data from the store', () => {
+      const expected = {
+        loggedIn: true,
+        username: 'jon'
+      };
+      const mockState = {
+        user: {
+          loggedIn: true,
+          username: 'jon'
+        }
+      };
+      expect(mapStateToProps(mockState)).toEqual(expected);
+    });
+  });
+
+  describe('mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    it('should call dispatch with action creator logOutUser', () => {
+      mapped.logOutUser();
+      expect(mockDispatch).toHaveBeenCalledWith(actions.logOutUser());
+    });
+
+    it('should call dispatch with action creator captureUser', () => {
+      const mockUser = { loggedIn: true };
+      mapped.captureUser(mockUser);
+      expect(mockDispatch).toHaveBeenCalledWith(actions.captureUser(mockUser));
+    });
   });
 });
