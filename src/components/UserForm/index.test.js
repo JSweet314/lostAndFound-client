@@ -22,6 +22,7 @@ describe('UserForm', () => {
       />
     );
   });
+  
   it('should match a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });

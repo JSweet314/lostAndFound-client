@@ -29,6 +29,7 @@ ShallowWrapper {
 />,
         <button
           className="search-form__submit"
+          disabled={true}
           type="submit"
 >
           Search
@@ -62,6 +63,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Search",
           "className": "search-form__submit",
+          "disabled": true,
           "type": "submit",
         },
         "ref": null,
@@ -89,6 +91,7 @@ ShallowWrapper {
 />,
           <button
             className="search-form__submit"
+            disabled={true}
             type="submit"
 >
             Search
@@ -122,6 +125,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Search",
             "className": "search-form__submit",
+            "disabled": true,
             "type": "submit",
           },
           "ref": null,
