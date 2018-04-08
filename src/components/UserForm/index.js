@@ -17,6 +17,7 @@ const UserForm = ({
   const passwordDisplayBtnText = showPassword ? 'hide' : 'show';
   const buttonText = routeId === 'login' ? 'Log In' : 'Sign Up';
   const userNameRequired = routeId === 'login' ? false : true;
+  const isDisabled = email && password ? false : true;
   const type = showPassword ? 'text' : 'password';
 
   return (
@@ -62,6 +63,7 @@ const UserForm = ({
       </div>
       <button 
         className='user-form__btn user-form__btn--submit'
+        disabled={isDisabled}
         type='submit'>
         {buttonText}
       </button>

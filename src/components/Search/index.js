@@ -16,6 +16,7 @@ export default class Search extends Component {
 
   render() {
     const { searchValue } = this.state;
+    const isDisabled = searchValue ? false : true;
     return (
       <form className='search-form'>
         <input
@@ -28,6 +29,7 @@ export default class Search extends Component {
           placeholder="What are we lookin' for?" />
         <button 
           className='search-form__submit'
+          disabled={isDisabled}
           type='submit'>
           Search
         </button>

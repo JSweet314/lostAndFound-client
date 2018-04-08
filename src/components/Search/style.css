@@ -12,6 +12,7 @@
   border: 2px solid #625049;
   border-right: none;
   color: #625049;
+  outline: none;
 }
 
 .search-form__search::placeholder {
@@ -29,4 +30,16 @@
 .search-form__submit:hover {
   background-color: #625049;
   color: #EBC9AD;
+}
+
+.search-form__submit:disabled {
+  opacity: 0.8;
+  color: #625049;
+}
+
+.search-form__submit:disabled:hover {
+  opacity: 0.8;
+  background-color: #EBC9AD;
+  cursor: default;
+  color: #625049;
 }

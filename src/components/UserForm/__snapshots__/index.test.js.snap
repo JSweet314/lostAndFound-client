@@ -76,11 +76,12 @@ ShallowWrapper {
                     className="password-fields__password-toggle-btn"
                     onClick={[Function]}
           >
-                    show password
+                    show
           </button>
 </div>,
         <button
           className="user-form__btn user-form__btn--submit"
+          disabled={true}
           type="submit"
 >
           Log In
@@ -162,7 +163,7 @@ ShallowWrapper {
               className="password-fields__password-toggle-btn"
               onClick={[Function]}
 >
-              show password
+              show
 </button>,
           ],
           "className": "user-form__password-fields",
@@ -191,12 +192,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "show password",
+              "children": "show",
               "className": "password-fields__password-toggle-btn",
               "onClick": [Function],
             },
             "ref": null,
-            "rendered": "show password",
+            "rendered": "show",
             "type": "button",
           },
         ],
@@ -209,6 +210,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Log In",
           "className": "user-form__btn user-form__btn--submit",
+          "disabled": true,
           "type": "submit",
         },
         "ref": null,
@@ -274,11 +276,12 @@ ShallowWrapper {
                         className="password-fields__password-toggle-btn"
                         onClick={[Function]}
             >
-                        show password
+                        show
             </button>
 </div>,
           <button
             className="user-form__btn user-form__btn--submit"
+            disabled={true}
             type="submit"
 >
             Log In
@@ -360,7 +363,7 @@ ShallowWrapper {
                 className="password-fields__password-toggle-btn"
                 onClick={[Function]}
 >
-                show password
+                show
 </button>,
             ],
             "className": "user-form__password-fields",
@@ -389,12 +392,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "show password",
+                "children": "show",
                 "className": "password-fields__password-toggle-btn",
                 "onClick": [Function],
               },
               "ref": null,
-              "rendered": "show password",
+              "rendered": "show",
               "type": "button",
             },
           ],
@@ -407,6 +410,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Log In",
             "className": "user-form__btn user-form__btn--submit",
+            "disabled": true,
             "type": "submit",
           },
           "ref": null,
@@ -503,11 +507,12 @@ ShallowWrapper {
                     className="password-fields__password-toggle-btn"
                     onClick={[Function]}
           >
-                    hide password
+                    hide
           </button>
 </div>,
         <button
           className="user-form__btn user-form__btn--submit"
+          disabled={true}
           type="submit"
 >
           Sign Up
@@ -589,7 +594,7 @@ ShallowWrapper {
               className="password-fields__password-toggle-btn"
               onClick={[Function]}
 >
-              hide password
+              hide
 </button>,
           ],
           "className": "user-form__password-fields",
@@ -618,12 +623,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "hide password",
+              "children": "hide",
               "className": "password-fields__password-toggle-btn",
               "onClick": [Function],
             },
             "ref": null,
-            "rendered": "hide password",
+            "rendered": "hide",
             "type": "button",
           },
         ],
@@ -636,6 +641,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Sign Up",
           "className": "user-form__btn user-form__btn--submit",
+          "disabled": true,
           "type": "submit",
         },
         "ref": null,
@@ -701,11 +707,12 @@ ShallowWrapper {
                         className="password-fields__password-toggle-btn"
                         onClick={[Function]}
             >
-                        hide password
+                        hide
             </button>
 </div>,
           <button
             className="user-form__btn user-form__btn--submit"
+            disabled={true}
             type="submit"
 >
             Sign Up
@@ -787,7 +794,7 @@ ShallowWrapper {
                 className="password-fields__password-toggle-btn"
                 onClick={[Function]}
 >
-                hide password
+                hide
 </button>,
             ],
             "className": "user-form__password-fields",
@@ -816,12 +823,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "hide password",
+                "children": "hide",
                 "className": "password-fields__password-toggle-btn",
                 "onClick": [Function],
               },
               "ref": null,
-              "rendered": "hide password",
+              "rendered": "hide",
               "type": "button",
             },
           ],
@@ -834,6 +841,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Sign Up",
             "className": "user-form__btn user-form__btn--submit",
+            "disabled": true,
             "type": "submit",
           },
           "ref": null,

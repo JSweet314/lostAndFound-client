@@ -48,6 +48,16 @@
   color: #EBC9AD;
 }
 
+.user-form__btn:disabled {
+  opacity: 0.5;
+}
+
+.user-form__btn:disabled:hover {
+  background-color: #EBC9AD;
+  color: #625049;
+  cursor: default;
+}
+
 .user-form__password-fields {
   display: flex;
 }
