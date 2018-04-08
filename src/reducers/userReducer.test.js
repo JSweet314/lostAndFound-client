@@ -13,4 +13,8 @@ describe('userReducer', () => {
     expect(userReducer(mockUser, actions.logOutUser()))
       .toEqual({loggedIn: false});
   });
+
+  it('should return an initial state by default', () => {
+    expect(userReducer(undefined, {})).toEqual({loggedIn: false});
+  });
 });

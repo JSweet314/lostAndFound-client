@@ -12,13 +12,12 @@ const UserForm = ({
   showPassword,
   togglePasswordVisibility
 }) => {
-  const buttonText = routeId === 'login' ? 'Log In' : 'Sign Up';
-  const usernameDisplay = routeId === 'login' ? 'none' : 'initial';
   const welcomeBackDisplay = routeId === 'login' ? 'initial' : 'none';
+  const usernameDisplay = routeId === 'login' ? 'none' : 'initial';
+  const passwordDisplayBtnText = showPassword ? 'hide' : 'show';
+  const buttonText = routeId === 'login' ? 'Log In' : 'Sign Up';
   const userNameRequired = routeId === 'login' ? false : true;
   const type = showPassword ? 'text' : 'password';
-  const passwordDisplayBtnText = showPassword ?
-    'hide password' : 'show password';
 
   return (
     <form
