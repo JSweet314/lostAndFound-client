@@ -6,10 +6,10 @@
 }
 
 .search-form__search {
-  padding: 0.4rem 1rem; 
+  border: 2px solid #625049;
+  padding: 0.4rem 1rem;
   width: 40%;
   font-size: 3rem;
-  border: 2px solid #625049;
   border-right: none;
   color: #625049;
   outline: none;
@@ -23,6 +23,7 @@
   background-color: #EBC9AD;
   border: 2px solid #625049;
   border-left: none;
+  color: #625049;
   font-size: 3rem;
   font-family: 'Exo', sans-serif;
 }
@@ -33,13 +34,12 @@
 }
 
 .search-form__submit:disabled {
-  opacity: 0.8;
-  color: #625049;
+  background-color: rgba(235, 201, 173, 0.5);
+  color: rgba(98, 80, 73, 0.5);
 }
 
 .search-form__submit:disabled:hover {
-  opacity: 0.8;
-  background-color: #EBC9AD;
+  background-color: rgba(235, 201, 173, 0.5);
+  color: rgba(98, 80, 73, 0.5);
   cursor: default;
-  color: #625049;
 }

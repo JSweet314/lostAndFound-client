@@ -1,0 +1,23 @@
+.report-link {
+  display: block;
+  margin: auto;
+  width: 40%;
+  border: 2px solid #625049;
+  background-color: #EBC9AD;
+  color: #625049;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.report-link:hover {
+  background-color: #625049;
+  color: #EBC9AD;
+}
+
+.or {
+  margin: 1rem;
+  color: #625049;
+  font-size: 3rem;
+  text-align: center;
+}
