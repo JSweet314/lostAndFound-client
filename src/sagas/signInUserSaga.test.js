@@ -1,5 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { signInUserSaga, listenForSignInUser } from './signInUserSaga';
+import shajs from 'sha.js';
 import * as API from '../api';
 import * as actions from '../actions';
 
@@ -20,19 +21,20 @@ describe('listenForSignInUser', () => {
 });
 
 describe('signInUserSaga', () => {
-  let generator, user, mockAction;
+  let generator, user, mockAction, hashedPassword;
 
   beforeAll(() => {
     user = {
       email: 'will@gmail.com',
       password: 'abc'
     };
+    hashedPassword = new shajs.sha256().update(user.password).digest('hex');
     mockAction = actions.signInUser(user);
     generator = signInUserSaga(mockAction);
   });
 
   it('should call the API', () => {
-    const expected = call(API.signInUser, user);
+    const expected = call(API.signInUser, {...user, password: hashedPassword});
     expect(generator.next().value).toEqual(expected);
   });
 

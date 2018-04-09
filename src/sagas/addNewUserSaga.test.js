@@ -1,5 +1,6 @@
 import {call, put, takeLatest} from 'redux-saga/effects';
 import {addNewUserSaga, listenForAddNewUser} from './addNewUserSaga';
+import shajs from 'sha.js';
 import * as API from '../api';
 import * as actions from '../actions';
 
@@ -20,7 +21,7 @@ describe('listenForAddNewUser', () => {
 });
 
 describe('addNewUserSaga', () => {
-  let generator, user, mockAction;
+  let generator, user, mockAction, hashedPassword;
 
   beforeAll(() => {
     user = {
@@ -28,12 +29,13 @@ describe('addNewUserSaga', () => {
       email: 'will@gmail.com',
       password: 'abc'
     };
+    hashedPassword = new shajs.sha256().update(user.password).digest('hex');
     mockAction = actions.submitNewUser(user);
     generator = addNewUserSaga(mockAction);
   });
 
   it('should call the API', () => {
-    const expected = call(API.addUser, user);
+    const expected = call(API.addUser, {...user, password: hashedPassword});
     expect(generator.next().value).toEqual(expected);
   });
 
@@ -46,6 +48,11 @@ describe('addNewUserSaga', () => {
     };
     const expected = put(actions.captureUser(user));
     expect(generator.next(userId).value).toEqual(expected);
+  });
+
+  it('should put clearErrorMessage action on the stack', () => {
+    const expected = put(actions.clearErrorMessage());
+    expect(generator.next().value).toEqual(expected);
   });
 
   it('should be done', () => {
