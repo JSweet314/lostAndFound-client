@@ -1,4 +1,8 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 1rem;
   background-color: #5D2C12;
   color: #EBC9AD;
@@ -11,10 +15,6 @@
   font-size: 5rem;
   font-weight: 100;
   text-align: center;
-}
-
-.header__nav-list {
-  float: right;
 }
 
 .header__nav-list-item {
