@@ -1,0 +1,637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportForm should match a snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ReportForm
+    date=""
+    description=""
+    handleGoBack={[Function]}
+    handleOnChange={[Function]}
+    handleOnSubmit={[Function]}
+    location=""
+    name=""
+    reward=""
+    routeId="lost"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="report-form__heading"
+>
+          lost
+</h2>,
+        <label
+          className="report-form__label"
+          htmlFor="name"
+>
+          Item Name
+</label>,
+        <input
+          className="report-form__input"
+          name="name"
+          onChange={[Function]}
+          placeholder="required"
+          type="text"
+          value=""
+/>,
+        <label
+          className="report-form__label"
+          htmlFor="description"
+>
+          Description
+</label>,
+        <textarea
+          className="report-form__textarea"
+          name="description"
+          onChange={[Function]}
+          placeholder="required"
+          type="text"
+          value=""
+/>,
+        <label
+          className="report-form__label"
+          htmlFor="location"
+>
+          Location
+</label>,
+        <input
+          className="report-form__input"
+          name="location"
+          onChange={[Function]}
+          placeholder="required"
+          type="text"
+          value=""
+/>,
+        <label
+          className="report-form__label"
+          htmlFor="date"
+>
+          Date
+</label>,
+        <input
+          className="report-form__input"
+          name="date"
+          onChange={[Function]}
+          placeholder="required"
+          type="date"
+          value=""
+/>,
+        <label
+          className="report-form__label"
+          htmlFor="reward"
+          style={
+                    Object {
+                              "display": "initial",
+                            }
+          }
+>
+          Reward?
+</label>,
+        <input
+          className="report-form__input"
+          name="reward"
+          onChange={[Function]}
+          placeholder="$?"
+          style={
+                    Object {
+                              "display": "initial",
+                            }
+          }
+          type="text"
+          value=""
+/>,
+        <button
+          className="report-form__btn"
+          type="submit"
+>
+          Submit
+</button>,
+        <button
+          className="report-form__btn"
+          onClick={[Function]}
+>
+          Back
+</button>,
+      ],
+      "className": "report-form",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "lost",
+          "className": "report-form__heading",
+        },
+        "ref": null,
+        "rendered": "lost",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Item Name",
+          "className": "report-form__label",
+          "htmlFor": "name",
+        },
+        "ref": null,
+        "rendered": "Item Name",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "report-form__input",
+          "name": "name",
+          "onChange": [Function],
+          "placeholder": "required",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Description",
+          "className": "report-form__label",
+          "htmlFor": "description",
+        },
+        "ref": null,
+        "rendered": "Description",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "report-form__textarea",
+          "name": "description",
+          "onChange": [Function],
+          "placeholder": "required",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Location",
+          "className": "report-form__label",
+          "htmlFor": "location",
+        },
+        "ref": null,
+        "rendered": "Location",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "report-form__input",
+          "name": "location",
+          "onChange": [Function],
+          "placeholder": "required",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Date",
+          "className": "report-form__label",
+          "htmlFor": "date",
+        },
+        "ref": null,
+        "rendered": "Date",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "report-form__input",
+          "name": "date",
+          "onChange": [Function],
+          "placeholder": "required",
+          "type": "date",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Reward?",
+          "className": "report-form__label",
+          "htmlFor": "reward",
+          "style": Object {
+            "display": "initial",
+          },
+        },
+        "ref": null,
+        "rendered": "Reward?",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "report-form__input",
+          "name": "reward",
+          "onChange": [Function],
+          "placeholder": "$?",
+          "style": Object {
+            "display": "initial",
+          },
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "className": "report-form__btn",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Back",
+          "className": "report-form__btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Back",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="report-form__heading"
+>
+            lost
+</h2>,
+          <label
+            className="report-form__label"
+            htmlFor="name"
+>
+            Item Name
+</label>,
+          <input
+            className="report-form__input"
+            name="name"
+            onChange={[Function]}
+            placeholder="required"
+            type="text"
+            value=""
+/>,
+          <label
+            className="report-form__label"
+            htmlFor="description"
+>
+            Description
+</label>,
+          <textarea
+            className="report-form__textarea"
+            name="description"
+            onChange={[Function]}
+            placeholder="required"
+            type="text"
+            value=""
+/>,
+          <label
+            className="report-form__label"
+            htmlFor="location"
+>
+            Location
+</label>,
+          <input
+            className="report-form__input"
+            name="location"
+            onChange={[Function]}
+            placeholder="required"
+            type="text"
+            value=""
+/>,
+          <label
+            className="report-form__label"
+            htmlFor="date"
+>
+            Date
+</label>,
+          <input
+            className="report-form__input"
+            name="date"
+            onChange={[Function]}
+            placeholder="required"
+            type="date"
+            value=""
+/>,
+          <label
+            className="report-form__label"
+            htmlFor="reward"
+            style={
+                        Object {
+                                    "display": "initial",
+                                  }
+            }
+>
+            Reward?
+</label>,
+          <input
+            className="report-form__input"
+            name="reward"
+            onChange={[Function]}
+            placeholder="$?"
+            style={
+                        Object {
+                                    "display": "initial",
+                                  }
+            }
+            type="text"
+            value=""
+/>,
+          <button
+            className="report-form__btn"
+            type="submit"
+>
+            Submit
+</button>,
+          <button
+            className="report-form__btn"
+            onClick={[Function]}
+>
+            Back
+</button>,
+        ],
+        "className": "report-form",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "lost",
+            "className": "report-form__heading",
+          },
+          "ref": null,
+          "rendered": "lost",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Item Name",
+            "className": "report-form__label",
+            "htmlFor": "name",
+          },
+          "ref": null,
+          "rendered": "Item Name",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "report-form__input",
+            "name": "name",
+            "onChange": [Function],
+            "placeholder": "required",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Description",
+            "className": "report-form__label",
+            "htmlFor": "description",
+          },
+          "ref": null,
+          "rendered": "Description",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "report-form__textarea",
+            "name": "description",
+            "onChange": [Function],
+            "placeholder": "required",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Location",
+            "className": "report-form__label",
+            "htmlFor": "location",
+          },
+          "ref": null,
+          "rendered": "Location",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "report-form__input",
+            "name": "location",
+            "onChange": [Function],
+            "placeholder": "required",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Date",
+            "className": "report-form__label",
+            "htmlFor": "date",
+          },
+          "ref": null,
+          "rendered": "Date",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "report-form__input",
+            "name": "date",
+            "onChange": [Function],
+            "placeholder": "required",
+            "type": "date",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Reward?",
+            "className": "report-form__label",
+            "htmlFor": "reward",
+            "style": Object {
+              "display": "initial",
+            },
+          },
+          "ref": null,
+          "rendered": "Reward?",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "report-form__input",
+            "name": "reward",
+            "onChange": [Function],
+            "placeholder": "$?",
+            "style": Object {
+              "display": "initial",
+            },
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "className": "report-form__btn",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Back",
+            "className": "report-form__btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Back",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

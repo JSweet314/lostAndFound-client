@@ -25,3 +25,13 @@ export const captureErrorMessage = message => ({
 export const clearErrorMessage = () => ({
   type: 'CLEAR_ERROR_MESSAGE'
 });
+
+export const reportItem = item => ({
+  type: 'REPORT_ITEM',
+  item
+});
+
+export const captureItem = itemId => ({
+  type: 'CAPTURE_ITEM',
+  itemId
+});

@@ -26,7 +26,7 @@ export default class Search extends Component {
           name='searchValue'
           onChange={event => this.handleOnChange(event)}
           aria-label='item search'
-          placeholder="What are we lookin' for?" />
+          placeholder="lookin' for something specific?" />
         <button 
           className='search-form__submit'
           disabled={isDisabled}

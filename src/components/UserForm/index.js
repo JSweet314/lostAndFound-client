@@ -17,6 +17,7 @@ const UserForm = ({
   const passwordDisplayBtnText = showPassword ? 'hide' : 'show';
   const buttonText = routeId === 'login' ? 'Log In' : 'Sign Up';
   const userNameRequired = routeId === 'login' ? false : true;
+  const showDisabled = password ? false : true;
   const isDisabled = email && password ? false : true;
   const type = showPassword ? 'text' : 'password';
 
@@ -56,6 +57,7 @@ const UserForm = ({
           required
           type={type} />
         <button 
+          disabled={showDisabled}
           className='password-fields__password-toggle-btn'
           onClick={event => togglePasswordVisibility(event)}>
           {passwordDisplayBtnText}

@@ -1,0 +1,30 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.landing-page__btnGroup {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 3rem 0;
+  width: 50%;
+}
+
+.landing-page__btn {
+  padding: 1rem;
+  border: 2px solid #625049;
+  background-color: #C28744;
+  color: #310906;
+  font-size: 3rem;  
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px #310906
+}
+
+.landing-page__btn:hover {
+  background-color: #625049;
+  color: #fff;
+}

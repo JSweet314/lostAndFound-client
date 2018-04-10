@@ -1,12 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { FormsContainer, mapDispatchToProps, mapStateToProps } from './index';
+import { 
+  UserFormContainer, 
+  mapDispatchToProps, 
+  mapStateToProps 
+} from './index';
 import LocalStorage from '../../__mocks__/localStorageMock';
 import * as actions from '../../actions';
 
 window.localStorage = new LocalStorage();
 
-describe('FormsContainer', () => {
+describe('UserFormContainer', () => {
   let wrapper;
   const mockUser = { username: 'tom', password: 'abc', email: 'tom@gmail.com' };
   const mockEvent = { preventDefault: jest.fn() };
@@ -17,7 +21,7 @@ describe('FormsContainer', () => {
   const mockCaptureUser = jest.fn();
   beforeEach(() => {
     wrapper = shallow(
-      <FormsContainer
+      <UserFormContainer
         user={{}}
         loggedIn={false}
         captureUser={mockCaptureUser}
@@ -54,7 +58,7 @@ describe('FormsContainer', () => {
   it('should store a logged in user in localStorage after signin', () => {
     window.localStorage.setItem = jest.fn();
     wrapper = shallow(
-      <FormsContainer
+      <UserFormContainer
         user={{loggedIn: true}}
         loggedIn={true}
         captureUser={mockCaptureUser}

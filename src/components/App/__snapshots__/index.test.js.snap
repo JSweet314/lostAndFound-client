@@ -34,7 +34,11 @@ ShallowWrapper {
 />,
         <Route
           component={[Function]}
-          path="/forms/:id"
+          path="/user-forms/:id"
+/>,
+        <Route
+          component={[Function]}
+          path="/report/:id"
 />,
       ],
       "className": "app",
@@ -73,7 +77,19 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
-          "path": "/forms/:id",
+          "path": "/user-forms/:id",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/report/:id",
         },
         "ref": null,
         "rendered": null,
@@ -101,7 +117,11 @@ ShallowWrapper {
 />,
           <Route
             component={[Function]}
-            path="/forms/:id"
+            path="/user-forms/:id"
+/>,
+          <Route
+            component={[Function]}
+            path="/report/:id"
 />,
         ],
         "className": "app",
@@ -140,7 +160,19 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "path": "/forms/:id",
+            "path": "/user-forms/:id",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/report/:id",
           },
           "ref": null,
           "rendered": null,
