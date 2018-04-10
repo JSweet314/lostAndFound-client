@@ -23,7 +23,7 @@ ShallowWrapper {
           className="search-form__search"
           name="searchValue"
           onChange={[Function]}
-          placeholder="What are we lookin' for?"
+          placeholder="lookin' for something specific?"
           type="text"
           value=""
 />,
@@ -48,7 +48,7 @@ ShallowWrapper {
           "className": "search-form__search",
           "name": "searchValue",
           "onChange": [Function],
-          "placeholder": "What are we lookin' for?",
+          "placeholder": "lookin' for something specific?",
           "type": "text",
           "value": "",
         },
@@ -85,7 +85,7 @@ ShallowWrapper {
             className="search-form__search"
             name="searchValue"
             onChange={[Function]}
-            placeholder="What are we lookin' for?"
+            placeholder="lookin' for something specific?"
             type="text"
             value=""
 />,
@@ -110,7 +110,7 @@ ShallowWrapper {
             "className": "search-form__search",
             "name": "searchValue",
             "onChange": [Function],
-            "placeholder": "What are we lookin' for?",
+            "placeholder": "lookin' for something specific?",
             "type": "text",
             "value": "",
           },

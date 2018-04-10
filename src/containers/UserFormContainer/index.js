@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import UserForm from '../../components/UserForm';
 import * as actions from '../../actions';
 
-export class FormsContainer extends Component {
+export class UserFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -81,7 +81,7 @@ export const mapStateToProps = state => ({
   user: state.user
 });
 
-FormsContainer.propTypes = {
+UserFormContainer.propTypes = {
   match: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
   loggedIn: PropTypes.bool.isRequired,
@@ -90,4 +90,4 @@ FormsContainer.propTypes = {
   signInUser: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FormsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(UserFormContainer);
