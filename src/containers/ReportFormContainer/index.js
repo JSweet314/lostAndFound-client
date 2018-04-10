@@ -26,6 +26,13 @@ export class ReportFormContainer extends Component {
     const { id } = this.props.match.params;
     const { userId } = this.props;
     this.props.reportItem({ ...this.state, status: id, userId });
+    this.setState({
+      name: '',
+      description: '',
+      location: '',
+      date: '',
+      reward: ''
+    }, this.props.history.goBack);
   }
 
   handleOnChange = event => {
@@ -56,6 +63,7 @@ const mapStateToProps = state => ({
 ReportFormContainer.propTypes = {
   history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
+  userId: PropTypes.number,
   reportItem: PropTypes.func.isRequired
 };
 

@@ -14,6 +14,8 @@ const ReportForm = ({
   routeId
 }) => {
   const display = {display: routeId === 'lost' ? 'initial' : 'none'};
+  const locationText = routeId === 'lost' ? 
+    'Last Known Location' : 'Found Location'; 
   return (
     <form
       onSubmit={event => handleOnSubmit(event)}
@@ -41,7 +43,11 @@ const ReportForm = ({
         placeholder='required'
         className='report-form__textarea'
         type='text' />
-      <label htmlFor='location' className='report-form__label'>Location</label>
+      <label 
+        htmlFor='location' 
+        className='report-form__label'>
+        {locationText}
+      </label>
       <input
         required
         onChange={event => handleOnChange(event)}

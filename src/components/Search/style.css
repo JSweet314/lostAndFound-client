@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 50%;
 }
 
 .search-form__search {
@@ -11,7 +11,7 @@
   border-radius: 15px 0px 0px 15px;
   border-right: none;
   padding: 0.4rem 1rem;
-  width: 45%;
+  width: 55%;
   font-size: 3rem;
   color: #310906;
   outline: none;
@@ -23,7 +23,7 @@
 
 .search-form__search::placeholder {
   font-family: 'Exo', sans-serif;
-  color: #31090648;
+  color: #310906;
 }
 
 .search-form__submit {
