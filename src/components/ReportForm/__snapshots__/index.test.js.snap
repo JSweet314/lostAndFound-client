@@ -16,9 +16,386 @@ ShallowWrapper {
     "instance": null,
     "key": undefined,
     "nodeType": "host",
-    "props": Object {},
+    "props": Object {
+      "children": Array [
+        <fieldset>
+          <legend
+                    className="report-form__legend"
+          >
+                    Item Status (required):
+          </legend>
+          <input
+                    checked={true}
+                    id="lost"
+                    name="itemStatus"
+                    type="radio"
+          />
+          <label
+                    className="report-form__label"
+                    htmlFor="lost"
+          >
+                    lost
+          </label>
+          <input
+                    id="found"
+                    name="itemStatus"
+                    type="radio"
+          />
+          <label
+                    className="report-form__label"
+                    htmlFor="found"
+          >
+                    found
+          </label>
+</fieldset>,
+        <label
+          className="report-form__label"
+>
+          Item Name:
+          <input
+                    className="report-form__input"
+                    placeholder="required"
+                    type="text"
+          />
+</label>,
+        <label
+          className="report-form__label"
+>
+          Description:
+          <input
+                    className="report-form__input"
+                    placeholder="required"
+                    type="text"
+          />
+</label>,
+        <label
+          className="report-form__label"
+>
+          Location:
+          <input
+                    className="report-form__input"
+                    placeholder="required"
+                    type="text"
+          />
+</label>,
+        <label
+          className="report-form__label"
+>
+          Date:
+          <input
+                    className="report-form__input"
+                    placeholder="required"
+                    type="date"
+          />
+</label>,
+        <label
+          className="report-form__label"
+>
+          Reward?:
+          <input
+                    className="report-form__input"
+                    type="text"
+          />
+</label>,
+        <button
+          className="report-form__submit"
+          type="submit"
+>
+          Submit
+</button>,
+      ],
+      "className": "report-form",
+    },
     "ref": null,
-    "rendered": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <legend
+              className="report-form__legend"
+>
+              Item Status (required):
+</legend>,
+            <input
+              checked={true}
+              id="lost"
+              name="itemStatus"
+              type="radio"
+/>,
+            <label
+              className="report-form__label"
+              htmlFor="lost"
+>
+              lost
+</label>,
+            <input
+              id="found"
+              name="itemStatus"
+              type="radio"
+/>,
+            <label
+              className="report-form__label"
+              htmlFor="found"
+>
+              found
+</label>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Item Status (required):",
+              "className": "report-form__legend",
+            },
+            "ref": null,
+            "rendered": "Item Status (required):",
+            "type": "legend",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "checked": true,
+              "id": "lost",
+              "name": "itemStatus",
+              "type": "radio",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "lost",
+              "className": "report-form__label",
+              "htmlFor": "lost",
+            },
+            "ref": null,
+            "rendered": "lost",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "found",
+              "name": "itemStatus",
+              "type": "radio",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "found",
+              "className": "report-form__label",
+              "htmlFor": "found",
+            },
+            "ref": null,
+            "rendered": "found",
+            "type": "label",
+          },
+        ],
+        "type": "fieldset",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Item Name:",
+            <input
+              className="report-form__input"
+              placeholder="required"
+              type="text"
+/>,
+          ],
+          "className": "report-form__label",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Item Name:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "report-form__input",
+              "placeholder": "required",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Description:",
+            <input
+              className="report-form__input"
+              placeholder="required"
+              type="text"
+/>,
+          ],
+          "className": "report-form__label",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Description:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "report-form__input",
+              "placeholder": "required",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Location:",
+            <input
+              className="report-form__input"
+              placeholder="required"
+              type="text"
+/>,
+          ],
+          "className": "report-form__label",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Location:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "report-form__input",
+              "placeholder": "required",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Date:",
+            <input
+              className="report-form__input"
+              placeholder="required"
+              type="date"
+/>,
+          ],
+          "className": "report-form__label",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Date:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "report-form__input",
+              "placeholder": "required",
+              "type": "date",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Reward?:",
+            <input
+              className="report-form__input"
+              type="text"
+/>,
+          ],
+          "className": "report-form__label",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Reward?:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "report-form__input",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "className": "report-form__submit",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+    ],
     "type": "form",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -26,9 +403,386 @@ ShallowWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
-      "props": Object {},
+      "props": Object {
+        "children": Array [
+          <fieldset>
+            <legend
+                        className="report-form__legend"
+            >
+                        Item Status (required):
+            </legend>
+            <input
+                        checked={true}
+                        id="lost"
+                        name="itemStatus"
+                        type="radio"
+            />
+            <label
+                        className="report-form__label"
+                        htmlFor="lost"
+            >
+                        lost
+            </label>
+            <input
+                        id="found"
+                        name="itemStatus"
+                        type="radio"
+            />
+            <label
+                        className="report-form__label"
+                        htmlFor="found"
+            >
+                        found
+            </label>
+</fieldset>,
+          <label
+            className="report-form__label"
+>
+            Item Name:
+            <input
+                        className="report-form__input"
+                        placeholder="required"
+                        type="text"
+            />
+</label>,
+          <label
+            className="report-form__label"
+>
+            Description:
+            <input
+                        className="report-form__input"
+                        placeholder="required"
+                        type="text"
+            />
+</label>,
+          <label
+            className="report-form__label"
+>
+            Location:
+            <input
+                        className="report-form__input"
+                        placeholder="required"
+                        type="text"
+            />
+</label>,
+          <label
+            className="report-form__label"
+>
+            Date:
+            <input
+                        className="report-form__input"
+                        placeholder="required"
+                        type="date"
+            />
+</label>,
+          <label
+            className="report-form__label"
+>
+            Reward?:
+            <input
+                        className="report-form__input"
+                        type="text"
+            />
+</label>,
+          <button
+            className="report-form__submit"
+            type="submit"
+>
+            Submit
+</button>,
+        ],
+        "className": "report-form",
+      },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <legend
+                className="report-form__legend"
+>
+                Item Status (required):
+</legend>,
+              <input
+                checked={true}
+                id="lost"
+                name="itemStatus"
+                type="radio"
+/>,
+              <label
+                className="report-form__label"
+                htmlFor="lost"
+>
+                lost
+</label>,
+              <input
+                id="found"
+                name="itemStatus"
+                type="radio"
+/>,
+              <label
+                className="report-form__label"
+                htmlFor="found"
+>
+                found
+</label>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Item Status (required):",
+                "className": "report-form__legend",
+              },
+              "ref": null,
+              "rendered": "Item Status (required):",
+              "type": "legend",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "checked": true,
+                "id": "lost",
+                "name": "itemStatus",
+                "type": "radio",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "lost",
+                "className": "report-form__label",
+                "htmlFor": "lost",
+              },
+              "ref": null,
+              "rendered": "lost",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "found",
+                "name": "itemStatus",
+                "type": "radio",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "found",
+                "className": "report-form__label",
+                "htmlFor": "found",
+              },
+              "ref": null,
+              "rendered": "found",
+              "type": "label",
+            },
+          ],
+          "type": "fieldset",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Item Name:",
+              <input
+                className="report-form__input"
+                placeholder="required"
+                type="text"
+/>,
+            ],
+            "className": "report-form__label",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Item Name:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "report-form__input",
+                "placeholder": "required",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Description:",
+              <input
+                className="report-form__input"
+                placeholder="required"
+                type="text"
+/>,
+            ],
+            "className": "report-form__label",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Description:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "report-form__input",
+                "placeholder": "required",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Location:",
+              <input
+                className="report-form__input"
+                placeholder="required"
+                type="text"
+/>,
+            ],
+            "className": "report-form__label",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Location:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "report-form__input",
+                "placeholder": "required",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Date:",
+              <input
+                className="report-form__input"
+                placeholder="required"
+                type="date"
+/>,
+            ],
+            "className": "report-form__label",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Date:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "report-form__input",
+                "placeholder": "required",
+                "type": "date",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Reward?:",
+              <input
+                className="report-form__input"
+                type="text"
+/>,
+            ],
+            "className": "report-form__label",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Reward?:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "report-form__input",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "className": "report-form__submit",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+      ],
       "type": "form",
     },
   ],

@@ -14,6 +14,7 @@
   border: 2px solid #625049;
   font-family: 'Exo', sans-serif;
   font-size: 2rem;
+  background-color: rgba(256, 256, 256, 0.5);
 }
 
 .user-form__greeting {
@@ -28,7 +29,7 @@
 .user-form__btn,
 .user-form__input {
   padding: 1rem;
-  color: #625049;
+  color: #310906;
 }
 
 .password-fields__input::placeholder,
@@ -38,22 +39,24 @@
 }
 .password-fields__password-toggle-btn,
 .user-form__btn {
-  background-color: #EBC9AD;
+  background-color: #C28744;
   border: 2px solid #625049;
+  box-shadow: 2px 2px 10px #310906
 }
 
 .password-fields__password-toggle-btn:hover,
 .user-form__btn:hover {
   background-color: #625049;
-  color: #EBC9AD;
+  color: #fff;
 }
 
+.password-fields__password-toggle-btn:disabled,
 .user-form__btn:disabled {
   opacity: 0.5;
 }
 
 .user-form__btn:disabled:hover {
-  background-color: #EBC9AD;
+  background-color: #C28744;
   color: #625049;
   cursor: default;
 }
@@ -63,6 +66,7 @@
 }
 
 .password-fields__input {
+  background-color: rgba(256, 256, 256, 0.5);
   width: 100%;
   font-size: 2rem;
   padding: 1rem;
@@ -74,4 +78,5 @@
   margin: 0;
   border: none;
   width: 12rem;
+  box-shadow: none;
 }

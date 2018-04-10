@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import FormsContainer from '../../containers/FormsContainer';
 import Header from '../Header';
 import LandingPage from '../LandingPage';
+import ReportForm from '../ReportForm';
 import './style.css';
 
 const App = ({ username, loggedIn, handleLogOut }) => {
@@ -15,7 +16,8 @@ const App = ({ username, loggedIn, handleLogOut }) => {
         handleLogOut={handleLogOut} />
       <Route exact path='/' render={() =>
         <LandingPage username={username} />} />
-      <Route path="/forms/:id" component={FormsContainer} />
+      <Route path='/user-forms/:id' component={FormsContainer} />
+      <Route path='/report/:id' component={ReportForm} />
     </div>
   );
 };

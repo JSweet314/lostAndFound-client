@@ -2,19 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 1rem;
   background-color: #5D2C12;
-  color: #EBC9AD;
+  color: #D3944A;
   height: 10%;
 }
 
 .header__h1 {
+  color: #D3944A;
   display: inline-block;
   margin: 0;
   font-size: 5rem;
   font-weight: 100;
   text-align: center;
+  text-decoration: none;
 }
 
 .header__nav-list-item {
@@ -25,10 +26,15 @@
 .header__username,
 .header__nav-link {
   font-size: 2rem;
-  color: #EBC9AD;
+  color: #D3944A;
   text-decoration: none;
 }
 
-.header__nav-link:hover {
+.header__username {
   color: #C47E59;
+}
+
+.header__h1:hover,
+.header__nav-link:hover {
+  color: #fff;
 }

@@ -36,6 +36,10 @@ ShallowWrapper {
           component={[Function]}
           path="/forms/:id"
 />,
+        <Route
+          component={[Function]}
+          path="/report"
+/>,
       ],
       "className": "app",
     },
@@ -79,6 +83,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/report",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -102,6 +118,10 @@ ShallowWrapper {
           <Route
             component={[Function]}
             path="/forms/:id"
+/>,
+          <Route
+            component={[Function]}
+            path="/report"
 />,
         ],
         "className": "app",
@@ -141,6 +161,18 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "path": "/forms/:id",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/report",
           },
           "ref": null,
           "rendered": null,

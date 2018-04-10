@@ -9,14 +9,14 @@ const LandingPage = ({username}) => {
   return (
     <main className='landing-page'>
       <Welcome username={username} />
-      <Search />
       {
         username &&
-        <div>
-          <h2 className='or'>Or</h2>
-          <Link className='report-link' to='/report'>Report Found Item</Link> 
+        <div className='landing-page__btnGroup'>
+          <Link className='landing-page__btn' to='/report/lost'>Lost an Item?</Link> 
+          <Link className='landing-page__btn' to='/report/found'>Found an Item?</Link> 
         </div>
       }
+      <Search />
     </main>
   );
 };
