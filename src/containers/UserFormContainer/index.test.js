@@ -15,7 +15,8 @@ describe('UserFormContainer', () => {
   const mockUser = { username: 'tom', password: 'abc', email: 'tom@gmail.com' };
   const mockEvent = { preventDefault: jest.fn() };
   const mockChangeEvent = { target: { name: 'name', value: 'tom' } };
-  const mockLoginMatch = { params: { id: 'signup' } };
+  const mockSignupMatch = { params: { id: 'signup' } };
+  const mockLoginMatch = { params: { id: 'login' } };
   const mockSubmitNewUser = jest.fn();
   const mockSignInUser = jest.fn();
   const mockCaptureUser = jest.fn();
@@ -27,7 +28,7 @@ describe('UserFormContainer', () => {
         captureUser={mockCaptureUser}
         submitNewUser={mockSubmitNewUser}
         signInUser={mockSignInUser}
-        match={mockLoginMatch}
+        match={mockSignupMatch}
       />
     );
   });
@@ -47,6 +48,23 @@ describe('UserFormContainer', () => {
     expect(mockSubmitNewUser).toHaveBeenCalledWith(mockUser);
   });
 
+  it('should call signInUser to log in a returning user', () => {
+    const wrapper = shallow(
+      <UserFormContainer
+        user={{}}
+        loggedIn={false}
+        captureUser={mockCaptureUser}
+        submitNewUser={mockSubmitNewUser}
+        signInUser={mockSignInUser}
+        match={mockLoginMatch}
+      />
+    );
+    wrapper.setState(mockUser);
+    wrapper.instance().handleOnSubmit(mockEvent);
+    const expected = {email: mockUser.email, password: mockUser.password};
+    expect(mockSignInUser).toHaveBeenCalledWith(expected);
+  });
+
   it('should reset the state when a form is submitted', () => {
     wrapper.setState(mockUser);
     wrapper.instance().handleOnSubmit(mockEvent);
@@ -64,7 +82,7 @@ describe('UserFormContainer', () => {
         captureUser={mockCaptureUser}
         submitNewUser={mockSubmitNewUser}
         signInUser={mockSignInUser}
-        match={mockLoginMatch}
+        match={mockSignupMatch}
       />
     );
     wrapper.instance().componentDidUpdate({loggedIn: false});
