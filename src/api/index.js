@@ -102,7 +102,13 @@ export const fetchUserItems = async userId => {
       }
     });
     if (response.ok) {
-      return await response.json();
+      const parsed = await response.json();
+      const withLocation =  await parsed.items.map(async (item) => {
+        const location = await fetchLocationDetails(item.locationId);
+        const {lat, lng, name} = location;
+        return {...item, locationName: name, location: {lat, lng}};
+      });
+      return Promise.all(withLocation);
     } else {
       throw new Error('fetchUserItems Failed');
     }

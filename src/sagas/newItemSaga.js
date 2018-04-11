@@ -11,8 +11,8 @@ export function* newItemSaga(action) {
     const location = { name: action.item.location, ...geoCode };
     const locationPost = yield call(API.postLocation, location);
     const item = {...action.item, location: locationPost.id};
-    const itemPost = yield call(API.postItem, item);
-    yield put(actions.captureItem(itemPost.id)); 
+    yield call(API.postItem, item);
+    yield put(actions.fetchUserItems(item.userId));   
   } catch (error) {
     throw new Error(error.message);
   }
