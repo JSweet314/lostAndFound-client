@@ -14,26 +14,22 @@ export class MapContainer extends Component {
   }
 
   onMapClick = (props, event, map) => {
-    console.log(props);
     const currentMarker = {
       lat: map.latLng.lat(),
       lng: map.latLng.lng()
     };
-    this.setState({ currentMarker });
-    // this.props.captureMarker(currentMarker);
+    this.setState({ currentMarker }, this.props.captureMarkerCoords(currentMarker));
   }
 
   render() {
     const location = { lat: 39.7508006, lng: -104.9965947 };
-    const style = { width: '100%', height: '100%' };
     return (
       <div className='map-container'>
         <Map
-          containerStyle={{ width: '50%', height: '50%' }}
+          containerStyle={{position: 'absolute', top: '150px', left: '50%', width: '50%', height: '50%'}}
           centerAroundCurrentLocation={true}
           onClick={this.onMapClick}
           google={this.props.google}
-          style={style}
           initialCenter={location}
           center={location}
           zoom={16}>

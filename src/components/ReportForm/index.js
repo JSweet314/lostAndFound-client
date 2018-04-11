@@ -14,6 +14,7 @@ const ReportForm = ({
   routeId
 }) => {
   const display = {display: routeId === 'lost' ? 'initial' : 'none'};
+  const isDisabled = name && description && location && date ? true : true;
   const locationText = routeId === 'lost' ? 
     'Last Known Location' : 'Found Location'; 
   return (
@@ -82,6 +83,7 @@ const ReportForm = ({
           className='report-form__input'
           type='text' />
         <button
+          disabled={isDisabled}
           type='submit'
           className='report-form__btn'>
           Submit

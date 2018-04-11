@@ -28,6 +28,11 @@ export class ReportFormContainer extends Component {
     this.props.history.goBack();
   }
 
+  captureMarkerCoords = location => {
+    const {lat, lng} = location;
+    this.setState({location: `lat: ${lat}, lng: ${lng}`});
+  }
+
   handleOnSubmit = event => {
     event.preventDefault();
     const { id } = this.props.match.params;
@@ -53,10 +58,9 @@ export class ReportFormContainer extends Component {
           handleOnChange={this.handleOnChange}
           handleOnSubmit={this.handleOnSubmit}
         />
-        <MapContainer />
+        <MapContainer captureMarkerCoords={this.captureMarkerCoords}/>
       </div>
     );
-      
   }
 }
 

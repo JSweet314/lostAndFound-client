@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: black;
+  background-color: #fff;
   color: #fff;
   width: 100%;
   height: 10rem;
@@ -40,5 +40,5 @@
 
 .header__h1:hover,
 .header__nav-link:hover {
-  color: #fff;
+  color: #a11111;
 }
