@@ -1,5 +1,6 @@
 .welcome-greeting {
-  color: #310906;
+  color: #fff;
   font-size: 5rem;
   margin: 5rem 0 2.5rem 0;
+  text-shadow: 2px 2px 2px #C28744;
 }

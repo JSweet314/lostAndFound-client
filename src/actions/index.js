@@ -40,3 +40,8 @@ export const captureItems = items => ({
   type: 'CAPTURE_ITEMS',
   items
 });
+
+export const captureMarker = marker => ({
+  type: 'CAPTURE_MARKER',
+  marker
+});

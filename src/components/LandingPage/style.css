@@ -1,9 +1,11 @@
 .landing-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10rem 0 0 0;
 }
 
 .landing-page__btnGroup {
@@ -15,16 +17,16 @@
 
 .landing-page__btn {
   padding: 1rem;
-  border: 2px solid #625049;
-  background-color: #C28744;
-  color: #310906;
+  border: 2px solid #C28744;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   font-size: 3rem;  
   text-decoration: none;
   border-radius: 15px;
-  box-shadow: 2px 2px 10px #310906
+  box-shadow: 2px 2px 10px #C28744
 }
 
 .landing-page__btn:hover {
-  background-color: #625049;
+  background-color: #C28744;
   color: #fff;
 }

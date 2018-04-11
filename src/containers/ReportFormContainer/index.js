@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import ReportForm from '../../components/ReportForm';
+import MapContainer from '../MapContainer';
+import './style.css';
 
 export class ReportFormContainer extends Component {
   constructor() {
@@ -42,13 +44,19 @@ export class ReportFormContainer extends Component {
 
   render() {
     const { id } = this.props.match.params;
-    return <ReportForm
-      {...this.state}
-      routeId={id}
-      handleGoBack={this.handleGoBack}
-      handleOnChange={this.handleOnChange}
-      handleOnSubmit={this.handleOnSubmit}
-    />;
+    return (
+      <div className='report-form-container'>
+        <ReportForm
+          {...this.state}
+          routeId={id}
+          handleGoBack={this.handleGoBack}
+          handleOnChange={this.handleOnChange}
+          handleOnSubmit={this.handleOnSubmit}
+        />
+        <MapContainer />
+      </div>
+    );
+      
   }
 }
 
