@@ -16,6 +16,11 @@ export class ReportFormContainer extends Component {
     };
   }
 
+  handleOnChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
+
   handleGoBack = event => {
     event.preventDefault();
     this.props.history.goBack();
@@ -35,11 +40,6 @@ export class ReportFormContainer extends Component {
     }, this.props.history.goBack);
   }
 
-  handleOnChange = event => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  }
-
   render() {
     const { id } = this.props.match.params;
     return <ReportForm
@@ -52,18 +52,18 @@ export class ReportFormContainer extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   reportItem: item => dispatch(actions.reportItem(item))
 });
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   userId: state.user.id
 });
 
 ReportFormContainer.propTypes = {
   history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
-  userId: PropTypes.number,
+  userId: PropTypes.number.isRequired,
   reportItem: PropTypes.func.isRequired
 };
 
