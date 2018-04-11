@@ -94,12 +94,12 @@ const ReportForm = ({
 };
 
 ReportForm.propTypes = {
-  name: PropTypes.string,
-  description: PropTypes.string,
-  location: PropTypes.string,
-  date: PropTypes.string,
-  reward: PropTypes.string,
-  routeId: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  reward: PropTypes.string.isRequired,
+  routeId: PropTypes.string.isRequired,
   handleOnSubmit: PropTypes.func.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   handleGoBack: PropTypes.func.isRequired

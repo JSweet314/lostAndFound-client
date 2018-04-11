@@ -51,12 +51,14 @@ describe('AppContainer', () => {
     it('should return an object of data from the store', () => {
       const expected = {
         loggedIn: true,
-        username: 'jon'
+        username: 'jon',
+        userId: 1
       };
       const mockState = {
         user: {
           loggedIn: true,
-          username: 'jon'
+          username: 'jon',
+          id: 1
         }
       };
       expect(mapStateToProps(mockState)).toEqual(expected);
@@ -75,6 +77,16 @@ describe('AppContainer', () => {
       const mockUser = { loggedIn: true };
       mapped.captureUser(mockUser);
       expect(mockDispatch).toHaveBeenCalledWith(actions.captureUser(mockUser));
+    });
+
+    it('should call dispatch with action creator fetchUserItems', () => {
+      mapped.fetchUserItems(1);
+      expect(mockDispatch).toHaveBeenCalledWith(actions.fetchUserItems(1));
+    });
+
+    it('should call dispatch with action creator captureItems', () => {
+      mapped.captureItems([]);
+      expect(mockDispatch).toHaveBeenCalledWith(actions.captureItems([]));
     });
   });
 });

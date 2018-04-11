@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 const Welcome = ({ username }) => {
-  const welcomeText = username ? `Welcome, ${username}` : 'Search or Log In';
+  const welcomeText = username ? 
+    `Welcome, ${username}` : 'Search or Log In to Report Item';
   return (
     <h2 className='welcome-greeting'>{welcomeText}</h2>
   );
@@ -13,4 +14,4 @@ Welcome.propTypes = {
   username: PropTypes.string
 };
 
-export default Welcome;
+export default Welcome; 
