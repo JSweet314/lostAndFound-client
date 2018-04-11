@@ -103,6 +103,8 @@ export const fetchUserItems = async userId => {
     });
     if (response.ok) {
       return await response.json();
+    } else {
+      throw new Error('fetchUserItems Failed');
     }
   } catch (error) {
     throw new Error(error.message);

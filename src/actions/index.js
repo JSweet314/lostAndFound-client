@@ -35,3 +35,13 @@ export const captureItem = itemId => ({
   type: 'CAPTURE_ITEM',
   itemId
 });
+
+export const fetchUserItems = userId => ({
+  type: 'FETCH_USER_ITEMS',
+  userId
+});
+
+export const storeUserItems = items => ({
+  type: 'STORE_USER_ITEMS',
+  items
+});
