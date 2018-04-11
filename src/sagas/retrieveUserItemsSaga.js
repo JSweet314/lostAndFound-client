@@ -5,7 +5,7 @@ import * as API from '../api';
 export function* retrieveUserItemsSaga(action) {
   try {
     const response = yield call(API.fetchUserItems, action.userId);
-    yield put(actions.storeUserItems(response));
+    yield put(actions.captureItems(response));
   } catch (error) {
     yield put(actions.captureErrorMessage(error.message));
   }

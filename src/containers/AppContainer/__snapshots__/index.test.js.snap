@@ -5,7 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AppContainer
+    captureItems={[Function]}
     captureUser={[Function]}
+    fetchUserItems={[Function]}
     logOutUser={[Function]}
     loggedIn={false}
     username=""

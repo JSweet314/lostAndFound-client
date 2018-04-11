@@ -49,7 +49,7 @@ export const geoCode = async address => {
       const parsed = await response.json(); 
       return geoCodeWrangler(parsed.results);
     } else {
-      throw new Error(`issue geocoding, status code: ${response.status}`)
+      throw new Error(`issue geocoding, status code: ${response.status}`);
     }
   } catch (error) {
     return error;

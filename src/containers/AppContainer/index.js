@@ -23,6 +23,7 @@ export class AppContainer extends Component {
 
   handleLogOut = () => {
     this.props.logOutUser();
+    this.props.captureItems([]);
     localStorage.clear();
   }
 
@@ -44,14 +45,18 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   logOutUser: () => dispatch(actions.logOutUser()),
   captureUser: user => dispatch(actions.captureUser(user)),
-  fetchUserItems: userId => dispatch(actions.fetchUserItems(userId))
+  fetchUserItems: userId => dispatch(actions.fetchUserItems(userId)),
+  captureItems: itemArray => dispatch(actions.captureItems(itemArray))
 });
 
 AppContainer.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
   username: PropTypes.string,
+  userId: PropTypes.number,
   logOutUser: PropTypes.func.isRequired,
-  captureUser: PropTypes.func.isRequired
+  captureUser: PropTypes.func.isRequired,
+  captureItems: PropTypes.func.isRequired,
+  fetchUserItems: PropTypes.func.isRequired
 };
 
 export default withRouter(

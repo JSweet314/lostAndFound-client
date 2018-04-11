@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import userReducer from './userReducer';
 import errorMessageReducer from './errorMessageReducer';
-import itemsReducer from './itemReducer.js';
+import itemsReducer from './itemsReducer.js';
 
 const rootReducer = combineReducers({
   user: userReducer,

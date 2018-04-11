@@ -44,6 +44,7 @@ ShallowWrapper {
           name="name"
           onChange={[Function]}
           placeholder="required"
+          required={true}
           type="text"
           value=""
 />,
@@ -58,6 +59,7 @@ ShallowWrapper {
           name="description"
           onChange={[Function]}
           placeholder="required"
+          required={true}
           type="text"
           value=""
 />,
@@ -65,13 +67,14 @@ ShallowWrapper {
           className="report-form__label"
           htmlFor="location"
 >
-          Location
+          Last Known Location
 </label>,
         <input
           className="report-form__input"
           name="location"
           onChange={[Function]}
           placeholder="required"
+          required={true}
           type="text"
           value=""
 />,
@@ -86,6 +89,7 @@ ShallowWrapper {
           name="date"
           onChange={[Function]}
           placeholder="required"
+          required={true}
           type="date"
           value=""
 />,
@@ -165,6 +169,7 @@ ShallowWrapper {
           "name": "name",
           "onChange": [Function],
           "placeholder": "required",
+          "required": true,
           "type": "text",
           "value": "",
         },
@@ -194,6 +199,7 @@ ShallowWrapper {
           "name": "description",
           "onChange": [Function],
           "placeholder": "required",
+          "required": true,
           "type": "text",
           "value": "",
         },
@@ -206,12 +212,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Location",
+          "children": "Last Known Location",
           "className": "report-form__label",
           "htmlFor": "location",
         },
         "ref": null,
-        "rendered": "Location",
+        "rendered": "Last Known Location",
         "type": "label",
       },
       Object {
@@ -223,6 +229,7 @@ ShallowWrapper {
           "name": "location",
           "onChange": [Function],
           "placeholder": "required",
+          "required": true,
           "type": "text",
           "value": "",
         },
@@ -252,6 +259,7 @@ ShallowWrapper {
           "name": "date",
           "onChange": [Function],
           "placeholder": "required",
+          "required": true,
           "type": "date",
           "value": "",
         },
@@ -346,6 +354,7 @@ ShallowWrapper {
             name="name"
             onChange={[Function]}
             placeholder="required"
+            required={true}
             type="text"
             value=""
 />,
@@ -360,6 +369,7 @@ ShallowWrapper {
             name="description"
             onChange={[Function]}
             placeholder="required"
+            required={true}
             type="text"
             value=""
 />,
@@ -367,13 +377,14 @@ ShallowWrapper {
             className="report-form__label"
             htmlFor="location"
 >
-            Location
+            Last Known Location
 </label>,
           <input
             className="report-form__input"
             name="location"
             onChange={[Function]}
             placeholder="required"
+            required={true}
             type="text"
             value=""
 />,
@@ -388,6 +399,7 @@ ShallowWrapper {
             name="date"
             onChange={[Function]}
             placeholder="required"
+            required={true}
             type="date"
             value=""
 />,
@@ -467,6 +479,7 @@ ShallowWrapper {
             "name": "name",
             "onChange": [Function],
             "placeholder": "required",
+            "required": true,
             "type": "text",
             "value": "",
           },
@@ -496,6 +509,7 @@ ShallowWrapper {
             "name": "description",
             "onChange": [Function],
             "placeholder": "required",
+            "required": true,
             "type": "text",
             "value": "",
           },
@@ -508,12 +522,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Location",
+            "children": "Last Known Location",
             "className": "report-form__label",
             "htmlFor": "location",
           },
           "ref": null,
-          "rendered": "Location",
+          "rendered": "Last Known Location",
           "type": "label",
         },
         Object {
@@ -525,6 +539,7 @@ ShallowWrapper {
             "name": "location",
             "onChange": [Function],
             "placeholder": "required",
+            "required": true,
             "type": "text",
             "value": "",
           },
@@ -554,6 +569,7 @@ ShallowWrapper {
             "name": "date",
             "onChange": [Function],
             "placeholder": "required",
+            "required": true,
             "type": "date",
             "value": "",
           },

@@ -12,8 +12,16 @@ const LandingPage = ({username}) => {
       {
         username &&
         <div className='landing-page__btnGroup'>
-          <Link className='landing-page__btn' to='/report/lost'>Lost an Item?</Link> 
-          <Link className='landing-page__btn' to='/report/found'>Found an Item?</Link> 
+          <Link 
+            className='landing-page__btn' 
+            to='/report/lost'>
+          Lost an Item?
+          </Link> 
+          <Link 
+            className='landing-page__btn' 
+            to='/report/found'>
+          Found an Item?
+          </Link> 
         </div>
       }
       <Search />
