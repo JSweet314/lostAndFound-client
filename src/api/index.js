@@ -91,3 +91,37 @@ export const postItem = async item => {
     throw new Error(error.message);
   }
 };
+
+export const fetchUserItems = async userId => {
+  try {
+    const response = await fetch('/api/v1/items', {
+      method: 'POST',
+      body: JSON.stringify({id: userId}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+export const fetchLocationDetails = async locationId => {
+  try {
+    const response = await fetch('/api/v1/locations', {
+      method: 'POST',
+      body: JSON.stringify({id: locationId}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
