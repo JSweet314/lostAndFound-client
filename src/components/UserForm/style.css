@@ -15,14 +15,19 @@
   width: 50%;
   margin: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #fff;
   font-family: 'Exo', sans-serif;
   font-size: 2rem;
   color: #fff;
+  border: none;
+  outline-color: #c28744;
+}
+
+.user-form__input {
+  background-color: rgba(256, 256, 256, 0.5);
+  border: none;
 }
 
 .user-form__greeting {
-  border: none;
   margin: 1rem;
   font-size: 4rem;
   text-align: center;
@@ -43,25 +48,27 @@
 }
 .password-fields__password-toggle-btn,
 .user-form__btn {
-  border: 2px solid #625049;
-  box-shadow: 2px 2px 10px #C28744
+  box-shadow: 2px 2px 10px rgba(193, 134, 66, 0.5);
 }
 
 .password-fields__password-toggle-btn:hover,
 .user-form__btn:hover {
-  background-color: #C28744;
-  color: #fff;
+  box-shadow: 2px 2px 10px rgba(193, 134, 66, 1);
+  color: #c28744;
 }
 
+.password-fields__password-toggle-btn:disabled,
 .user-form__btn:disabled {
+  box-shadow: 2px 2px 10px #000;
+  border: none;
   color: rgba(256, 256, 256, 0.5);
-  box-shadow: none;
+  cursor: initial;
 }
 
+.password-fields__password-toggle-btn:disabled:hover,
 .user-form__btn:disabled:hover {
-  background-color: #C28744;
-  color: #fff;
-  cursor: default;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(256, 256, 256, 0.5);
 }
 
 .user-form__password-fields {
@@ -69,12 +76,13 @@
 }
 
 .password-fields__input {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(256, 256, 256, 0.5);
   width: 100%;
   font-size: 2rem;
   padding: 1rem;
   border: none;
   color: #fff;
+  outline-color: #c28744;
 }
 
 .password-fields__password-toggle-btn {
@@ -82,5 +90,5 @@
   margin: 0;
   border: none;
   width: 12rem;
-  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.5);
 }

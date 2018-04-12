@@ -29,6 +29,7 @@
   border: none;
   padding: 0.5rem;
   color: #fff;
+  outline-color: #C28744;
 }
 
 .report-form__textarea {
@@ -38,13 +39,13 @@
 .report-form__textarea::placeholder,
 .report-form__input::placeholder {
   font-family: 'Exo', sans-serif;
-  color: rgba(256, 256, 256, 0.5)
+  color: rgba(256, 256, 256, 0.5);
 }
 
 .report-form__btn {
   grid-column: 1/3;
   padding: 1rem;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid #C28744;
   color: #fff;
   font-size: 2rem;
@@ -60,6 +61,8 @@
 }
 
 .report-form__btn:disabled {
+  box-shadow: 2px 2px 10px #000;
+  border: none;
   color: rgba(256, 256, 256, 0.5);
   cursor: initial;
 }

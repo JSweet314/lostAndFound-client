@@ -14,7 +14,7 @@ const ReportForm = ({
   routeId
 }) => {
   const display = {display: routeId === 'lost' ? 'initial' : 'none'};
-  const isDisabled = name && description && location && date ? true : true;
+  const isDisabled = name && description && location && date ? false : true;
   const locationText = routeId === 'lost' ? 
     'Last Known Location' : 'Found Location'; 
   return (
