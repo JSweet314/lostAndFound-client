@@ -26,7 +26,7 @@ export class MapContainer extends Component {
     return (
       <div className='map-container'>
         <Map
-          containerStyle={{position: 'absolute', top: '150px', left: '50%', width: '50%', height: '50%'}}
+          containerStyle={{position: 'absolute', top: '150px', left: '49%', width: '50%', height: '50%'}}
           centerAroundCurrentLocation={true}
           onClick={this.onMapClick}
           google={this.props.google}

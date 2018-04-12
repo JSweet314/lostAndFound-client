@@ -17,16 +17,18 @@
 
 .landing-page__btn {
   padding: 1rem;
-  border: 2px solid #C28744;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   font-size: 3rem;  
   text-decoration: none;
+  text-align: center;
   border-radius: 15px;
-  box-shadow: 2px 2px 10px #C28744
+  box-shadow: 2px 2px 5px rgba(196, 126, 89, 0.5);
+  width: 15rem;
 }
 
 .landing-page__btn:hover {
-  background-color: #C28744;
-  color: #fff;
+  box-shadow: 2px 2px 5px rgba(196, 126, 89, 1);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #C47E59;
 }

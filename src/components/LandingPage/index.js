@@ -16,12 +16,12 @@ const LandingPage = ({username}) => {
           <Link 
             className='landing-page__btn' 
             to='/report/lost'>
-          Lost an Item?
+          LOST
           </Link> 
           <Link 
             className='landing-page__btn' 
             to='/report/found'>
-          Found an Item?
+          FOUND
           </Link> 
         </div>
       }

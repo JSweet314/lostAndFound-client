@@ -56,6 +56,21 @@ export const geoCode = async address => {
   }
 };
 
+export const reverseGeoCode = async coords => {
+  try {
+    const groot = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
+    const response = await fetch(`${groot}${coords}&key=${gKey}`);
+    if (response.ok) {
+      const parsed = await response.json(); 
+      return geoCodeWrangler(parsed.results);
+    } else {
+      throw new Error(`issue geocoding, status code: ${response.status}`);
+    }
+  } catch (error) {
+    return error;
+  }
+};
+
 export const postLocation = async location => {
   try {
     const response = await fetch('/api/v1/locations/new', {
