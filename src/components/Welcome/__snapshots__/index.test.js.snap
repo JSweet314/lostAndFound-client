@@ -19,11 +19,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Search or Log In to Report Item",
+      "children": "Log In to Report/Search",
       "className": "welcome-greeting",
     },
     "ref": null,
-    "rendered": "Search or Log In to Report Item",
+    "rendered": "Log In to Report/Search",
     "type": "h2",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -32,11 +32,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Search or Log In to Report Item",
+        "children": "Log In to Report/Search",
         "className": "welcome-greeting",
       },
       "ref": null,
-      "rendered": "Search or Log In to Report Item",
+      "rendered": "Log In to Report/Search",
       "type": "h2",
     },
   ],

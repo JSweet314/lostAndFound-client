@@ -30,41 +30,219 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "date": "",
-      "description": "",
-      "handleGoBack": [Function],
-      "handleOnChange": [Function],
-      "handleOnSubmit": [Function],
-      "location": "",
-      "name": "",
-      "reward": "",
-      "routeId": "lost",
+      "children": Array [
+        <ReportForm
+          date=""
+          description=""
+          handleGoBack={[Function]}
+          handleOnChange={[Function]}
+          handleOnSubmit={[Function]}
+          location=""
+          name=""
+          reward=""
+          routeId="lost"
+/>,
+        <withScriptjs(withGoogleMap(Component))
+          containerElement={
+                    <div
+                              style={
+                                        Object {
+                                                  "height": "400px",
+                                                }
+                              }
+                    />
+          }
+          googleMapURL="https://maps.googleapis.com/maps/api/js?
+  key=AIzaSyCVepTj3yZKdBV-t1k2wz5aHkbKYWFPL0w&v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={
+                    <div
+                              style={
+                                        Object {
+                                                  "height": "100%",
+                                                }
+                              }
+                    />
+          }
+          mapElement={
+                    <div
+                              style={
+                                        Object {
+                                                  "height": "100%",
+                                                }
+                              }
+                    />
+          }
+/>,
+      ],
+      "className": "report-form-container",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "date": "",
+          "description": "",
+          "handleGoBack": [Function],
+          "handleOnChange": [Function],
+          "handleOnSubmit": [Function],
+          "location": "",
+          "name": "",
+          "reward": "",
+          "routeId": "lost",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "containerElement": <div
+            style={
+                        Object {
+                                    "height": "400px",
+                                  }
+            }
+/>,
+          "googleMapURL": "https://maps.googleapis.com/maps/api/js?
+  key=AIzaSyCVepTj3yZKdBV-t1k2wz5aHkbKYWFPL0w&v=3.exp&libraries=geometry,drawing,places",
+          "loadingElement": <div
+            style={
+                        Object {
+                                    "height": "100%",
+                                  }
+            }
+/>,
+          "mapElement": <div
+            style={
+                        Object {
+                                    "height": "100%",
+                                  }
+            }
+/>,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "date": "",
-        "description": "",
-        "handleGoBack": [Function],
-        "handleOnChange": [Function],
-        "handleOnSubmit": [Function],
-        "location": "",
-        "name": "",
-        "reward": "",
-        "routeId": "lost",
+        "children": Array [
+          <ReportForm
+            date=""
+            description=""
+            handleGoBack={[Function]}
+            handleOnChange={[Function]}
+            handleOnSubmit={[Function]}
+            location=""
+            name=""
+            reward=""
+            routeId="lost"
+/>,
+          <withScriptjs(withGoogleMap(Component))
+            containerElement={
+                        <div
+                                    style={
+                                                Object {
+                                                            "height": "400px",
+                                                          }
+                                    }
+                        />
+            }
+            googleMapURL="https://maps.googleapis.com/maps/api/js?
+  key=AIzaSyCVepTj3yZKdBV-t1k2wz5aHkbKYWFPL0w&v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={
+                        <div
+                                    style={
+                                                Object {
+                                                            "height": "100%",
+                                                          }
+                                    }
+                        />
+            }
+            mapElement={
+                        <div
+                                    style={
+                                                Object {
+                                                            "height": "100%",
+                                                          }
+                                    }
+                        />
+            }
+/>,
+        ],
+        "className": "report-form-container",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "date": "",
+            "description": "",
+            "handleGoBack": [Function],
+            "handleOnChange": [Function],
+            "handleOnSubmit": [Function],
+            "location": "",
+            "name": "",
+            "reward": "",
+            "routeId": "lost",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "containerElement": <div
+              style={
+                            Object {
+                                          "height": "400px",
+                                        }
+              }
+/>,
+            "googleMapURL": "https://maps.googleapis.com/maps/api/js?
+  key=AIzaSyCVepTj3yZKdBV-t1k2wz5aHkbKYWFPL0w&v=3.exp&libraries=geometry,drawing,places",
+            "loadingElement": <div
+              style={
+                            Object {
+                                          "height": "100%",
+                                        }
+              }
+/>,
+            "mapElement": <div
+              style={
+                            Object {
+                                          "height": "100%",
+                                        }
+              }
+/>,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

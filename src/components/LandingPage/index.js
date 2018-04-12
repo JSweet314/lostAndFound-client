@@ -1,9 +1,7 @@
 import React from 'react';
 import Welcome from '../Welcome';
 import {Link} from 'react-router-dom';
-import Search from '../Search';
 import PropTypes from 'prop-types';
-import MapContainer from '../../containers/MapContainer';
 import './style.css';
 
 const LandingPage = ({username}) => {

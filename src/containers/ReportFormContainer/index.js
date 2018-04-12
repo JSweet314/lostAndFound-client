@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import ReportForm from '../../components/ReportForm';
-import MapContainer from '../MapContainer';
+import Map from '../../components/Map';
+import {googleUrl} from '../../private/keys';
 import './style.css';
+import { MapContainer } from '../MapContainer';
 
 export class ReportFormContainer extends Component {
   constructor() {
@@ -29,8 +31,8 @@ export class ReportFormContainer extends Component {
   }
 
   captureMarkerCoords = location => {
-    const {lat, lng} = location;
-    this.setState({location: `lat: ${lat}, lng: ${lng}`});
+    const { lat, lng } = location;
+    this.setState({ location: `lat: ${lat}, lng: ${lng}` });
   }
 
   handleOnSubmit = event => {
@@ -38,13 +40,16 @@ export class ReportFormContainer extends Component {
     const { id } = this.props.match.params;
     const { userId } = this.props;
     this.props.reportItem({ ...this.state, status: id, userId });
-    this.setState({
-      name: '',
-      description: '',
-      location: '',
-      date: '',
-      reward: ''
-    }, this.props.history.goBack);
+    this.setState(
+      {
+        name: '',
+        description: '',
+        location: '',
+        date: '',
+        reward: ''
+      }, 
+      this.props.history.goBack
+    );
   }
 
   render() {
@@ -58,7 +63,7 @@ export class ReportFormContainer extends Component {
           handleOnChange={this.handleOnChange}
           handleOnSubmit={this.handleOnSubmit}
         />
-        <MapContainer captureMarkerCoords={this.captureMarkerCoords}/>
+        <MapContainer />
       </div>
     );
   }

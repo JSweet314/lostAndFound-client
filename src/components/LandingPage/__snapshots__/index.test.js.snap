@@ -22,8 +22,6 @@ ShallowWrapper {
           username={undefined}
 />,
         undefined,
-        <Search />,
-        <Connect(Wrapper) />,
       ],
       "className": "landing-page",
     },
@@ -41,24 +39,6 @@ ShallowWrapper {
         "type": [Function],
       },
       undefined,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "main",
   },
@@ -73,8 +53,6 @@ ShallowWrapper {
             username={undefined}
 />,
           undefined,
-          <Search />,
-          <Connect(Wrapper) />,
         ],
         "className": "landing-page",
       },
@@ -92,24 +70,6 @@ ShallowWrapper {
           "type": [Function],
         },
         undefined,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
       ],
       "type": "main",
     },
@@ -155,18 +115,16 @@ ShallowWrapper {
                     replace={false}
                     to="/report/lost"
           >
-                    Lost an Item?
+                    LOST
           </Link>
           <Link
                     className="landing-page__btn"
                     replace={false}
                     to="/report/found"
           >
-                    Found an Item?
+                    FOUND
           </Link>
 </div>,
-        <Search />,
-        <Connect(Wrapper) />,
       ],
       "className": "landing-page",
     },
@@ -194,14 +152,14 @@ ShallowWrapper {
               replace={false}
               to="/report/lost"
 >
-              Lost an Item?
+              LOST
 </Link>,
             <Link
               className="landing-page__btn"
               replace={false}
               to="/report/found"
 >
-              Found an Item?
+              FOUND
 </Link>,
           ],
           "className": "landing-page__btnGroup",
@@ -213,13 +171,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "Lost an Item?",
+              "children": "LOST",
               "className": "landing-page__btn",
               "replace": false,
               "to": "/report/lost",
             },
             "ref": null,
-            "rendered": "Lost an Item?",
+            "rendered": "LOST",
             "type": [Function],
           },
           Object {
@@ -227,35 +185,17 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "Found an Item?",
+              "children": "FOUND",
               "className": "landing-page__btn",
               "replace": false,
               "to": "/report/found",
             },
             "ref": null,
-            "rendered": "Found an Item?",
+            "rendered": "FOUND",
             "type": [Function],
           },
         ],
         "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
     ],
     "type": "main",
@@ -278,18 +218,16 @@ ShallowWrapper {
                         replace={false}
                         to="/report/lost"
             >
-                        Lost an Item?
+                        LOST
             </Link>
             <Link
                         className="landing-page__btn"
                         replace={false}
                         to="/report/found"
             >
-                        Found an Item?
+                        FOUND
             </Link>
 </div>,
-          <Search />,
-          <Connect(Wrapper) />,
         ],
         "className": "landing-page",
       },
@@ -317,14 +255,14 @@ ShallowWrapper {
                 replace={false}
                 to="/report/lost"
 >
-                Lost an Item?
+                LOST
 </Link>,
               <Link
                 className="landing-page__btn"
                 replace={false}
                 to="/report/found"
 >
-                Found an Item?
+                FOUND
 </Link>,
             ],
             "className": "landing-page__btnGroup",
@@ -336,13 +274,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "Lost an Item?",
+                "children": "LOST",
                 "className": "landing-page__btn",
                 "replace": false,
                 "to": "/report/lost",
               },
               "ref": null,
-              "rendered": "Lost an Item?",
+              "rendered": "LOST",
               "type": [Function],
             },
             Object {
@@ -350,35 +288,17 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "Found an Item?",
+                "children": "FOUND",
                 "className": "landing-page__btn",
                 "replace": false,
                 "to": "/report/found",
               },
               "ref": null,
-              "rendered": "Found an Item?",
+              "rendered": "FOUND",
               "type": [Function],
             },
           ],
           "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
         },
       ],
       "type": "main",
