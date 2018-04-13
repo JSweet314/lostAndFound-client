@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import UserFormContainer from '../../containers/UserFormContainer';
 import ReportFormContainer from '../../containers/ReportFormContainer';

@@ -15,8 +15,15 @@ export class AppContainer extends Component {
     }
   }
 
+  componentDidUpdate = prevProps => {
+    if ((prevProps.username !== this.props.username) && this.props.username) {
+      this.props.fetchUserItems(this.props.userId);
+    }
+  }
+
   handleLogOut = () => {
     this.props.logOutUser();
+    this.props.captureItems([]);
     localStorage.clear();
   }
 
@@ -31,19 +38,25 @@ export class AppContainer extends Component {
 
 export const mapStateToProps = state => ({
   loggedIn: state.user.loggedIn,
-  username: state.user.username
+  username: state.user.username,
+  userId: state.user.id
 });
 
 export const mapDispatchToProps = dispatch => ({
   logOutUser: () => dispatch(actions.logOutUser()),
-  captureUser: user => dispatch(actions.captureUser(user))
+  captureUser: user => dispatch(actions.captureUser(user)),
+  fetchUserItems: userId => dispatch(actions.fetchUserItems(userId)),
+  captureItems: itemArray => dispatch(actions.captureItems(itemArray))
 });
 
 AppContainer.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
   username: PropTypes.string,
+  userId: PropTypes.number,
   logOutUser: PropTypes.func.isRequired,
-  captureUser: PropTypes.func.isRequired
+  captureUser: PropTypes.func.isRequired,
+  captureItems: PropTypes.func.isRequired,
+  fetchUserItems: PropTypes.func.isRequired
 };
 
 export default withRouter(

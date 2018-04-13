@@ -31,7 +31,17 @@ export const reportItem = item => ({
   item
 });
 
-export const captureItem = itemId => ({
-  type: 'CAPTURE_ITEM',
-  itemId
+export const fetchUserItems = userId => ({
+  type: 'FETCH_USER_ITEMS',
+  userId
+});
+
+export const captureItems = items => ({
+  type: 'CAPTURE_ITEMS',
+  items
+});
+
+export const captureMarker = marker => ({
+  type: 'CAPTURE_MARKER',
+  marker
 });

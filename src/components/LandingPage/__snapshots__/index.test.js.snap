@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should match a snapshot when no user 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LandingPage />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Welcome
+          username={undefined}
+/>,
+        undefined,
+      ],
+      "className": "landing-page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "username": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      undefined,
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Welcome
+            username={undefined}
+/>,
+          undefined,
+        ],
+        "className": "landing-page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "username": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        undefined,
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`LandingPage should match a snapshot when user is signed in 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LandingPage
+    username="jon"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Welcome
+          username="jon"
+/>,
+        <div
+          className="landing-page__btnGroup"
+>
+          <Link
+                    className="landing-page__btn"
+                    replace={false}
+                    to="/report/lost"
+          >
+                    LOST
+          </Link>
+          <Link
+                    className="landing-page__btn"
+                    replace={false}
+                    to="/report/found"
+          >
+                    FOUND
+          </Link>
+</div>,
+      ],
+      "className": "landing-page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "username": "jon",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              className="landing-page__btn"
+              replace={false}
+              to="/report/lost"
+>
+              LOST
+</Link>,
+            <Link
+              className="landing-page__btn"
+              replace={false}
+              to="/report/found"
+>
+              FOUND
+</Link>,
+          ],
+          "className": "landing-page__btnGroup",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "LOST",
+              "className": "landing-page__btn",
+              "replace": false,
+              "to": "/report/lost",
+            },
+            "ref": null,
+            "rendered": "LOST",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "FOUND",
+              "className": "landing-page__btn",
+              "replace": false,
+              "to": "/report/found",
+            },
+            "ref": null,
+            "rendered": "FOUND",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Welcome
+            username="jon"
+/>,
+          <div
+            className="landing-page__btnGroup"
+>
+            <Link
+                        className="landing-page__btn"
+                        replace={false}
+                        to="/report/lost"
+            >
+                        LOST
+            </Link>
+            <Link
+                        className="landing-page__btn"
+                        replace={false}
+                        to="/report/found"
+            >
+                        FOUND
+            </Link>
+</div>,
+        ],
+        "className": "landing-page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "username": "jon",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                className="landing-page__btn"
+                replace={false}
+                to="/report/lost"
+>
+                LOST
+</Link>,
+              <Link
+                className="landing-page__btn"
+                replace={false}
+                to="/report/found"
+>
+                FOUND
+</Link>,
+            ],
+            "className": "landing-page__btnGroup",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "LOST",
+                "className": "landing-page__btn",
+                "replace": false,
+                "to": "/report/lost",
+              },
+              "ref": null,
+              "rendered": "LOST",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "FOUND",
+                "className": "landing-page__btn",
+                "replace": false,
+                "to": "/report/found",
+              },
+              "ref": null,
+              "rendered": "FOUND",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

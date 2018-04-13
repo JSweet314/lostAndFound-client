@@ -49,7 +49,22 @@ export const geoCode = async address => {
       const parsed = await response.json(); 
       return geoCodeWrangler(parsed.results);
     } else {
-      throw new Error(`issue geocoding, status code: ${response.status}`)
+      throw new Error(`issue geocoding, status code: ${response.status}`);
+    }
+  } catch (error) {
+    return error;
+  }
+};
+
+export const reverseGeoCode = async coords => {
+  try {
+    const groot = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
+    const response = await fetch(`${groot}${coords}&key=${gKey}`);
+    if (response.ok) {
+      const parsed = await response.json(); 
+      return geoCodeWrangler(parsed.results);
+    } else {
+      throw new Error(`issue geocoding, status code: ${response.status}`);
     }
   } catch (error) {
     return error;
@@ -80,6 +95,48 @@ export const postItem = async item => {
     const response = await fetch('/api/v1/items/new', {
       method: 'POST',
       body: JSON.stringify(item),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+export const fetchUserItems = async userId => {
+  try {
+    const response = await fetch('/api/v1/items', {
+      method: 'POST',
+      body: JSON.stringify({id: userId}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if (response.ok) {
+      const parsed = await response.json();
+      const withLocation =  await parsed.items.map(async (item) => {
+        const location = await fetchLocationDetails(item.locationId);
+        const {lat, lng, name} = location;
+        return {...item, locationName: name, location: {lat, lng}};
+      });
+      return Promise.all(withLocation);
+    } else {
+      throw new Error('fetchUserItems Failed');
+    }
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+export const fetchLocationDetails = async locationId => {
+  try {
+    const response = await fetch('/api/v1/locations', {
+      method: 'POST',
+      body: JSON.stringify({id: locationId}),
       headers: {
         'Content-Type': 'application/json'
       }

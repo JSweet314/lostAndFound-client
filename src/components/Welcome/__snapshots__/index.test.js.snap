@@ -19,11 +19,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Search or Log In",
+      "children": "Log In to Report/Search",
       "className": "welcome-greeting",
     },
     "ref": null,
-    "rendered": "Search or Log In",
+    "rendered": "Log In to Report/Search",
     "type": "h2",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -32,11 +32,61 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Search or Log In",
+        "children": "Log In to Report/Search",
         "className": "welcome-greeting",
       },
       "ref": null,
-      "rendered": "Search or Log In",
+      "rendered": "Log In to Report/Search",
+      "type": "h2",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Welcome should match a snapshot with username provided 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Welcome
+    username="jon"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "Welcome, jon",
+      "className": "welcome-greeting",
+    },
+    "ref": null,
+    "rendered": "Welcome, jon",
+    "type": "h2",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Welcome, jon",
+        "className": "welcome-greeting",
+      },
+      "ref": null,
+      "rendered": "Welcome, jon",
       "type": "h2",
     },
   ],

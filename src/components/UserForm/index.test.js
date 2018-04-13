@@ -32,7 +32,7 @@ describe('UserForm', () => {
       <UserForm
         username=''
         email=''
-        password=''
+        password='abc'
         showPassword={true}
         routeId='signup'
         handleOnChange={mockHandleOnChange}

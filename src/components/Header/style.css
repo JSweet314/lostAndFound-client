@@ -1,15 +1,19 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #5D2C12;
-  color: #D3944A;
-  height: 10%;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 10rem;
 }
 
 .header__h1 {
-  color: #D3944A;
+  color: #fff;
   display: inline-block;
   margin: 0;
   font-size: 5rem;
@@ -26,7 +30,7 @@
 .header__username,
 .header__nav-link {
   font-size: 2rem;
-  color: #D3944A;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -36,5 +40,5 @@
 
 .header__h1:hover,
 .header__nav-link:hover {
-  color: #fff;
+  color: #C47E59;
 }

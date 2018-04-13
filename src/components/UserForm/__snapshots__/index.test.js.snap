@@ -445,7 +445,7 @@ ShallowWrapper {
     email=""
     handleOnChange={[Function]}
     handleOnSubmit={[Function]}
-    password=""
+    password="abc"
     routeId="signup"
     showPassword={true}
     togglePasswordVisibility={[Function]}
@@ -507,11 +507,11 @@ ShallowWrapper {
                     placeholder="password"
                     required={true}
                     type="text"
-                    value=""
+                    value="abc"
           />
           <button
                     className="password-fields__password-toggle-btn"
-                    disabled={true}
+                    disabled={false}
                     onClick={[Function]}
           >
                     hide
@@ -595,11 +595,11 @@ ShallowWrapper {
               placeholder="password"
               required={true}
               type="text"
-              value=""
+              value="abc"
 />,
             <button
               className="password-fields__password-toggle-btn"
-              disabled={true}
+              disabled={false}
               onClick={[Function]}
 >
               hide
@@ -620,7 +620,7 @@ ShallowWrapper {
               "placeholder": "password",
               "required": true,
               "type": "text",
-              "value": "",
+              "value": "abc",
             },
             "ref": null,
             "rendered": null,
@@ -633,7 +633,7 @@ ShallowWrapper {
             "props": Object {
               "children": "hide",
               "className": "password-fields__password-toggle-btn",
-              "disabled": true,
+              "disabled": false,
               "onClick": [Function],
             },
             "ref": null,
@@ -710,11 +710,11 @@ ShallowWrapper {
                         placeholder="password"
                         required={true}
                         type="text"
-                        value=""
+                        value="abc"
             />
             <button
                         className="password-fields__password-toggle-btn"
-                        disabled={true}
+                        disabled={false}
                         onClick={[Function]}
             >
                         hide
@@ -798,11 +798,11 @@ ShallowWrapper {
                 placeholder="password"
                 required={true}
                 type="text"
-                value=""
+                value="abc"
 />,
               <button
                 className="password-fields__password-toggle-btn"
-                disabled={true}
+                disabled={false}
                 onClick={[Function]}
 >
                 hide
@@ -823,7 +823,7 @@ ShallowWrapper {
                 "placeholder": "password",
                 "required": true,
                 "type": "text",
-                "value": "",
+                "value": "abc",
               },
               "ref": null,
               "rendered": null,
@@ -836,7 +836,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "hide",
                 "className": "password-fields__password-toggle-btn",
-                "disabled": true,
+                "disabled": false,
                 "onClick": [Function],
               },
               "ref": null,
