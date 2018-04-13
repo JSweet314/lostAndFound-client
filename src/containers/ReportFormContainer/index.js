@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import ReportForm from '../../components/ReportForm';
-import Map from '../../components/Map';
-import {googleUrl} from '../../private/keys';
 import './style.css';
 import { MapContainer } from '../MapContainer';
 

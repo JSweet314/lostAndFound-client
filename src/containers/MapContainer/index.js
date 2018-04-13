@@ -6,8 +6,6 @@ export class MapContainer extends Component {
   constructor() {
     super();
   }
-
-  loadingElement = () => (<div style={{ height: `100%` }} />)
   containerElement = () => (
     <div 
       className="lostAndFoundMap"
@@ -20,6 +18,7 @@ export class MapContainer extends Component {
       }} 
     />
   )
+  loadingElement = () => (<div style={{ height: `100%` }} />)
   mapElement = () => (<div style={{ height: `100%` }} />)
   render() {
     return (
