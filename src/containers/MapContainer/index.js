@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import MapComponent from '../../components/MapComponent';
 import { googleUrl } from '../../private/keys';
 import * as actions from '../../actions';
+import PropTypes from 'prop-types';
 
 export class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: true,
+      markerCoords: {}
     };
   }
 
@@ -27,9 +29,8 @@ export class MapContainer extends Component {
       lat: event.latLng.lat(),
       lng: event.latLng.lng()
     };
-    this.props.captureGeo(location);
     this.props.captureMarkerCoords(location);
-    this.setState({ loading: false });
+    this.setState({ loading: false, markerCoords: location });
   }
 
   containerElement = () => (
@@ -49,7 +50,7 @@ export class MapContainer extends Component {
   render() {
     return (
       <MapComponent
-        loading={this.state.loading}
+        {...this.state}
         position={this.props.userLocation}
         onMapClick={this.onMapClick}
         onMarkerClick={this.onMarkerClick}
@@ -68,5 +69,10 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   captureGeo: location => dispatch(actions.captureGeo(location))
 });
+
+MapContainer.propTypes = {
+  userLocation: PropTypes.object,
+  captureGeo: PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);

@@ -31,7 +31,7 @@ const UserForm = ({
         onChange={event => handleOnChange(event)}
         value={username}
         name='username'
-        placeholder="Hey stranger, what's your name?"
+        placeholder="name"
         required={userNameRequired}
         type='text' />
       <h2  

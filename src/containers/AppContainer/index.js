@@ -8,13 +8,13 @@ import App from '../../components/App';
 export class AppContainer extends Component {
 
   componentDidMount = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(this.getUserGeo);
+    }
     const storedUser = localStorage.getItem('LFUser');
     if (storedUser) {
       const user = JSON.parse(storedUser);
       this.props.captureUser(user);
-    }
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(this.getUserGeo);
     }
   }
 
