@@ -44,7 +44,9 @@ ShallowWrapper {
           reward=""
           routeId="lost"
 />,
-        <MapContainer />,
+        <Connect(MapContainer)
+          captureMarkerCoords={[Function]}
+/>,
       ],
       "className": "report-form-container",
     },
@@ -73,7 +75,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "captureMarkerCoords": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -99,7 +103,9 @@ ShallowWrapper {
             reward=""
             routeId="lost"
 />,
-          <MapContainer />,
+          <Connect(MapContainer)
+            captureMarkerCoords={[Function]}
+/>,
         ],
         "className": "report-form-container",
       },
@@ -128,7 +134,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "captureMarkerCoords": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

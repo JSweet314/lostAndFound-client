@@ -45,3 +45,8 @@ export const captureMarker = marker => ({
   type: 'CAPTURE_MARKER',
   marker
 });
+
+export const captureGeo = position => ({
+  type: 'GET_GEOLOCATION',
+  position
+});

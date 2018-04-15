@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import ReportForm from '../../components/ReportForm';
 import './style.css';
-import { MapContainer } from '../MapContainer';
+import MapContainer from '../MapContainer';
 
 export class ReportFormContainer extends Component {
   constructor() {
@@ -61,7 +61,7 @@ export class ReportFormContainer extends Component {
           handleOnChange={this.handleOnChange}
           handleOnSubmit={this.handleOnSubmit}
         />
-        <MapContainer />
+        <MapContainer captureMarkerCoords={this.captureMarkerCoords}/>
       </div>
     );
   }
@@ -77,10 +77,11 @@ export const mapStateToProps = state => ({
 
 ReportFormContainer.propTypes = {
   history: PropTypes.object.isRequired,
+  userId: PropTypes.number,
   match: PropTypes.object.isRequired,
-  userId: PropTypes.number.isRequired,
   reportItem: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  ReportFormContainer);
+  ReportFormContainer
+);
