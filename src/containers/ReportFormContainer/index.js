@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import ReportForm from '../../components/ReportForm';
@@ -12,7 +13,7 @@ export class ReportFormContainer extends Component {
     this.state = {
       name: '',
       description: '',
-      location: '',
+      location: {},
       date: '',
       reward: ''
     };
@@ -28,9 +29,13 @@ export class ReportFormContainer extends Component {
     this.props.history.goBack();
   }
 
+  handleNext = event => {
+    event.preventDefault();
+    this.props.history.goForward('/report/map')
+  }
+
   captureMarkerCoords = location => {
-    const { lat, lng } = location;
-    this.setState({ location: `lat: ${lat}, lng: ${lng}` });
+    this.setState({ location });
   }
 
   handleOnSubmit = event => {
@@ -42,26 +47,39 @@ export class ReportFormContainer extends Component {
       {
         name: '',
         description: '',
-        location: '',
         date: '',
-        reward: ''
-      }, 
-      this.props.history.goBack
+        reward: '',
+        location: {}
+      }
     );
   }
 
   render() {
     const { id } = this.props.match.params;
+    const mapDisplay = id === 'map' ? true : false;
+    const searchPlaceholder = 'Enter address or drop map marker';
     return (
       <div className='report-form-container'>
-        <ReportForm
-          {...this.state}
-          routeId={id}
-          handleGoBack={this.handleGoBack}
-          handleOnChange={this.handleOnChange}
-          handleOnSubmit={this.handleOnSubmit}
-        />
-        <MapContainer captureMarkerCoords={this.captureMarkerCoords}/>
+        {
+          mapDisplay ?
+            <div className='map-report'>
+              <button className='report-form__btn' onClick={() => this.props.history.goBack()}>{'< Back'}</button>
+              <input type="text" placeholder={searchPlaceholder} />
+              <Link className='report-form__btn' to='/'>{'Submit >'}</Link>
+              <MapContainer
+                top='200px'
+                height='75%'
+                width='100%'
+                captureMarkerCoords={this.captureMarkerCoords} />
+            </div> :
+            <ReportForm
+              {...this.state}
+              routeId={id}
+              handleGoBack={this.handleGoBack}
+              handleOnChange={this.handleOnChange}
+              handleOnSubmit={this.handleOnSubmit}
+            />
+        }
       </div>
     );
   }

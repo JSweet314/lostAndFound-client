@@ -10,7 +10,7 @@ describe('ReportFormContainer', () => {
   const mockState = {
     name: 'phone',
     description: 'black iphone',
-    location: 'Turing School',
+    location: {name: 'Turing School', position: {lat:1, lng: 2}},
     date: '04/01/2018',
     reward: '0'
   };
@@ -52,7 +52,7 @@ describe('ReportFormContainer', () => {
     const expected = {
       name: '',
       description: '',
-      location: '',
+      location: {},
       date: '',
       reward: '',
       status: 'lost',
@@ -67,7 +67,7 @@ describe('ReportFormContainer', () => {
     expect(wrapper.state()).toEqual({
       name: '',
       description: '',
-      location: '',
+      location: {},
       date: '',
       reward: ''
     });

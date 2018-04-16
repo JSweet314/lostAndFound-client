@@ -9,6 +9,14 @@ const Header = ({ loggedIn, username, handleLogOut }) => {
     <header className='header'>
       <Link to='/' className='header__h1'>Lost & Found</Link>
       <ul className='header__nav-list'>
+        {
+          loggedIn && 
+          <Link 
+            className='header__nav-link' 
+            to='/items'>
+            My Items
+          </Link>
+        }
         <li className='header__nav-list-item'>
           {loggedIn ? 
             <Link 

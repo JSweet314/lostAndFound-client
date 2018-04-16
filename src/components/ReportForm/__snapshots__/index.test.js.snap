@@ -10,7 +10,7 @@ ShallowWrapper {
     handleGoBack={[Function]}
     handleOnChange={[Function]}
     handleOnSubmit={[Function]}
-    location=""
+    location={Object {}}
     name=""
     reward=""
     routeId="lost"
@@ -43,7 +43,7 @@ ShallowWrapper {
                 Item Name
         </label>
         <input
-                className="report-form__input"
+                className="report-form__input name"
                 name="name"
                 onChange={[Function]}
                 placeholder="required"
@@ -62,21 +62,6 @@ ShallowWrapper {
                 name="description"
                 onChange={[Function]}
                 placeholder="required"
-                required={true}
-                type="text"
-                value=""
-        />
-        <label
-                className="report-form__label"
-                htmlFor="location"
-        >
-                Last Known Location
-        </label>
-        <input
-                className="report-form__input"
-                name="location"
-                onChange={[Function]}
-                placeholder="Address or drop marker"
                 required={true}
                 type="text"
                 value=""
@@ -120,19 +105,25 @@ ShallowWrapper {
                 type="text"
                 value=""
         />
-        <button
-                className="report-form__btn"
-                disabled={true}
-                type="submit"
+        <div
+                className="report-form__nav"
         >
-                Submit
-        </button>
-        <button
-                className="report-form__btn"
-                onClick={[Function]}
-        >
-                Back
-        </button>
+                <button
+                        className="report-form__btn"
+                        onClick={[Function]}
+                >
+                        Back
+                </button>
+                <Link
+                        className="report-form__btn"
+                        disabled={true}
+                        replace={false}
+                        to="/report/map"
+                        type="submit"
+                >
+                        next
+                </Link>
+        </div>
 </form>,
       "className": "report-form-container",
     },
@@ -155,7 +146,7 @@ ShallowWrapper {
             Item Name
 </label>,
           <input
-            className="report-form__input"
+            className="report-form__input name"
             name="name"
             onChange={[Function]}
             placeholder="required"
@@ -174,21 +165,6 @@ ShallowWrapper {
             name="description"
             onChange={[Function]}
             placeholder="required"
-            required={true}
-            type="text"
-            value=""
-/>,
-          <label
-            className="report-form__label"
-            htmlFor="location"
->
-            Last Known Location
-</label>,
-          <input
-            className="report-form__input"
-            name="location"
-            onChange={[Function]}
-            placeholder="Address or drop marker"
             required={true}
             type="text"
             value=""
@@ -232,19 +208,25 @@ ShallowWrapper {
             type="text"
             value=""
 />,
-          <button
-            className="report-form__btn"
-            disabled={true}
-            type="submit"
+          <div
+            className="report-form__nav"
 >
-            Submit
-</button>,
-          <button
-            className="report-form__btn"
-            onClick={[Function]}
->
-            Back
-</button>,
+            <button
+                        className="report-form__btn"
+                        onClick={[Function]}
+            >
+                        Back
+            </button>
+            <Link
+                        className="report-form__btn"
+                        disabled={true}
+                        replace={false}
+                        to="/report/map"
+                        type="submit"
+            >
+                        next
+            </Link>
+</div>,
         ],
         "className": "report-form",
         "onSubmit": [Function],
@@ -281,7 +263,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "report-form__input",
+            "className": "report-form__input name",
             "name": "name",
             "onChange": [Function],
             "placeholder": "required",
@@ -322,36 +304,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "textarea",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Last Known Location",
-            "className": "report-form__label",
-            "htmlFor": "location",
-          },
-          "ref": null,
-          "rendered": "Last Known Location",
-          "type": "label",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "report-form__input",
-            "name": "location",
-            "onChange": [Function],
-            "placeholder": "Address or drop marker",
-            "required": true,
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
         },
         Object {
           "instance": null,
@@ -423,27 +375,58 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Submit",
-            "className": "report-form__btn",
-            "disabled": true,
-            "type": "submit",
+            "children": Array [
+              <button
+                className="report-form__btn"
+                onClick={[Function]}
+>
+                Back
+</button>,
+              <Link
+                className="report-form__btn"
+                disabled={true}
+                replace={false}
+                to="/report/map"
+                type="submit"
+>
+                next
+</Link>,
+            ],
+            "className": "report-form__nav",
           },
           "ref": null,
-          "rendered": "Submit",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Back",
-            "className": "report-form__btn",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Back",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Back",
+                "className": "report-form__btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Back",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "next",
+                "className": "report-form__btn",
+                "disabled": true,
+                "replace": false,
+                "to": "/report/map",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "next",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "form",
@@ -472,7 +455,7 @@ ShallowWrapper {
                     Item Name
           </label>
           <input
-                    className="report-form__input"
+                    className="report-form__input name"
                     name="name"
                     onChange={[Function]}
                     placeholder="required"
@@ -491,21 +474,6 @@ ShallowWrapper {
                     name="description"
                     onChange={[Function]}
                     placeholder="required"
-                    required={true}
-                    type="text"
-                    value=""
-          />
-          <label
-                    className="report-form__label"
-                    htmlFor="location"
-          >
-                    Last Known Location
-          </label>
-          <input
-                    className="report-form__input"
-                    name="location"
-                    onChange={[Function]}
-                    placeholder="Address or drop marker"
                     required={true}
                     type="text"
                     value=""
@@ -549,19 +517,25 @@ ShallowWrapper {
                     type="text"
                     value=""
           />
-          <button
-                    className="report-form__btn"
-                    disabled={true}
-                    type="submit"
+          <div
+                    className="report-form__nav"
           >
-                    Submit
-          </button>
-          <button
-                    className="report-form__btn"
-                    onClick={[Function]}
-          >
-                    Back
-          </button>
+                    <button
+                              className="report-form__btn"
+                              onClick={[Function]}
+                    >
+                              Back
+                    </button>
+                    <Link
+                              className="report-form__btn"
+                              disabled={true}
+                              replace={false}
+                              to="/report/map"
+                              type="submit"
+                    >
+                              next
+                    </Link>
+          </div>
 </form>,
         "className": "report-form-container",
       },
@@ -584,7 +558,7 @@ ShallowWrapper {
               Item Name
 </label>,
             <input
-              className="report-form__input"
+              className="report-form__input name"
               name="name"
               onChange={[Function]}
               placeholder="required"
@@ -603,21 +577,6 @@ ShallowWrapper {
               name="description"
               onChange={[Function]}
               placeholder="required"
-              required={true}
-              type="text"
-              value=""
-/>,
-            <label
-              className="report-form__label"
-              htmlFor="location"
->
-              Last Known Location
-</label>,
-            <input
-              className="report-form__input"
-              name="location"
-              onChange={[Function]}
-              placeholder="Address or drop marker"
               required={true}
               type="text"
               value=""
@@ -661,19 +620,25 @@ ShallowWrapper {
               type="text"
               value=""
 />,
-            <button
-              className="report-form__btn"
-              disabled={true}
-              type="submit"
+            <div
+              className="report-form__nav"
 >
-              Submit
-</button>,
-            <button
-              className="report-form__btn"
-              onClick={[Function]}
->
-              Back
-</button>,
+              <button
+                            className="report-form__btn"
+                            onClick={[Function]}
+              >
+                            Back
+              </button>
+              <Link
+                            className="report-form__btn"
+                            disabled={true}
+                            replace={false}
+                            to="/report/map"
+                            type="submit"
+              >
+                            next
+              </Link>
+</div>,
           ],
           "className": "report-form",
           "onSubmit": [Function],
@@ -710,7 +675,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "report-form__input",
+              "className": "report-form__input name",
               "name": "name",
               "onChange": [Function],
               "placeholder": "required",
@@ -751,36 +716,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": "textarea",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Last Known Location",
-              "className": "report-form__label",
-              "htmlFor": "location",
-            },
-            "ref": null,
-            "rendered": "Last Known Location",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "report-form__input",
-              "name": "location",
-              "onChange": [Function],
-              "placeholder": "Address or drop marker",
-              "required": true,
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
           },
           Object {
             "instance": null,
@@ -852,27 +787,58 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Submit",
-              "className": "report-form__btn",
-              "disabled": true,
-              "type": "submit",
+              "children": Array [
+                <button
+                  className="report-form__btn"
+                  onClick={[Function]}
+>
+                  Back
+</button>,
+                <Link
+                  className="report-form__btn"
+                  disabled={true}
+                  replace={false}
+                  to="/report/map"
+                  type="submit"
+>
+                  next
+</Link>,
+              ],
+              "className": "report-form__nav",
             },
             "ref": null,
-            "rendered": "Submit",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Back",
-              "className": "report-form__btn",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Back",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Back",
+                  "className": "report-form__btn",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Back",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "next",
+                  "className": "report-form__btn",
+                  "disabled": true,
+                  "replace": false,
+                  "to": "/report/map",
+                  "type": "submit",
+                },
+                "ref": null,
+                "rendered": "next",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "form",

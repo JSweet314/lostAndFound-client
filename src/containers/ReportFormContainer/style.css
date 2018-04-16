@@ -3,4 +3,30 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5rem 0 0 0;
+  font-family: 'Exo', sans-serif;
+}
+
+.map-report {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-report input {
+  height: 5rem;
+  width: 80%;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.map-report input {
+  font-family: 'Exo', sans-serif;
+}
+
+.map-report input:hover {
+  outline-color: #C28744;
+}
+
+.map-report input::placeholder {
+  font-family: 'Exo', sans-serif;
 }

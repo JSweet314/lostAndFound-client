@@ -9,15 +9,8 @@ export class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
       markerCoords: {}
     };
-  }
-
-  componentDidUpdate = (prevProps) => {
-    if (prevProps.userLocation !== this.props.userLocation) {
-      this.setState({ loading: false });
-    }
   }
 
   onMarkerClick = event => {
@@ -30,7 +23,7 @@ export class MapContainer extends Component {
       lng: event.latLng.lng()
     };
     this.props.captureMarkerCoords(location);
-    this.setState({ loading: false, markerCoords: location });
+    this.setState({ markerCoords: location });
   }
 
   containerElement = () => (
@@ -38,10 +31,10 @@ export class MapContainer extends Component {
       className="lostAndFoundMap"
       style={{
         position: 'absolute',
-        right: '2rem',
-        top: '170px',
-        height: '50%',
-        width: '50%'
+        top: this.props.top || '100px',
+        left: this.props.right,
+        height: this.props.height || '50%',
+        width: this.props.width || '50%'
       }}
     />
   )
@@ -51,6 +44,7 @@ export class MapContainer extends Component {
     return (
       <MapComponent
         {...this.state}
+        loading={this.props.loading}
         position={this.props.userLocation}
         onMapClick={this.onMapClick}
         onMarkerClick={this.onMarkerClick}
@@ -63,7 +57,8 @@ export class MapContainer extends Component {
 }
 
 export const mapStateToProps = state => ({
-  userLocation: state.userLocation
+  userLocation: state.userLocation.position,
+  loading: state.userLocation.loading
 });
 
 export const mapDispatchToProps = dispatch => ({
@@ -72,7 +67,8 @@ export const mapDispatchToProps = dispatch => ({
 
 MapContainer.propTypes = {
   userLocation: PropTypes.object,
-  captureGeo: PropTypes.func.isRequired
+  captureGeo: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);

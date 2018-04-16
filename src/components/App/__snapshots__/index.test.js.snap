@@ -27,19 +27,25 @@ ShallowWrapper {
           loggedIn={true}
           username="jon"
 />,
-        <Route
-          exact={true}
-          path="/"
-          render={[Function]}
-/>,
-        <Route
-          component={[Function]}
-          path="/user-forms/:id"
-/>,
-        <Route
-          component={[Function]}
-          path="/report/:id"
-/>,
+        <Switch>
+          <Route
+                    exact={true}
+                    path="/"
+                    render={[Function]}
+          />
+          <Route
+                    component={[Function]}
+                    path="/user-forms/:id"
+          />
+          <Route
+                    component={[Function]}
+                    path="/report/:id"
+          />
+          <Route
+                    component={[Function]}
+                    path="/items"
+          />
+</Switch>,
       ],
       "className": "app",
     },
@@ -63,36 +69,78 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "exact": true,
-          "path": "/",
-          "render": [Function],
+          "children": Array [
+            <Route
+              exact={true}
+              path="/"
+              render={[Function]}
+/>,
+            <Route
+              component={[Function]}
+              path="/user-forms/:id"
+/>,
+            <Route
+              component={[Function]}
+              path="/report/:id"
+/>,
+            <Route
+              component={[Function]}
+              path="/items"
+/>,
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "path": "/user-forms/:id",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "path": "/report/:id",
-        },
-        "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/user-forms/:id",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/report/:id",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "path": "/items",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -110,19 +158,25 @@ ShallowWrapper {
             loggedIn={true}
             username="jon"
 />,
-          <Route
-            exact={true}
-            path="/"
-            render={[Function]}
-/>,
-          <Route
-            component={[Function]}
-            path="/user-forms/:id"
-/>,
-          <Route
-            component={[Function]}
-            path="/report/:id"
-/>,
+          <Switch>
+            <Route
+                        exact={true}
+                        path="/"
+                        render={[Function]}
+            />
+            <Route
+                        component={[Function]}
+                        path="/user-forms/:id"
+            />
+            <Route
+                        component={[Function]}
+                        path="/report/:id"
+            />
+            <Route
+                        component={[Function]}
+                        path="/items"
+            />
+</Switch>,
         ],
         "className": "app",
       },
@@ -146,36 +200,78 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "exact": true,
-            "path": "/",
-            "render": [Function],
+            "children": Array [
+              <Route
+                exact={true}
+                path="/"
+                render={[Function]}
+/>,
+              <Route
+                component={[Function]}
+                path="/user-forms/:id"
+/>,
+              <Route
+                component={[Function]}
+                path="/report/:id"
+/>,
+              <Route
+                component={[Function]}
+                path="/items"
+/>,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/user-forms/:id",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/report/:id",
-          },
-          "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/user-forms/:id",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/report/:id",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/items",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],

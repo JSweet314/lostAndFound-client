@@ -31,7 +31,7 @@ ShallowWrapper {
           className="user-form__input"
           name="username"
           onChange={[Function]}
-          placeholder="Hey stranger, what's your name?"
+          placeholder="name"
           required={false}
           style={
                     Object {
@@ -101,7 +101,7 @@ ShallowWrapper {
           "className": "user-form__input",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "Hey stranger, what's your name?",
+          "placeholder": "name",
           "required": false,
           "style": Object {
             "display": "none",
@@ -234,7 +234,7 @@ ShallowWrapper {
             className="user-form__input"
             name="username"
             onChange={[Function]}
-            placeholder="Hey stranger, what's your name?"
+            placeholder="name"
             required={false}
             style={
                         Object {
@@ -304,7 +304,7 @@ ShallowWrapper {
             "className": "user-form__input",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "Hey stranger, what's your name?",
+            "placeholder": "name",
             "required": false,
             "style": Object {
               "display": "none",
@@ -468,7 +468,7 @@ ShallowWrapper {
           className="user-form__input"
           name="username"
           onChange={[Function]}
-          placeholder="Hey stranger, what's your name?"
+          placeholder="name"
           required={true}
           style={
                     Object {
@@ -538,7 +538,7 @@ ShallowWrapper {
           "className": "user-form__input",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "Hey stranger, what's your name?",
+          "placeholder": "name",
           "required": true,
           "style": Object {
             "display": "initial",
@@ -671,7 +671,7 @@ ShallowWrapper {
             className="user-form__input"
             name="username"
             onChange={[Function]}
-            placeholder="Hey stranger, what's your name?"
+            placeholder="name"
             required={true}
             style={
                         Object {
@@ -741,7 +741,7 @@ ShallowWrapper {
             "className": "user-form__input",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "Hey stranger, what's your name?",
+            "placeholder": "name",
             "required": true,
             "style": Object {
               "display": "initial",
