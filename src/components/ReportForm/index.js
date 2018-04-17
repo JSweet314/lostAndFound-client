@@ -8,7 +8,6 @@ const ReportForm = ({
   description,
   date,
   reward,
-  handleOnSubmit,
   handleOnChange,
   handleGoBack,
   routeId
@@ -18,7 +17,6 @@ const ReportForm = ({
   return (
     <div className='report-form-container'>
       <form
-        onSubmit={event => handleOnSubmit(event)}
         className='report-form'>
         <h2 className='report-form__heading'>{routeId}</h2>
         <label htmlFor='name' className='report-form__label'>Item Name</label>
@@ -75,7 +73,6 @@ const ReportForm = ({
           <Link
             to='/report/map'
             disabled={isDisabled}
-            type='submit'
             className='report-form__btn'>
             next
           </Link>

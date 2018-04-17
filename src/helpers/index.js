@@ -1,1 +1,2 @@
-export const geoCodeWrangler = results => results[0].geometry.location;
+export const geoCodeWrangler = response => 
+  response.results[0].geometry.location;

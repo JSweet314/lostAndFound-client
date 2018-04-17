@@ -61,6 +61,7 @@ export class UserFormContainer extends Component {
     return (loggedIn ? <Redirect to='/' /> : (
       <UserForm
         routeId={id}
+        errorMessage={this.props.errorMessage}
         handleOnSubmit={this.handleOnSubmit}
         handleOnChange={this.handleOnChange}
         togglePasswordVisibility={this.togglePasswordVisibility}
@@ -78,7 +79,8 @@ export const mapDispatchToProps = dispatch => ({
 
 export const mapStateToProps = state => ({
   loggedIn: state.user.loggedIn,
-  user: state.user
+  user: state.user,
+  errorMessage: state.errorMessage
 });
 
 UserFormContainer.propTypes = {
@@ -87,7 +89,8 @@ UserFormContainer.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
   captureUser: PropTypes.func.isRequired,
   submitNewUser: PropTypes.func.isRequired,
-  signInUser: PropTypes.func.isRequired
+  signInUser: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserFormContainer);

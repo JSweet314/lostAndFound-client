@@ -10,7 +10,8 @@ const UserForm = ({
   handleOnChange, 
   handleOnSubmit, 
   showPassword,
-  togglePasswordVisibility
+  togglePasswordVisibility,
+  errorMessage
 }) => {
   const welcomeBackDisplay = routeId === 'login' ? 'initial' : 'none';
   const usernameDisplay = routeId === 'login' ? 'none' : 'initial';
@@ -63,6 +64,9 @@ const UserForm = ({
           {passwordDisplayBtnText}
         </button>
       </div>
+      {
+        errorMessage && <h1>Invalid username/password, try again or sign up</h1>
+      }
       <button 
         className='user-form__btn user-form__btn--submit'
         disabled={isDisabled}
@@ -81,7 +85,8 @@ UserForm.propTypes = {
   showPassword: PropTypes.bool.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   handleOnSubmit: PropTypes.func.isRequired,
-  togglePasswordVisibility: PropTypes.func.isRequired
+  togglePasswordVisibility: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string
 };
 
 export default UserForm;

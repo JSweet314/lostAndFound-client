@@ -4,17 +4,24 @@ import MapComponent from '../../components/MapComponent';
 import { googleUrl } from '../../private/keys';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
+import * as API from '../../api';
 
 export class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      markerCoords: {}
+      markerCoords: {},
+      center: null
     };
   }
 
-  onMarkerClick = event => {
-    console.log(event);
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.markerCoords !== this.props.markerCoords) {
+      this.setState({
+        center: this.props.markerCoords,
+        markerCoords: this.props.markerCoords
+      });
+    }
   }
 
   onMapClick = event => {
@@ -22,8 +29,19 @@ export class MapContainer extends Component {
       lat: event.latLng.lat(),
       lng: event.latLng.lng()
     };
-    this.props.captureMarkerCoords(location);
+    if (this.props.routeId === 'map') {
+      this.reverseGeoCode(location);
+    }
     this.setState({ markerCoords: location });
+  }
+
+  reverseGeoCode = async location => {
+    const response = await API.reverseGeoCode(location);
+    this.props.handleMapClick({
+      ...location,
+      name: response.results[0].formatted_address
+    });
+
   }
 
   containerElement = () => (
@@ -31,7 +49,7 @@ export class MapContainer extends Component {
       className="lostAndFoundMap"
       style={{
         position: 'absolute',
-        top: this.props.top || '100px',
+        top: this.props.top || '10rem',
         left: this.props.right,
         height: this.props.height || '50%',
         width: this.props.width || '50%'
@@ -45,7 +63,7 @@ export class MapContainer extends Component {
       <MapComponent
         {...this.state}
         loading={this.props.loading}
-        position={this.props.userLocation}
+        position={this.state.center || this.props.userLocation}
         onMapClick={this.onMapClick}
         onMarkerClick={this.onMarkerClick}
         googleMapURL={googleUrl}
@@ -58,7 +76,8 @@ export class MapContainer extends Component {
 
 export const mapStateToProps = state => ({
   userLocation: state.userLocation.position,
-  loading: state.userLocation.loading
+  loading: state.userLocation.loading,
+  markerCoords: state.mapMarker
 });
 
 export const mapDispatchToProps = dispatch => ({

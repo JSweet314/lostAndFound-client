@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MapContainer from '../MapContainer';
+import * as actions from '../../actions';
+import Item from '../../components/Item';
 import './style.css';
 
 export class ItemsContainer extends Component {
 
-  handleOnClick = () => {
-
+  handleOnClick = itemId => {
+    const item = this.props.items.find(item => item.itemId === itemId);
+    if (item.locationId) {
+      const {locationId} = item;
+      this.props.getLocationDetails({locationId, itemId});
+    }
   }
 
   itemList = () => this.props.items.map(item =>
     <li
       className='list-item'
       key={item.itemId}>
-      <article
-        className='user-item'
-        onClick={() => this.handleOnClick()}>
-        <h3>{item.status}: {item.name}</h3>
-        <p>{item.description}</p>
-        <p>{item.date}</p>
-      </article>
+      <Item {...item} handleOnClick={this.handleOnClick}/>
     </li>
   );
 
@@ -27,7 +27,7 @@ export class ItemsContainer extends Component {
     return (
       <section className='items-container'>
         <div className='item-map'>
-          <MapContainer  height='87%' width='75%' captureMarkerCoords={() => {}}/>
+          <MapContainer height='87%' width='75%' captureMarkerCoords={() => { }} />
         </div>
         <ul className='items-list'>
           {this.itemList()}
@@ -37,8 +37,12 @@ export class ItemsContainer extends Component {
   }
 }
 
-export const mapStateToProps = ({items}) => ({
+export const mapStateToProps = ({ items }) => ({
   items
 });
 
-export default connect(mapStateToProps)(ItemsContainer);
+export const mapDispatchToProps = dispatch => ({
+  getLocationDetails: ids => dispatch(actions.fetchItemLocation(ids))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsContainer);

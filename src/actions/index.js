@@ -50,3 +50,15 @@ export const captureGeo = position => ({
   type: 'GET_GEOLOCATION',
   position
 });
+
+export const fetchItemLocation = ({itemId, locationId}) => ({
+  type: 'FETCH_LOCATION',
+  itemId,
+  locationId
+});
+
+export const captureLocation = ({itemId, location}) => ({
+  type: 'CAPTURE_LOCATION',
+  itemId,
+  location
+});

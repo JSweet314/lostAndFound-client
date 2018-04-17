@@ -21,11 +21,9 @@
 }
 .map-report input {
   font-family: 'Exo', sans-serif;
-}
-
-.map-report input:hover {
   outline-color: #C28744;
 }
+
 
 .map-report input::placeholder {
   font-family: 'Exo', sans-serif;

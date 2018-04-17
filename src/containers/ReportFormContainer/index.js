@@ -13,15 +13,28 @@ export class ReportFormContainer extends Component {
     this.state = {
       name: '',
       description: '',
-      location: {},
+      location: {
+        name: '',
+        position: {
+          lat: null,
+          lng: null
+        }
+      },
       date: '',
       reward: ''
     };
   }
 
+  handleMapClick = location => this.setState({ location })
+
   handleOnChange = event => {
     const { name, value } = event.target;
-    this.setState({ [name]: value });
+    if (event.target.name === 'mapSearch') {
+      const { location } = this.state;
+      this.setState({ location: { ...location, name: value } })
+    } else {
+      this.setState({ [name]: value });
+    }
   }
 
   handleGoBack = event => {
@@ -31,25 +44,25 @@ export class ReportFormContainer extends Component {
 
   handleNext = event => {
     event.preventDefault();
-    this.props.history.goForward('/report/map')
+    this.props.history.goForward('/report/map');
   }
 
-  captureMarkerCoords = location => {
-    this.setState({ location });
-  }
-
-  handleOnSubmit = event => {
-    event.preventDefault();
-    const { id } = this.props.match.params;
+  handleOnSubmit = () => {
     const { userId } = this.props;
-    this.props.reportItem({ ...this.state, status: id, userId });
+    this.props.reportItem({ ...this.state, status: 'lost', userId });
     this.setState(
       {
         name: '',
         description: '',
         date: '',
         reward: '',
-        location: {}
+        location: {
+          name: '',
+          position: {
+            lat: null,
+            lng: null
+          }
+        }
       }
     );
   }
@@ -64,13 +77,24 @@ export class ReportFormContainer extends Component {
           mapDisplay ?
             <div className='map-report'>
               <button className='report-form__btn' onClick={() => this.props.history.goBack()}>{'< Back'}</button>
-              <input type="text" placeholder={searchPlaceholder} />
-              <Link className='report-form__btn' to='/'>{'Submit >'}</Link>
+              <input
+                type="text"
+                placeholder={searchPlaceholder}
+                name='mapSearch'
+                onChange={event => this.handleOnChange(event)}
+                value={this.state.location.name} />
+              <Link 
+                onClick={event => this.handleOnSubmit(event)}
+                className='report-form__btn' 
+                to='/'>
+                {'Submit >'}
+              </Link>
               <MapContainer
+                routeId={id}
                 top='200px'
                 height='75%'
                 width='100%'
-                captureMarkerCoords={this.captureMarkerCoords} />
+                handleMapClick={this.handleMapClick} />
             </div> :
             <ReportForm
               {...this.state}
@@ -86,7 +110,8 @@ export class ReportFormContainer extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  reportItem: item => dispatch(actions.reportItem(item))
+  reportItem: item => dispatch(actions.reportItem(item)),
+  captureMarker: location => dispatch(actions.captureMarker(location))
 });
 
 export const mapStateToProps = state => ({

@@ -14,7 +14,7 @@ const Header = ({ loggedIn, username, handleLogOut }) => {
           <Link 
             className='header__nav-link' 
             to='/items'>
-            My Items
+            My Reports
           </Link>
         }
         <li className='header__nav-list-item'>

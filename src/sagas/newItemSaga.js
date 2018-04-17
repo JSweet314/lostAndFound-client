@@ -1,15 +1,23 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import * as API from '../api';
 import * as actions from '../actions';
+import * as helpers from '../helpers';
 
 export function* newItemSaga(action) {
   try {
-    const geoCode = yield call(API.geoCode, action.item.location);
-    const location = { name: action.item.location, ...geoCode };
-    const locationPost = yield call(API.postLocation, location);
-    const item = {...action.item, location: locationPost.id};
+    if (!action.item.location.lat) {
+      const response = yield call(API.geoCode, action.item.location.name);
+      const geoLocation = yield helpers.geoCodeWrangler(response);
+      const {name} = action.item.location;
+      action.item.location = {name, ...geoLocation};
+      console.log(action.item.location);
+    }
+    const locationPost = yield call(API.postLocation, action.item.location);
+    const item = { ...action.item, location: locationPost.id };
+    console.log(item);
     yield call(API.postItem, item);
-    yield put(actions.fetchUserItems(item.userId));   
+    yield put(actions.fetchUserItems(item.userId));
+
   } catch (error) {
     yield put(actions.captureErrorMessage(error.message));
   }

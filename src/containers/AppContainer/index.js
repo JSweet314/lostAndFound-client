@@ -10,6 +10,8 @@ export class AppContainer extends Component {
   componentDidMount = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.getUserGeo);
+    } else {
+      this.props.captureGeo({});  
     }
     const storedUser = localStorage.getItem('LFUser');
     if (storedUser) {
@@ -27,6 +29,7 @@ export class AppContainer extends Component {
   getUserGeo = userPosition => {
     const { latitude, longitude } = userPosition.coords;
     const position = { lat: latitude, lng: longitude };
+    localStorage.setItem('LFLocation', JSON.stringify(position));
     this.props.captureGeo(position);
   }
 
