@@ -6,7 +6,18 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ItemsContainer
     getLocationDetails={[Function]}
-    items={Array []}
+    items={
+        Array [
+            Object {
+              "date": "02-02-2018",
+              "description": "subaru keys",
+              "itemId": 1,
+              "locationId": 2,
+              "name": "keys",
+              "status": "lost",
+            },
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,7 +44,19 @@ ShallowWrapper {
         <ul
           className="items-list"
 >
-          
+          <li
+                    className="list-item"
+          >
+                    <Unknown
+                              date="02-02-2018"
+                              description="subaru keys"
+                              handleOnClick={[Function]}
+                              itemId={1}
+                              locationId={2}
+                              name="keys"
+                              status="lost"
+                    />
+          </li>
 </ul>,
       ],
       "className": "items-container",
@@ -73,11 +96,62 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [],
+          "children": Array [
+            <li
+              className="list-item"
+>
+              <Unknown
+                            date="02-02-2018"
+                            description="subaru keys"
+                            handleOnClick={[Function]}
+                            itemId={1}
+                            locationId={2}
+                            name="keys"
+                            status="lost"
+              />
+</li>,
+          ],
           "className": "items-list",
         },
         "ref": null,
-        "rendered": Array [],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": <Unknown
+                date="02-02-2018"
+                description="subaru keys"
+                handleOnClick={[Function]}
+                itemId={1}
+                locationId={2}
+                name="keys"
+                status="lost"
+/>,
+              "className": "list-item",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "date": "02-02-2018",
+                "description": "subaru keys",
+                "handleOnClick": [Function],
+                "itemId": 1,
+                "locationId": 2,
+                "name": "keys",
+                "status": "lost",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "li",
+          },
+        ],
         "type": "ul",
       },
     ],
@@ -102,7 +176,19 @@ ShallowWrapper {
           <ul
             className="items-list"
 >
-            
+            <li
+                        className="list-item"
+            >
+                        <Unknown
+                                    date="02-02-2018"
+                                    description="subaru keys"
+                                    handleOnClick={[Function]}
+                                    itemId={1}
+                                    locationId={2}
+                                    name="keys"
+                                    status="lost"
+                        />
+            </li>
 </ul>,
         ],
         "className": "items-container",
@@ -142,11 +228,62 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
+            "children": Array [
+              <li
+                className="list-item"
+>
+                <Unknown
+                                date="02-02-2018"
+                                description="subaru keys"
+                                handleOnClick={[Function]}
+                                itemId={1}
+                                locationId={2}
+                                name="keys"
+                                status="lost"
+                />
+</li>,
+            ],
             "className": "items-list",
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Unknown
+                  date="02-02-2018"
+                  description="subaru keys"
+                  handleOnClick={[Function]}
+                  itemId={1}
+                  locationId={2}
+                  name="keys"
+                  status="lost"
+/>,
+                "className": "list-item",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "date": "02-02-2018",
+                  "description": "subaru keys",
+                  "handleOnClick": [Function],
+                  "itemId": 1,
+                  "locationId": 2,
+                  "name": "keys",
+                  "status": "lost",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+          ],
           "type": "ul",
         },
       ],

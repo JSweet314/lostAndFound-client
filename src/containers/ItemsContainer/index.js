@@ -11,8 +11,8 @@ export class ItemsContainer extends Component {
   handleOnClick = itemId => {
     const item = this.props.items.find(item => item.itemId === itemId);
     if (item.locationId) {
-      const {locationId} = item;
-      this.props.getLocationDetails({locationId, itemId});
+      const { locationId } = item;
+      this.props.getLocationDetails({ locationId, itemId });
     }
   }
 
@@ -20,7 +20,7 @@ export class ItemsContainer extends Component {
     <li
       className='list-item'
       key={item.itemId}>
-      <Item {...item} handleOnClick={this.handleOnClick}/>
+      <Item {...item} handleOnClick={this.handleOnClick} />
     </li>
   );
 
@@ -28,9 +28,9 @@ export class ItemsContainer extends Component {
     return (
       <section className='items-container'>
         <div className='item-map'>
-          <MapContainer 
-            height='87%' 
-            width='75%' 
+          <MapContainer
+            height='87%'
+            width='75%'
             captureMarkerCoords={() => { }} />
         </div>
         <ul className='items-list'>
