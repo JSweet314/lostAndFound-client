@@ -1,8 +1,8 @@
 # Lost & Found
-by Jonathan Sweet
+by [Jonathan Sweet](https://github.com/JSweet314/)
 
 ## Description:
-This project is composed of two parts, a client side and a server side. Utilizing an express.js server with knex/postgreSQL on the backend to store user and reported item information, the frontend provides an interface with React, Router, Redux, Saga middleware, and the Google Maps Javascript API to allow users to sign up, create reports, and view their reports with a dynamic, interactive map. Future versions will allow for greater administrative control for organizations and more robust search functionality for querying reported items. 
+This project is composed of two parts, a client side and a server side. Utilizing an express.js server with knex/postgreSQL on the backend to store user and reported item information, the front end provides an interface with React, Router, Redux, Saga middleware, and the Google Maps Javascript API to allow users to sign up, create reports, and view their reports with a dynamic, interactive map. Future versions may include public portal access that an organization can grant to search a full list of items.
 
 ## Instructions: 
 This project requires the following: 
