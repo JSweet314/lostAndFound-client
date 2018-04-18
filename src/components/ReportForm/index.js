@@ -1,27 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const ReportForm = ({
   name,
   description,
-  location,
   date,
   reward,
-  handleOnSubmit, 
-  handleOnChange, 
+  handleOnChange,
   handleGoBack,
   routeId
 }) => {
-  const display = {display: routeId === 'lost' ? 'initial' : 'none'};
-  const isDisabled = name && description && location && date ? false : true;
-  const locationText = routeId === 'lost' ? 
-    'Last Known Location' : 'Found Location'; 
+  const display = { display: routeId === 'lost' ? 'initial' : 'none' };
+  const isDisabled = name && description && date ? false : true;
   return (
     <div className='report-form-container'>
-
       <form
-        onSubmit={event => handleOnSubmit(event)}
         className='report-form'>
         <h2 className='report-form__heading'>{routeId}</h2>
         <label htmlFor='name' className='report-form__label'>Item Name</label>
@@ -31,33 +26,20 @@ const ReportForm = ({
           value={name}
           name='name'
           placeholder='required'
-          className='report-form__input'
+          className='report-form__input name'
           type='text' />
-        <label 
-          htmlFor='description' 
+        <label
+          htmlFor='description'
           className='report-form__label'>
           Description
         </label>
         <textarea
-          required 
+          required
           onChange={event => handleOnChange(event)}
           value={description}
           name='description'
           placeholder='required'
           className='report-form__textarea'
-          type='text' />
-        <label 
-          htmlFor='location' 
-          className='report-form__label'>
-          {locationText}
-        </label>
-        <input
-          required
-          onChange={event => handleOnChange(event)}
-          value={location}
-          name='location'
-          placeholder='Address or drop marker'
-          className='report-form__input'
           type='text' />
         <label htmlFor='date' className='report-form__label'>Date</label>
         <input
@@ -68,9 +50,9 @@ const ReportForm = ({
           placeholder='required'
           className='report-form__input'
           type='date' />
-        <label 
-          htmlFor='reward' 
-          style={display} 
+        <label
+          htmlFor='reward'
+          style={display}
           className='report-form__label'>
           Reward?
         </label>
@@ -82,17 +64,19 @@ const ReportForm = ({
           placeholder='$?'
           className='report-form__input'
           type='text' />
-        <button
-          disabled={isDisabled}
-          type='submit'
-          className='report-form__btn'>
-          Submit
-        </button>
-        <button
-          className='report-form__btn'
-          onClick={event => handleGoBack(event)}>
-          Back
-        </button>
+        <div className='report-form__nav'>
+          <button
+            className='report-form__btn'
+            onClick={event => handleGoBack(event)}>
+            Back
+          </button>
+          <Link
+            to='/report/map'
+            disabled={isDisabled}
+            className='report-form__btn'>
+            next
+          </Link>
+        </div>
       </form>
     </div>
   );
@@ -101,7 +85,6 @@ const ReportForm = ({
 ReportForm.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   reward: PropTypes.string.isRequired,
   routeId: PropTypes.string.isRequired,

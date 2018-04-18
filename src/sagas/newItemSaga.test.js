@@ -1,7 +1,8 @@
-import {call, put, takeLatest} from 'redux-saga/effects';
-import {newItemSaga, listenForNewItem} from './newItemSaga';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { newItemSaga, listenForNewItem } from './newItemSaga';
 import * as actions from '../actions';
 import * as API from '../api';
+import * as helpers from '../helpers';
 
 describe('listenForNewItem', () => {
   let generator;
@@ -22,15 +23,35 @@ describe('listenForNewItem', () => {
 describe('newItemSaga', () => {
   let generator, mockAction, mockItem, mockLocation;
   beforeAll(() => {
-    mockItem = {userId: 1, name: 'phone', location: 'Denver, CO'};
+    mockItem = {
+      userId: 1, name: 'phone', location: {
+        name: 'Denver, CO',
+        lat: null,
+        lng: null
+      }
+    };
     mockAction = actions.reportItem(mockItem);
-    mockLocation = {name: 'Denver, CO', lat: 34, lng: -109};
+    mockLocation = { name: 'Denver, CO', positionlat: 34, lng: -109 };
     generator = newItemSaga(mockAction);
   });
 
   it('should call geocoding API', () => {
-    const expected = call(API.geoCode, mockAction.item.location);
+    const expected = call(API.geoCode, mockAction.item.location.name);
     expect(generator.next().value).toEqual(expected);
+  });
+
+  it('should clean the geoCode data', () => {
+    const mockResponse = {
+      results: [{
+        geometry: {
+          location: {
+            lat: 34, lng: -109
+          }
+        }
+      }]
+    };
+    const expected = helpers.geoCodeWrangler(mockResponse);
+    expect(generator.next(mockResponse).value).toEqual(expected);
   });
 
   it('should call an API to post the geocoded item location', () => {
@@ -39,11 +60,11 @@ describe('newItemSaga', () => {
   });
 
   it('should call an API to post the remaining item data', () => {
-    const newItem = {...mockItem, location: 1};
+    const newItem = { ...mockItem, location: 1 };
     const expected = call(API.postItem, newItem);
-    expect(generator.next({id: 1}).value).toEqual(expected);
+    expect(generator.next({ id: 1 }).value).toEqual(expected);
   });
-  
+
   it('should reconcile store and DB items', () => {
     const expected = put(actions.fetchUserItems(mockItem.userId));
     expect(generator.next().value).toEqual(expected);

@@ -4,3 +4,21 @@
   margin: 5rem 0 2.5rem 0;
   text-shadow: 2px 2px 5px rgba(196, 126, 89, 0.5);
 }
+
+.welcome-title {
+  text-align: center;
+  margin: 2rem 0 0 0;
+  color: orange;
+}
+
+.welcome-call-to-action,
+.welcome-instructions {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+.welcome-call-to-action {
+  font-size: 5.5rem;
+  color: orange;
+}

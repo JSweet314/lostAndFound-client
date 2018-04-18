@@ -10,9 +10,10 @@ describe('ReportFormContainer', () => {
   const mockState = {
     name: 'phone',
     description: 'black iphone',
-    location: 'Turing School',
+    location: { name: 'Turing School', position: { lat: 1, lng: 2 } },
     date: '04/01/2018',
-    reward: '0'
+    reward: '0',
+    status: 'lost'
   };
   const mockItem = { ...mockState, status: 'lost', userId: 1 };
   const mockGoBack = jest.fn();
@@ -48,15 +49,15 @@ describe('ReportFormContainer', () => {
   });
 
   it('should have a handleOnSubmit method', () => {
-    wrapper.instance().handleOnSubmit({ preventDefault: jest.fn() });
+    wrapper.instance().handleOnSubmit();
     const expected = {
-      name: '',
-      description: '',
-      location: '',
-      date: '',
-      reward: '',
-      status: 'lost',
-      userId: 1
+      "date": "", 
+      "description": "", 
+      "location": { "name": "", "position": { "lat": null, "lng": null } }, 
+      "name": "", 
+      "reward": "", 
+      "status": "", 
+      "userId": 1 
     };
     expect(mockReportItem).toHaveBeenCalledWith(expected);
   });
@@ -64,12 +65,13 @@ describe('ReportFormContainer', () => {
   it('should reset state after submitting an item report', () => {
     wrapper.setState(mockState);
     wrapper.instance().handleOnSubmit({ preventDefault: jest.fn() });
-    expect(wrapper.state()).toEqual({
-      name: '',
-      description: '',
-      location: '',
-      date: '',
-      reward: ''
+    expect(wrapper.state()).toEqual({ 
+      "date": "", 
+      "description": "", 
+      "location": { "name": "", "position": { "lat": null, "lng": null } }, 
+      "name": "", 
+      "reward": "", 
+      "status": "lost" 
     });
   });
 

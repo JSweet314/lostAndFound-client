@@ -31,7 +31,7 @@ ShallowWrapper {
           className="user-form__input"
           name="username"
           onChange={[Function]}
-          placeholder="Hey stranger, what's your name?"
+          placeholder="name"
           required={false}
           style={
                     Object {
@@ -80,6 +80,7 @@ ShallowWrapper {
                     show
           </button>
 </div>,
+        undefined,
         <button
           className="user-form__btn user-form__btn--submit"
           disabled={true}
@@ -101,7 +102,7 @@ ShallowWrapper {
           "className": "user-form__input",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "Hey stranger, what's your name?",
+          "placeholder": "name",
           "required": false,
           "style": Object {
             "display": "none",
@@ -206,6 +207,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -234,7 +236,7 @@ ShallowWrapper {
             className="user-form__input"
             name="username"
             onChange={[Function]}
-            placeholder="Hey stranger, what's your name?"
+            placeholder="name"
             required={false}
             style={
                         Object {
@@ -283,6 +285,7 @@ ShallowWrapper {
                         show
             </button>
 </div>,
+          undefined,
           <button
             className="user-form__btn user-form__btn--submit"
             disabled={true}
@@ -304,7 +307,7 @@ ShallowWrapper {
             "className": "user-form__input",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "Hey stranger, what's your name?",
+            "placeholder": "name",
             "required": false,
             "style": Object {
               "display": "none",
@@ -409,6 +412,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        undefined,
         Object {
           "instance": null,
           "key": undefined,
@@ -468,7 +472,7 @@ ShallowWrapper {
           className="user-form__input"
           name="username"
           onChange={[Function]}
-          placeholder="Hey stranger, what's your name?"
+          placeholder="name"
           required={true}
           style={
                     Object {
@@ -517,6 +521,7 @@ ShallowWrapper {
                     hide
           </button>
 </div>,
+        undefined,
         <button
           className="user-form__btn user-form__btn--submit"
           disabled={true}
@@ -538,7 +543,7 @@ ShallowWrapper {
           "className": "user-form__input",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "Hey stranger, what's your name?",
+          "placeholder": "name",
           "required": true,
           "style": Object {
             "display": "initial",
@@ -643,6 +648,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -671,7 +677,7 @@ ShallowWrapper {
             className="user-form__input"
             name="username"
             onChange={[Function]}
-            placeholder="Hey stranger, what's your name?"
+            placeholder="name"
             required={true}
             style={
                         Object {
@@ -720,6 +726,7 @@ ShallowWrapper {
                         hide
             </button>
 </div>,
+          undefined,
           <button
             className="user-form__btn user-form__btn--submit"
             disabled={true}
@@ -741,7 +748,7 @@ ShallowWrapper {
             "className": "user-form__input",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "Hey stranger, what's your name?",
+            "placeholder": "name",
             "required": true,
             "style": Object {
               "display": "initial",
@@ -846,6 +853,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        undefined,
         Object {
           "instance": null,
           "key": undefined,

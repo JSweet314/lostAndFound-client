@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import ReportForm from '../../components/ReportForm';
 import './style.css';
-import { MapContainer } from '../MapContainer';
+import MapContainer from '../MapContainer';
 
 export class ReportFormContainer extends Component {
   constructor() {
@@ -12,15 +13,30 @@ export class ReportFormContainer extends Component {
     this.state = {
       name: '',
       description: '',
-      location: '',
+      location: {
+        name: '',
+        position: {
+          lat: null,
+          lng: null
+        }
+      },
       date: '',
-      reward: ''
+      reward: '',
+      status: ''
     };
   }
 
+  handleMapClick = location => this.setState({ location })
+
   handleOnChange = event => {
+    const {id} = this.props.match.params;
     const { name, value } = event.target;
-    this.setState({ [name]: value });
+    if (event.target.name === 'mapSearch') {
+      const { location } = this.state;
+      this.setState({ location: { ...location, name: value } });
+    } else {
+      this.setState({ [name]: value, status: id});
+    }
   }
 
   handleGoBack = event => {
@@ -28,47 +44,80 @@ export class ReportFormContainer extends Component {
     this.props.history.goBack();
   }
 
-  captureMarkerCoords = location => {
-    const { lat, lng } = location;
-    this.setState({ location: `lat: ${lat}, lng: ${lng}` });
+  handleNext = event => {
+    event.preventDefault();
+    this.props.history.goForward('/report/map');
   }
 
-  handleOnSubmit = event => {
-    event.preventDefault();
-    const { id } = this.props.match.params;
+  handleOnSubmit = () => {
     const { userId } = this.props;
-    this.props.reportItem({ ...this.state, status: id, userId });
+    this.props.reportItem({ ...this.state, userId });
     this.setState(
       {
         name: '',
         description: '',
-        location: '',
         date: '',
-        reward: ''
-      }, 
-      this.props.history.goBack
+        reward: '',
+        location: {
+          name: '',
+          position: {
+            lat: null,
+            lng: null
+          }
+        }
+      }
     );
   }
 
   render() {
     const { id } = this.props.match.params;
+    const mapDisplay = id === 'map' ? true : false;
+    const searchPlaceholder = 'Enter address or drop map marker';
     return (
       <div className='report-form-container'>
-        <ReportForm
-          {...this.state}
-          routeId={id}
-          handleGoBack={this.handleGoBack}
-          handleOnChange={this.handleOnChange}
-          handleOnSubmit={this.handleOnSubmit}
-        />
-        <MapContainer />
+        {
+          mapDisplay ?
+            <div className='map-report'>
+              <button 
+                className='report-form__btn' 
+                onClick={() => this.props.history.goBack()}>
+                {'< Back'}
+              </button>
+              <input
+                type="text"
+                placeholder={searchPlaceholder}
+                name='mapSearch'
+                onChange={event => this.handleOnChange(event)}
+                value={this.state.location.name} />
+              <Link 
+                onClick={event => this.handleOnSubmit(event)}
+                className='report-form__btn' 
+                to='/'>
+                {'Submit >'}
+              </Link>
+              <MapContainer
+                routeId={id}
+                top='200px'
+                height='75%'
+                width='100%'
+                handleMapClick={this.handleMapClick} />
+            </div> :
+            <ReportForm
+              {...this.state}
+              routeId={id}
+              handleGoBack={this.handleGoBack}
+              handleOnChange={this.handleOnChange}
+              handleOnSubmit={this.handleOnSubmit}
+            />
+        }
       </div>
     );
   }
 }
 
 export const mapDispatchToProps = dispatch => ({
-  reportItem: item => dispatch(actions.reportItem(item))
+  reportItem: item => dispatch(actions.reportItem(item)),
+  captureMarker: location => dispatch(actions.captureMarker(location))
 });
 
 export const mapStateToProps = state => ({
@@ -77,10 +126,11 @@ export const mapStateToProps = state => ({
 
 ReportFormContainer.propTypes = {
   history: PropTypes.object.isRequired,
+  userId: PropTypes.number,
   match: PropTypes.object.isRequired,
-  userId: PropTypes.number.isRequired,
   reportItem: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  ReportFormContainer);
+  ReportFormContainer
+);

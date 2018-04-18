@@ -80,6 +80,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            false,
             <li
               className="header__nav-list-item"
 >
@@ -107,6 +108,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -240,6 +242,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              false,
               <li
                 className="header__nav-list-item"
 >
@@ -267,6 +270,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            false,
             Object {
               "instance": null,
               "key": undefined,
@@ -378,6 +382,13 @@ ShallowWrapper {
         <ul
           className="header__nav-list"
 >
+          <Link
+                    className="header__nav-link"
+                    replace={false}
+                    to="/items"
+          >
+                    My Reports
+          </Link>
           <li
                     className="header__nav-list-item"
           >
@@ -425,6 +436,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <Link
+              className="header__nav-link"
+              replace={false}
+              to="/items"
+>
+              My Reports
+</Link>,
             <li
               className="header__nav-list-item"
 >
@@ -451,6 +469,20 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "My Reports",
+              "className": "header__nav-link",
+              "replace": false,
+              "to": "/items",
+            },
+            "ref": null,
+            "rendered": "My Reports",
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -534,6 +566,13 @@ ShallowWrapper {
           <ul
             className="header__nav-list"
 >
+            <Link
+                        className="header__nav-link"
+                        replace={false}
+                        to="/items"
+            >
+                        My Reports
+            </Link>
             <li
                         className="header__nav-list-item"
             >
@@ -581,6 +620,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <Link
+                className="header__nav-link"
+                replace={false}
+                to="/items"
+>
+                My Reports
+</Link>,
               <li
                 className="header__nav-list-item"
 >
@@ -607,6 +653,20 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "My Reports",
+                "className": "header__nav-link",
+                "replace": false,
+                "to": "/items",
+              },
+              "ref": null,
+              "rendered": "My Reports",
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,

@@ -1,10 +1,10 @@
-const mapMarkersReducer = (state = [], action) => {
+const mapMarkerReducer = (state = {}, action) => {
   switch (action.type) {
   case 'CAPTURE_MARKER':
-    return [...state, action.marker];
+    return action.marker;
   default:
     return state;
   }
 };
 
-export default mapMarkersReducer;
+export default mapMarkerReducer;

@@ -1,11 +1,23 @@
 import React from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker }
+  from 'react-google-maps';
+import './style.css';
 
-export const MapComponent = withScriptjs(withGoogleMap(() => {
-  return (
-    <GoogleMap
+export const MapComponent = withScriptjs(withGoogleMap((
+  { position, onMapClick, onMarkerClick, markerCoords, ...props }
+) => {
+  const markerPosition = markerCoords.lat ? markerCoords : position;
+  return (props.loading ?
+    <div className='map-loading'>
+      <h3>Waiting on Location...</h3>
+    </div>
+    : <GoogleMap
+      onClick={event => onMapClick(event)}
       defaultZoom={16}
-      defaultCenter={{ lat: 39.7508, lng: -104.9966 }}>  
+      center={position}>
+      <Marker 
+        onClick={event => onMarkerClick(event)} 
+        position={markerPosition} />
     </GoogleMap>
   );
 }));

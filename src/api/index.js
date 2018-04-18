@@ -1,5 +1,4 @@
 import { gKey } from '../private/keys';
-import { geoCodeWrangler } from '../helpers';
 
 export const addUser = async newUser => {
   try {
@@ -13,10 +12,10 @@ export const addUser = async newUser => {
     if (response.ok) {
       return await response.json();
     } else {
-      throw new Error(`Errored adding user. Status code: ${response.status}.`);
+      throw new Error(`Bad response, status code: ${response.status}`);
     }
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(`addUser error: ${error.message}`);
   }
 };
 
@@ -32,12 +31,10 @@ export const signInUser = async user => {
     if (response.ok) {
       return await response.json();
     } else {
-      throw new Error(
-        `Error occured during sign in. Status code: ${response.status}.`
-      );
+      throw new Error(`Bad response, status code: ${response.status}`);
     }
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(`signInUser error: ${error.message}`);
   }
 };
 
@@ -46,28 +43,26 @@ export const geoCode = async address => {
     const groot = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
     const response = await fetch(`${groot}${address}&key=${gKey}`);
     if (response.ok) {
-      const parsed = await response.json(); 
-      return geoCodeWrangler(parsed.results);
-    } else {
-      throw new Error(`issue geocoding, status code: ${response.status}`);
+      return await response.json(); 
     }
+    throw new Error(`Bad response, status code: ${response.status}`);
   } catch (error) {
-    return error;
+    throw new Error(`geoCode error: ${error.message}`);
   }
 };
 
 export const reverseGeoCode = async coords => {
   try {
     const groot = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
-    const response = await fetch(`${groot}${coords}&key=${gKey}`);
+    const response = await fetch(
+      `${groot}${coords.lat},${coords.lng}&key=${gKey}`
+    );
     if (response.ok) {
-      const parsed = await response.json(); 
-      return geoCodeWrangler(parsed.results);
-    } else {
-      throw new Error(`issue geocoding, status code: ${response.status}`);
-    }
+      return await response.json(); 
+    } 
+    throw new Error(`Bad response, status code: ${response.status}`);
   } catch (error) {
-    return error;
+    throw new Error(`reverseGeoCode error: ${error.message}`);
   }
 };
 
@@ -82,11 +77,10 @@ export const postLocation = async location => {
     });
     if (response.ok) {
       return await response.json();
-    } else {
-      throw new Error(`Error adding location. Status ${response.status}`);
-    }
+    } 
+    throw new Error(`Bad response, status code: ${response.status}`);
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(`postLocation error: ${error.message}`);
   }
 };
 
@@ -102,8 +96,9 @@ export const postItem = async item => {
     if (response.ok) {
       return await response.json();
     }
+    throw new Error(`Bad response, status code: ${response.status}`);
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(`postItem error: ${error.message}`);
   }
 };
 
@@ -117,18 +112,11 @@ export const fetchUserItems = async userId => {
       }
     });
     if (response.ok) {
-      const parsed = await response.json();
-      const withLocation =  await parsed.items.map(async (item) => {
-        const location = await fetchLocationDetails(item.locationId);
-        const {lat, lng, name} = location;
-        return {...item, locationName: name, location: {lat, lng}};
-      });
-      return Promise.all(withLocation);
-    } else {
-      throw new Error('fetchUserItems Failed');
+      return await response.json();
     }
+    throw new Error(`Bad response, status code: ${response.status}`);
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(`fetchUserItems error: ${error.message}`);
   }
 };
 
@@ -144,7 +132,8 @@ export const fetchLocationDetails = async locationId => {
     if (response.ok) {
       return await response.json();
     }
+    throw new Error(`Bad response, status code: ${response.status}`);
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(`fetchLocationDetails error: ${error.message}`);
   }
 };

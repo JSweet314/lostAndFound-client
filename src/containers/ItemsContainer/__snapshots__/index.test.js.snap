@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemsContainer should match a snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ItemsContainer
+    getLocationDetails={[Function]}
+    items={
+        Array [
+            Object {
+              "date": "02-02-2018",
+              "description": "subaru keys",
+              "itemId": 1,
+              "locationId": 2,
+              "name": "keys",
+              "status": "lost",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="item-map"
+>
+          <Connect(MapContainer)
+                    captureMarkerCoords={[Function]}
+                    height="87%"
+                    width="75%"
+          />
+</div>,
+        <ul
+          className="items-list"
+>
+          <li
+                    className="list-item"
+          >
+                    <Unknown
+                              date="02-02-2018"
+                              description="subaru keys"
+                              handleOnClick={[Function]}
+                              itemId={1}
+                              locationId={2}
+                              name="keys"
+                              status="lost"
+                    />
+          </li>
+</ul>,
+      ],
+      "className": "items-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Connect(MapContainer)
+            captureMarkerCoords={[Function]}
+            height="87%"
+            width="75%"
+/>,
+          "className": "item-map",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "captureMarkerCoords": [Function],
+            "height": "87%",
+            "width": "75%",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="list-item"
+>
+              <Unknown
+                            date="02-02-2018"
+                            description="subaru keys"
+                            handleOnClick={[Function]}
+                            itemId={1}
+                            locationId={2}
+                            name="keys"
+                            status="lost"
+              />
+</li>,
+          ],
+          "className": "items-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": <Unknown
+                date="02-02-2018"
+                description="subaru keys"
+                handleOnClick={[Function]}
+                itemId={1}
+                locationId={2}
+                name="keys"
+                status="lost"
+/>,
+              "className": "list-item",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "date": "02-02-2018",
+                "description": "subaru keys",
+                "handleOnClick": [Function],
+                "itemId": 1,
+                "locationId": 2,
+                "name": "keys",
+                "status": "lost",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="item-map"
+>
+            <Connect(MapContainer)
+                        captureMarkerCoords={[Function]}
+                        height="87%"
+                        width="75%"
+            />
+</div>,
+          <ul
+            className="items-list"
+>
+            <li
+                        className="list-item"
+            >
+                        <Unknown
+                                    date="02-02-2018"
+                                    description="subaru keys"
+                                    handleOnClick={[Function]}
+                                    itemId={1}
+                                    locationId={2}
+                                    name="keys"
+                                    status="lost"
+                        />
+            </li>
+</ul>,
+        ],
+        "className": "items-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Connect(MapContainer)
+              captureMarkerCoords={[Function]}
+              height="87%"
+              width="75%"
+/>,
+            "className": "item-map",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "captureMarkerCoords": [Function],
+              "height": "87%",
+              "width": "75%",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="list-item"
+>
+                <Unknown
+                                date="02-02-2018"
+                                description="subaru keys"
+                                handleOnClick={[Function]}
+                                itemId={1}
+                                locationId={2}
+                                name="keys"
+                                status="lost"
+                />
+</li>,
+            ],
+            "className": "items-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Unknown
+                  date="02-02-2018"
+                  description="subaru keys"
+                  handleOnClick={[Function]}
+                  itemId={1}
+                  locationId={2}
+                  name="keys"
+                  status="lost"
+/>,
+                "className": "list-item",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "date": "02-02-2018",
+                  "description": "subaru keys",
+                  "handleOnClick": [Function],
+                  "itemId": 1,
+                  "locationId": 2,
+                  "name": "keys",
+                  "status": "lost",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

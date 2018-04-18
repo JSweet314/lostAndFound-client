@@ -12,10 +12,12 @@ describe('AppContainer', () => {
   const mockCaptureUser = jest.fn();
   const mockCaptureItems = jest.fn();
   const mockFetchUserItems = jest.fn();
+  const mockCaptureGeo = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(
       <AppContainer
+        captureGeo={mockCaptureGeo}
         captureUser={mockCaptureUser}
         logOutUser={mockLogOutUser} 
         captureItems={mockCaptureItems}

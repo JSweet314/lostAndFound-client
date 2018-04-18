@@ -20,6 +20,7 @@ describe('UserFormContainer', () => {
   const mockSubmitNewUser = jest.fn();
   const mockSignInUser = jest.fn();
   const mockCaptureUser = jest.fn();
+  const mockCaptureErrorMessage = jest.fn();
   beforeEach(() => {
     wrapper = shallow(
       <UserFormContainer
@@ -29,6 +30,8 @@ describe('UserFormContainer', () => {
         submitNewUser={mockSubmitNewUser}
         signInUser={mockSignInUser}
         match={mockSignupMatch}
+        captureErrorMessage={mockCaptureErrorMessage}
+        errorMessage=''
       />
     );
   });
@@ -57,6 +60,8 @@ describe('UserFormContainer', () => {
         submitNewUser={mockSubmitNewUser}
         signInUser={mockSignInUser}
         match={mockLoginMatch}
+        captureErrorMessage={mockCaptureErrorMessage}
+        errorMessage=''
       />
     );
     wrapper.setState(mockUser);
@@ -83,6 +88,8 @@ describe('UserFormContainer', () => {
         submitNewUser={mockSubmitNewUser}
         signInUser={mockSignInUser}
         match={mockSignupMatch}
+        captureErrorMessage={mockCaptureErrorMessage}
+        errorMessage=''
       />
     );
     wrapper.instance().componentDidUpdate({loggedIn: false});

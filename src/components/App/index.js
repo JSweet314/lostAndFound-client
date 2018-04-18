@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import UserFormContainer from '../../containers/UserFormContainer';
 import ReportFormContainer from '../../containers/ReportFormContainer';
 import Header from '../Header';
 import LandingPage from '../LandingPage';
+import ItemsContainer from '../../containers/ItemsContainer';
 import './style.css';
 
 const App = ({ username, loggedIn, handleLogOut }) => {
@@ -14,10 +15,13 @@ const App = ({ username, loggedIn, handleLogOut }) => {
         loggedIn={loggedIn}
         username={username}
         handleLogOut={handleLogOut} />
-      <Route exact path='/' render={() =>
-        <LandingPage username={username} />} />
-      <Route path='/user-forms/:id' component={UserFormContainer} />
-      <Route path='/report/:id' component={ReportFormContainer} />
+      <Switch>
+        <Route exact path='/' render={() =>
+          <LandingPage username={username} />} />
+        <Route path='/user-forms/:id' component={UserFormContainer} />
+        <Route path='/report/:id' component={ReportFormContainer} />
+        <Route path='/items' component={ItemsContainer} />
+      </Switch>
     </div>
   );
 };
