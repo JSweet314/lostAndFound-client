@@ -29,7 +29,6 @@ ShallowWrapper {
     "props": Object {
       "children": <form
         className="report-form"
-        onSubmit={[Function]}
 >
         <h2
                 className="report-form__heading"
@@ -119,7 +118,6 @@ ShallowWrapper {
                         disabled={true}
                         replace={false}
                         to="/report/map"
-                        type="submit"
                 >
                         next
                 </Link>
@@ -222,14 +220,12 @@ ShallowWrapper {
                         disabled={true}
                         replace={false}
                         to="/report/map"
-                        type="submit"
             >
                         next
             </Link>
 </div>,
         ],
         "className": "report-form",
-        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -387,7 +383,6 @@ ShallowWrapper {
                 disabled={true}
                 replace={false}
                 to="/report/map"
-                type="submit"
 >
                 next
 </Link>,
@@ -419,7 +414,6 @@ ShallowWrapper {
                 "disabled": true,
                 "replace": false,
                 "to": "/report/map",
-                "type": "submit",
               },
               "ref": null,
               "rendered": "next",
@@ -441,7 +435,6 @@ ShallowWrapper {
       "props": Object {
         "children": <form
           className="report-form"
-          onSubmit={[Function]}
 >
           <h2
                     className="report-form__heading"
@@ -531,7 +524,6 @@ ShallowWrapper {
                               disabled={true}
                               replace={false}
                               to="/report/map"
-                              type="submit"
                     >
                               next
                     </Link>
@@ -634,14 +626,12 @@ ShallowWrapper {
                             disabled={true}
                             replace={false}
                             to="/report/map"
-                            type="submit"
               >
                             next
               </Link>
 </div>,
           ],
           "className": "report-form",
-          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -799,7 +789,6 @@ ShallowWrapper {
                   disabled={true}
                   replace={false}
                   to="/report/map"
-                  type="submit"
 >
                   next
 </Link>,
@@ -831,7 +820,6 @@ ShallowWrapper {
                   "disabled": true,
                   "replace": false,
                   "to": "/report/map",
-                  "type": "submit",
                 },
                 "ref": null,
                 "rendered": "next",

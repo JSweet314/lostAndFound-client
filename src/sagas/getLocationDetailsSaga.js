@@ -5,7 +5,6 @@ import * as API from '../api';
 export function* getLocationDetailsSaga(action) {
   try {
     const response = yield call(API.fetchLocationDetails, action.locationId);
-    console.log(response);
     yield put(actions.captureLocation({
       itemId: action.itemId, location: response
     }));

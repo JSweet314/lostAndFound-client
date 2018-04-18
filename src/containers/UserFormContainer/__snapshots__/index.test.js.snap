@@ -5,7 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <UserFormContainer
+    captureErrorMessage={[Function]}
     captureUser={[Function]}
+    errorMessage=""
     loggedIn={false}
     match={
         Object {
@@ -31,6 +33,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "email": "",
+      "errorMessage": "",
       "handleOnChange": [Function],
       "handleOnSubmit": [Function],
       "password": "",
@@ -50,6 +53,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "email": "",
+        "errorMessage": "",
         "handleOnChange": [Function],
         "handleOnSubmit": [Function],
         "password": "",

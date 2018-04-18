@@ -20,6 +20,10 @@ export class UserFormContainer extends Component {
     if (prevProps.loggedIn !== this.props.loggedIn) {
       localStorage.setItem('LFUser', JSON.stringify(this.props.user));
     }
+    const sameErrorMessage = prevProps.errorMessage === this.props.errorMessage;
+    if (sameErrorMessage || prevProps.errorMessage) {
+      this.props.captureErrorMessage('');
+    }
   }
 
   handleOnChange = event => {
@@ -74,7 +78,8 @@ export class UserFormContainer extends Component {
 export const mapDispatchToProps = dispatch => ({
   captureUser: user => dispatch(actions.captureUser(user)),
   submitNewUser: user => dispatch(actions.submitNewUser(user)),
-  signInUser: user => dispatch(actions.signInUser(user))
+  signInUser: user => dispatch(actions.signInUser(user)),
+  captureErrorMessage: message => dispatch(actions.captureErrorMessage(message))
 });
 
 export const mapStateToProps = state => ({
@@ -90,7 +95,8 @@ UserFormContainer.propTypes = {
   captureUser: PropTypes.func.isRequired,
   submitNewUser: PropTypes.func.isRequired,
   signInUser: PropTypes.func.isRequired,
-  errorMessage: PropTypes.string.isRequired
+  errorMessage: PropTypes.string.isRequired,
+  captureErrorMessage: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserFormContainer);

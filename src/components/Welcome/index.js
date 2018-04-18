@@ -3,10 +3,18 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 const Welcome = ({ username }) => {
-  const welcomeText = username ? 
-    `Welcome, ${username}` : 'Log In to Report/Search';
-  return (
-    <h2 className='welcome-greeting'>{welcomeText}</h2>
+  return (username ?
+    <h2 className='welcome-greeting'>{`Welcome, ${username}`}</h2> :
+    <div className='welcome-greeting'>
+      <h2 className='welcome-title'>Lost & Found</h2>
+      <p className='welcome-instructions'>
+        Here to help you or your organization track reported lost and found 
+        items. Be sure to view existing reports prior to reporting a new item.
+      </p>
+      <p className='welcome-call-to-action'>
+        Please log In to Report/Search
+      </p>
+    </div>
   );
 };
 

@@ -141,7 +141,7 @@ describe('apiCalls', () => {
   });
 
   describe('reverseGeoCode', () => {
-    const mockCoords = '34, -104';
+    const mockCoords = { lat: 34, lng: -109 };
     const groot =
       'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
     beforeEach(() => {
@@ -152,7 +152,7 @@ describe('apiCalls', () => {
     });
 
     it('should call fetch with the correct params', () => {
-      const expected = `${groot}${mockCoords}&key=${gKey}`;
+      const expected = `${groot}34,-109&key=${gKey}`;
       API.reverseGeoCode(mockCoords);
       expect(window.fetch).toHaveBeenCalledWith(expected);
     });
@@ -287,12 +287,12 @@ describe('apiCalls', () => {
       await expect(API.fetchUserItems(1)).rejects.toEqual(expected);
     });
   });
-  
+
   describe('fetchLocationDetails', () => {
     beforeEach(() => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
-        json: () => Promise.resolve({name: 'turing', lat: 1, lng: 2})
+        json: () => Promise.resolve({ name: 'turing', lat: 1, lng: 2 })
       }));
     });
 
@@ -309,7 +309,7 @@ describe('apiCalls', () => {
     });
 
     it('should return an array of user items', async () => {
-      const expected = { name: 'turing', lat: 1, lng: 2 }
+      const expected = { name: 'turing', lat: 1, lng: 2 };
       await expect(API.fetchLocationDetails(1)).resolves.toEqual(expected);
     });
 

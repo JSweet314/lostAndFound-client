@@ -80,6 +80,7 @@ ShallowWrapper {
                     show
           </button>
 </div>,
+        undefined,
         <button
           className="user-form__btn user-form__btn--submit"
           disabled={true}
@@ -206,6 +207,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -283,6 +285,7 @@ ShallowWrapper {
                         show
             </button>
 </div>,
+          undefined,
           <button
             className="user-form__btn user-form__btn--submit"
             disabled={true}
@@ -409,6 +412,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        undefined,
         Object {
           "instance": null,
           "key": undefined,
@@ -517,6 +521,7 @@ ShallowWrapper {
                     hide
           </button>
 </div>,
+        undefined,
         <button
           className="user-form__btn user-form__btn--submit"
           disabled={true}
@@ -643,6 +648,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      undefined,
       Object {
         "instance": null,
         "key": undefined,
@@ -720,6 +726,7 @@ ShallowWrapper {
                         hide
             </button>
 </div>,
+          undefined,
           <button
             className="user-form__btn user-form__btn--submit"
             disabled={true}
@@ -846,6 +853,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        undefined,
         Object {
           "instance": null,
           "key": undefined,

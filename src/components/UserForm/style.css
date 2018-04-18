@@ -92,3 +92,7 @@
   width: 12rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.user-form .error {
+  color: orange;
+}

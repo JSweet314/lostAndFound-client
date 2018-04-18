@@ -54,7 +54,9 @@ export const geoCode = async address => {
 export const reverseGeoCode = async coords => {
   try {
     const groot = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
-    const response = await fetch(`${groot}${coords.lat},${coords.lng}&key=${gKey}`);
+    const response = await fetch(
+      `${groot}${coords.lat},${coords.lng}&key=${gKey}`
+    );
     if (response.ok) {
       return await response.json(); 
     } 

@@ -65,7 +65,10 @@ const UserForm = ({
         </button>
       </div>
       {
-        errorMessage && <h1>Invalid username/password, try again or sign up</h1>
+        errorMessage && 
+        <h1 className='error'>
+          Invalid username/password, try again or sign up
+        </h1>
       }
       <button 
         className='user-form__btn user-form__btn--submit'

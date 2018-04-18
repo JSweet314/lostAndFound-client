@@ -38,10 +38,19 @@ ShallowWrapper {
         handleGoBack={[Function]}
         handleOnChange={[Function]}
         handleOnSubmit={[Function]}
-        location={Object {}}
+        location={
+                Object {
+                        "name": "",
+                        "position": Object {
+                          "lat": null,
+                          "lng": null,
+                        },
+                      }
+        }
         name=""
         reward=""
         routeId="lost"
+        status=""
 />,
       "className": "report-form-container",
     },
@@ -56,10 +65,17 @@ ShallowWrapper {
         "handleGoBack": [Function],
         "handleOnChange": [Function],
         "handleOnSubmit": [Function],
-        "location": Object {},
+        "location": Object {
+          "name": "",
+          "position": Object {
+            "lat": null,
+            "lng": null,
+          },
+        },
         "name": "",
         "reward": "",
         "routeId": "lost",
+        "status": "",
       },
       "ref": null,
       "rendered": null,
@@ -79,10 +95,19 @@ ShallowWrapper {
           handleGoBack={[Function]}
           handleOnChange={[Function]}
           handleOnSubmit={[Function]}
-          location={Object {}}
+          location={
+                    Object {
+                              "name": "",
+                              "position": Object {
+                                "lat": null,
+                                "lng": null,
+                              },
+                            }
+          }
           name=""
           reward=""
           routeId="lost"
+          status=""
 />,
         "className": "report-form-container",
       },
@@ -97,10 +122,17 @@ ShallowWrapper {
           "handleGoBack": [Function],
           "handleOnChange": [Function],
           "handleOnSubmit": [Function],
-          "location": Object {},
+          "location": Object {
+            "name": "",
+            "position": Object {
+              "lat": null,
+              "lng": null,
+            },
+          },
           "name": "",
           "reward": "",
           "routeId": "lost",
+          "status": "",
         },
         "ref": null,
         "rendered": null,

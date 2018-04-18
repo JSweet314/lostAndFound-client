@@ -10,11 +10,9 @@ export function* newItemSaga(action) {
       const geoLocation = yield helpers.geoCodeWrangler(response);
       const {name} = action.item.location;
       action.item.location = {name, ...geoLocation};
-      console.log(action.item.location);
     }
     const locationPost = yield call(API.postLocation, action.item.location);
     const item = { ...action.item, location: locationPost.id };
-    console.log(item);
     yield call(API.postItem, item);
     yield put(actions.fetchUserItems(item.userId));
 

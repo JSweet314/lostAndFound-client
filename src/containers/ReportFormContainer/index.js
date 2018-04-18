@@ -21,19 +21,21 @@ export class ReportFormContainer extends Component {
         }
       },
       date: '',
-      reward: ''
+      reward: '',
+      status: ''
     };
   }
 
   handleMapClick = location => this.setState({ location })
 
   handleOnChange = event => {
+    const {id} = this.props.match.params;
     const { name, value } = event.target;
     if (event.target.name === 'mapSearch') {
       const { location } = this.state;
-      this.setState({ location: { ...location, name: value } })
+      this.setState({ location: { ...location, name: value } });
     } else {
-      this.setState({ [name]: value });
+      this.setState({ [name]: value, status: id});
     }
   }
 
@@ -49,7 +51,7 @@ export class ReportFormContainer extends Component {
 
   handleOnSubmit = () => {
     const { userId } = this.props;
-    this.props.reportItem({ ...this.state, status: 'lost', userId });
+    this.props.reportItem({ ...this.state, userId });
     this.setState(
       {
         name: '',
@@ -76,7 +78,11 @@ export class ReportFormContainer extends Component {
         {
           mapDisplay ?
             <div className='map-report'>
-              <button className='report-form__btn' onClick={() => this.props.history.goBack()}>{'< Back'}</button>
+              <button 
+                className='report-form__btn' 
+                onClick={() => this.props.history.goBack()}>
+                {'< Back'}
+              </button>
               <input
                 type="text"
                 placeholder={searchPlaceholder}

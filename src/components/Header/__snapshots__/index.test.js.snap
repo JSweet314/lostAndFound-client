@@ -387,7 +387,7 @@ ShallowWrapper {
                     replace={false}
                     to="/items"
           >
-                    My Items
+                    My Reports
           </Link>
           <li
                     className="header__nav-list-item"
@@ -441,7 +441,7 @@ ShallowWrapper {
               replace={false}
               to="/items"
 >
-              My Items
+              My Reports
 </Link>,
             <li
               className="header__nav-list-item"
@@ -474,13 +474,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "My Items",
+              "children": "My Reports",
               "className": "header__nav-link",
               "replace": false,
               "to": "/items",
             },
             "ref": null,
-            "rendered": "My Items",
+            "rendered": "My Reports",
             "type": [Function],
           },
           Object {
@@ -571,7 +571,7 @@ ShallowWrapper {
                         replace={false}
                         to="/items"
             >
-                        My Items
+                        My Reports
             </Link>
             <li
                         className="header__nav-list-item"
@@ -625,7 +625,7 @@ ShallowWrapper {
                 replace={false}
                 to="/items"
 >
-                My Items
+                My Reports
 </Link>,
               <li
                 className="header__nav-list-item"
@@ -658,13 +658,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "My Items",
+                "children": "My Reports",
                 "className": "header__nav-link",
                 "replace": false,
                 "to": "/items",
               },
               "ref": null,
-              "rendered": "My Items",
+              "rendered": "My Reports",
               "type": [Function],
             },
             Object {

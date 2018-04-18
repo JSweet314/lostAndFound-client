@@ -87,7 +87,14 @@ export const mapDispatchToProps = dispatch => ({
 MapContainer.propTypes = {
   userLocation: PropTypes.object,
   captureGeo: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  markerCoords: PropTypes.object.isRequired,
+  routeId: PropTypes.string.isRequired,
+  handleMapClick: PropTypes.func.isRequired,
+  top: PropTypes.string.isRequired,
+  right: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);
