@@ -8,7 +8,7 @@ const Welcome = ({ username }) => {
     <div className='welcome-greeting'>
       <h2 className='welcome-title'>Lost & Found</h2>
       <p className='welcome-instructions'>
-        Here to help you or your organization track reported lost and found 
+        Here to help your organization track reported lost and found 
         items. Be sure to view existing reports prior to reporting a new item.
       </p>
       <p className='welcome-call-to-action'>
