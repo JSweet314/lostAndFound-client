@@ -4,8 +4,6 @@ import {shallow} from 'enzyme';
 import * as actions from '../../actions';
 import LocalStorage from '../../__mocks__/localStorageMock';
 
-window.localStorage = new LocalStorage();
-
 describe('AppContainer', () => {
   let wrapper;
   const mockLogOutUser = jest.fn();
@@ -15,6 +13,7 @@ describe('AppContainer', () => {
   const mockCaptureGeo = jest.fn();
 
   beforeEach(() => {
+    window.localStorage = new LocalStorage();
     wrapper = shallow(
       <AppContainer
         captureGeo={mockCaptureGeo}
@@ -47,6 +46,23 @@ describe('AppContainer', () => {
     window.localStorage.clear = jest.fn();
     wrapper.instance().handleLogOut();
     expect(window.localStorage.clear).toHaveBeenCalled();
+  });
+
+  it('should be able store a users geolocation', () => {
+    const mockUserPosition = {coords: {longitude: 1, latitude: 3}};
+    const mockSetItem = jest.fn();
+    window.localStorage.setItem = mockSetItem;
+    const position = {lat: 3, lng: 1};
+    wrapper.instance().getUserGeo(mockUserPosition);
+    const expected = ['LFLocation', JSON.stringify(position)];
+    expect(mockSetItem).toHaveBeenCalledWith(...expected);
+  });
+
+  it('should be able to capture te users geolocation', () => {
+    const mockUserPosition = { coords: { longitude: 1, latitude: 3 } };
+    wrapper.instance().getUserGeo(mockUserPosition);
+    const expected = { lat: 3, lng: 1 };
+    expect(mockCaptureGeo).toHaveBeenCalledWith(expected);
   });
 
   describe('mapStateToProps', () => {

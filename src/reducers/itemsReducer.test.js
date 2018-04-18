@@ -10,4 +10,20 @@ describe('itemsReducer', () => {
     expect(itemsReducer(undefined, actions.captureItems([{}])))
       .toEqual([{}]);
   });
+
+  it('should be able to add location info to an item', () => {
+    const mockLocation = { 
+      itemId: 1, 
+      location: { 
+        name: 'turing',
+        lat: 2, 
+        lng: 3 
+      }
+    }
+
+    const mockItem = {itemId: 1, name: 'keys'}
+    const expected = [{...mockItem, location: {lat: 2, lng: 3}, locationName: 'turing'}]
+    expect(itemsReducer([mockItem], actions.captureLocation(mockLocation)))
+      .toEqual(expected);
+  });
 });
