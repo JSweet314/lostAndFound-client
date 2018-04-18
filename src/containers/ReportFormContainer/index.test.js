@@ -82,10 +82,19 @@ describe('ReportFormContainer', () => {
       mapped.reportItem(mockItem);
       expect(mockDispatch).toHaveBeenCalledWith(actions.reportItem(mockItem));
     });
+
+    it('should call dispatch with captureMarker action creator', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
+      mapped.captureMarker({});
+      expect(mockDispatch).toHaveBeenCalledWith(actions.captureMarker({}));
+    });
   });
 
   describe('mapStateToProps', () => {
-    const expected = { userId: 1 };
-    expect(mapStateToProps({ user: { id: 1 } })).toEqual(expected);
+    it('should map userId from the store', () => {
+      const mapped = mapStateToProps({user: {id: 1}});
+      expect(mapped.userId).toEqual(1);
+    });
   });
 });

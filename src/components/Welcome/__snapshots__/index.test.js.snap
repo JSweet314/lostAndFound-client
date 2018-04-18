@@ -28,7 +28,7 @@ ShallowWrapper {
         <p
           className="welcome-instructions"
 >
-          Here to help you or your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.
+          Here to help your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.
 </p>,
         <p
           className="welcome-call-to-action"
@@ -57,11 +57,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Here to help you or your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
+          "children": "Here to help your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
           "className": "welcome-instructions",
         },
         "ref": null,
-        "rendered": "Here to help you or your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
+        "rendered": "Here to help your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
         "type": "p",
       },
       Object {
@@ -94,7 +94,7 @@ ShallowWrapper {
           <p
             className="welcome-instructions"
 >
-            Here to help you or your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.
+            Here to help your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.
 </p>,
           <p
             className="welcome-call-to-action"
@@ -123,11 +123,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Here to help you or your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
+            "children": "Here to help your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
             "className": "welcome-instructions",
           },
           "ref": null,
-          "rendered": "Here to help you or your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
+          "rendered": "Here to help your organization track reported lost and found items. Be sure to view existing reports prior to reporting a new item.",
           "type": "p",
         },
         Object {
