@@ -22,7 +22,7 @@ describe('listenForGetLocationDetails', () => {
 
 describe('getLocationDetailsSaga', () => {
   let generator;
-  const mockIds = {itemId: 1, locationId: 2}
+  const mockIds = {itemId: 1, locationId: 2};
   const mockAction = actions.fetchItemLocation(mockIds);
   beforeAll(() => {
     generator = getLocationDetailsSaga(mockAction);

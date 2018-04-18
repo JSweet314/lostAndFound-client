@@ -7,7 +7,7 @@ describe('mapMarkerReducer', () => {
   });
 
   it('should handle action CAPTURE_MARKER', () => {
-    const mockMarker = { lat: 1, lng: 2 }
+    const mockMarker = { lat: 1, lng: 2 };
     expect(mapMarkerReducer(undefined, actions.captureMarker(mockMarker)))
       .toEqual(mockMarker);
   });
