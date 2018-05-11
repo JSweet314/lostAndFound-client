@@ -1,4 +1,4 @@
-import { gKey } from '../private/keys';
+const gKey = process.env.GOOGLE_KEY;
 const rootURL = 'https://lostandfound-server.herokuapp.com';
 
 export const addUser = async newUser => {
