@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MapComponent from '../../components/MapComponent';
-import { googleUrl } from '../../private/keys';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import * as API from '../../api';
+
+const googleUrl = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_KEY}&v=3.exp&libraries=geometry,drawing,places`;
 
 export class MapContainer extends Component {
   constructor(props) {
