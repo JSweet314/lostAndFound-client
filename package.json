@@ -1,5 +1,5 @@
 {
-  "name": "personal-project",
+  "name": "lostandfound-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,6 @@
     "redux-saga": "^0.16.0",
     "sha.js": "^2.4.11"
   },
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

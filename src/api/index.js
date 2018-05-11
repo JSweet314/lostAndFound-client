@@ -1,8 +1,9 @@
 import { gKey } from '../private/keys';
+const rootURL = 'https://lostandfound-server.herokuapp.com';
 
 export const addUser = async newUser => {
   try {
-    const response = await fetch('/api/v1/users/new', {
+    const response = await fetch(`${rootURL}/api/v1/users/new`, {
       method: 'POST',
       body: JSON.stringify(newUser),
       headers: {
@@ -21,7 +22,7 @@ export const addUser = async newUser => {
 
 export const signInUser = async user => {
   try {
-    const response = await fetch('/api/v1/users/signIn', {
+    const response = await fetch(`${rootURL}/api/v1/users/signIn`, {
       method: 'POST',
       body: JSON.stringify({ email: user.email, password: user.password }),
       headers: {
@@ -68,7 +69,7 @@ export const reverseGeoCode = async coords => {
 
 export const postLocation = async location => {
   try {
-    const response = await fetch('/api/v1/locations/new', {
+    const response = await fetch(`${rootURL}/api/v1/locations/new`, {
       method: 'POST',
       body: JSON.stringify(location),
       headers: {
@@ -86,7 +87,7 @@ export const postLocation = async location => {
 
 export const postItem = async item => {
   try {
-    const response = await fetch('/api/v1/items/new', {
+    const response = await fetch(`${rootURL}/api/v1/items/new`, {
       method: 'POST',
       body: JSON.stringify(item),
       headers: {
@@ -104,7 +105,7 @@ export const postItem = async item => {
 
 export const fetchUserItems = async userId => {
   try {
-    const response = await fetch('/api/v1/items', {
+    const response = await fetch(`${rootURL}/api/v1/items`, {
       method: 'POST',
       body: JSON.stringify({id: userId}),
       headers: {
@@ -122,7 +123,7 @@ export const fetchUserItems = async userId => {
 
 export const fetchLocationDetails = async locationId => {
   try {
-    const response = await fetch('/api/v1/locations', {
+    const response = await fetch(`${rootURL}/api/v1/locations`, {
       method: 'POST',
       body: JSON.stringify({id: locationId}),
       headers: {
