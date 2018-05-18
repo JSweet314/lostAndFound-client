@@ -12,7 +12,7 @@ This project requires the following:
 To start:
 * Clone down this repo and run `npm install`
 * Clone backend (server) and run `npm install`
-* Start backend server with `nodemon index.js`
+* Start backend server with `node index.js`
 * Start frontend (client) with `npm start`
   * Press 'y' to accept different port (client side is proxied to port 3000)
 
