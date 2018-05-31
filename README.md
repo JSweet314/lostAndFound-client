@@ -1,5 +1,5 @@
 # Lost & Found
-by [Jonathan Sweet](https://github.com/JSweet314/)
+by [Jonathan Sweet](https://www.turing.io/alumni/jonathan-sweet)
 
 ## Description:
 This project is composed of two parts, a client side and a server side. Utilizing an express.js server with knex/postgreSQL on the backend to store user and reported item information, the front end provides an interface with React, Router, Redux, Saga middleware, and the Google Maps Javascript API to allow users to sign up, create reports, and view their reports with a dynamic, interactive map. Future versions may include public portal access that an organization can grant to search a full list of items.
@@ -19,6 +19,11 @@ To start:
 Run the test suite in terminal with `npm test`. 
 Run eslint with `npm run eslint`.
 
+Homepage
 ![welcome](src/images/LFscreenshot.png)
+
+New Report Map
 ![reportMap](src/images/reportMapScreenshot.png)
+
+My Reports
 ![myReports](src/images/itemsListScreenshot.png)
